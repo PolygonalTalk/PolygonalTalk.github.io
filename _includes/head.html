@@ -1,0 +1,100 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-touch-fullscreen" content="yes">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- BEGIN CORE CSS -->
+  <!-- <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}"> -->
+  <link rel="stylesheet" href="{{ "/css/admin1.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/elements.css" | prepend: site.baseurl }}">
+  <!-- END CORE CSS -->
+
+  <!-- BEGIN PLUGINS CSS -->
+  <link rel="stylesheet" href="{{ "/plugins/rickshaw/rickshaw.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/plugins/bxslider/jquery.bxslider.css" | prepend: site.baseurl }}">
+
+  <link rel="stylesheet" href="{{ "/css/plugins.css" | prepend: site.baseurl }}">
+  <!-- END PLUGINS CSS -->
+
+  <!-- BEGIN SHORTCUT AND TOUCH ICONS -->
+  <!-- <link rel="shortcut icon" href="../../assets/globals/img/icons/favicon.ico">
+  <link rel="apple-touch-icon" href="../../assets/globals/img/icons/apple-touch-icon.png"> -->
+  <!-- END SHORTCUT AND TOUCH ICONS -->
+
+  <!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script> -->
+
+  <script src="{{ "/plugins/modernizr/modernizr.min.js" | prepend: site.baseurl }}"></script>
+
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <script type="text/javascript">
+
+      function generateQuotes()
+      {
+  console.log("tests...");
+      $.getJSON("{{ '/GameQuotes.json' | prepend: site.baseurl }}", function(data) {
+          console.log("Getting Quotes...");
+
+    var tiles = "";
+    if (data.posts_count >8)
+      var arraylength = 8;
+    else
+      var arraylength = data.posts_count;
+    for (var i = arraylength - 1; i >= 0; i--) {
+      tiles = "";
+      var post = data.post_stream.posts[i];
+
+      var quote = $(post.cooked).find("blockquote").text();
+      var quser = $(post.cooked).find(".title").text();
+      quser = quser.slice(0,-1);
+      var avatarURL = $(post.cooked).find(".title").find("img").attr("src");
+      var imageURL = $(post.cooked).find("img").attr("src");
+      var postLink = post.link_counts[0].url;
+      var postTitle = post.link_counts[0].title;
+
+      if (!post.link_counts[0].internal)
+      {
+          postLink = post.link_counts[1].url;
+          postTitle = post.link_counts[1].title;
+      }
+
+      // tiles += "<li>";
+       if(post.image_url !== null){
+              tiles += "<div class='card tile card-quote card-black bg-image bg-opaque5' style='background: url(" + imageURL + ") center/cover'>";
+      } else {
+        tiles += "<div class='card card-quote card-black bg-image bg-opaque5' style='background-image: url(//polygonalweave.com/Images/Generic/POLY08s.jpg)'>";
+      }
+        // tiles += "<a class='tile-hover' href=" + postLink + ">";
+      // 		tiles += "<h2 class='tile-title'>" + postTitle + "</h2>";
+          tiles += "<div class='card-body text-color-white'><div class='quote'><i class='fa fa-quote-left'></i> " + quote + "<i class='fa fa-quote-right'></i></div>";
+          // tiles += "<div class='tile-info'>" + postTitle + "<br><div class='comment-btn'><img alt='' width='40' height='40' src='" + avatarURL + "' class='avatar'></div></div>"; //tile
+
+        tiles += "<a href='" + postLink + "' class='author'>" + quser + "</a>"; //tile-hover
+      tiles += "</div>"; //tile
+      $("#quotes"+i).html(tiles);
+    }
+  });
+}
+
+  $(document).ready(function() {
+    console.log("Doc Ready...");
+      generateQuotes();
+  });
+
+  </script>
+</head>

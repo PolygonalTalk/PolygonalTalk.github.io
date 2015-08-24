@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+  <title>Everybody's Gone to the Rapture : Review</title>
+  <meta name="description" content="I’ve never played a “walking simulator” before this, but I’m glad I did. This is the Bizarro-Destiny of games, where it is ALL story and no gameplay. And it ...">
+
+  <link rel="canonical" href="http://yourdomain.com/review/2015/10/10/everyones-gone-to-the-rapture-review.html">
+  <link rel="alternate" type="application/rss+xml" title="Polygonal Talk" href="http://yourdomain.com/feed.xml" />
+
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-touch-fullscreen" content="yes">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- BEGIN CORE CSS -->
+  <!-- <link rel="stylesheet" href="/css/main.css"> -->
+  <link rel="stylesheet" href="/css/admin1.css">
+  <link rel="stylesheet" href="/css/elements.css">
+  <!-- END CORE CSS -->
+
+  <!-- BEGIN PLUGINS CSS -->
+  <link rel="stylesheet" href="/plugins/rickshaw/rickshaw.min.css">
+  <link rel="stylesheet" href="/plugins/bxslider/jquery.bxslider.css">
+
+  <link rel="stylesheet" href="/css/plugins.css">
+  <!-- END PLUGINS CSS -->
+
+  <!-- BEGIN SHORTCUT AND TOUCH ICONS -->
+  <!-- <link rel="shortcut icon" href="../../assets/globals/img/icons/favicon.ico">
+  <link rel="apple-touch-icon" href="../../assets/globals/img/icons/apple-touch-icon.png"> -->
+  <!-- END SHORTCUT AND TOUCH ICONS -->
+
+  <!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script> -->
+
+  <script src="/plugins/modernizr/modernizr.min.js"></script>
+
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <script type="text/javascript">
+
+      function generateQuotes()
+      {
+  console.log("tests...");
+      $.getJSON("/GameQuotes.json", function(data) {
+          console.log("Getting Quotes...");
+
+    var tiles = "";
+    if (data.posts_count >8)
+      var arraylength = 8;
+    else
+      var arraylength = data.posts_count;
+    for (var i = arraylength - 1; i >= 0; i--) {
+      tiles = "";
+      var post = data.post_stream.posts[i];
+
+      var quote = $(post.cooked).find("blockquote").text();
+      var quser = $(post.cooked).find(".title").text();
+      quser = quser.slice(0,-1);
+      var avatarURL = $(post.cooked).find(".title").find("img").attr("src");
+      var imageURL = $(post.cooked).find("img").attr("src");
+      var postLink = post.link_counts[0].url;
+      var postTitle = post.link_counts[0].title;
+
+      if (!post.link_counts[0].internal)
+      {
+          postLink = post.link_counts[1].url;
+          postTitle = post.link_counts[1].title;
+      }
+
+      // tiles += "<li>";
+       if(post.image_url !== null){
+              tiles += "<div class='card tile card-quote card-black bg-image bg-opaque5' style='background: url(" + imageURL + ") center/cover'>";
+      } else {
+        tiles += "<div class='card card-quote card-black bg-image bg-opaque5' style='background-image: url(//polygonalweave.com/Images/Generic/POLY08s.jpg)'>";
+      }
+        // tiles += "<a class='tile-hover' href=" + postLink + ">";
+      // 		tiles += "<h2 class='tile-title'>" + postTitle + "</h2>";
+          tiles += "<div class='card-body text-color-white'><div class='quote'><i class='fa fa-quote-left'></i> " + quote + "<i class='fa fa-quote-right'></i></div>";
+          // tiles += "<div class='tile-info'>" + postTitle + "<br><div class='comment-btn'><img alt='' width='40' height='40' src='" + avatarURL + "' class='avatar'></div></div>"; //tile
+
+        tiles += "<a href='" + postLink + "' class='author'>" + quser + "</a>"; //tile-hover
+      tiles += "</div>"; //tile
+      $("#quotes"+i).html(tiles);
+    }
+  });
+}
+
+  $(document).ready(function() {
+    console.log("Doc Ready...");
+      generateQuotes();
+  });
+
+  </script>
+</head>
+
+
+  <body>
+
+    <!-- Start Layout -->
+    <div class="nav-bar-container">
+
+  <!-- BEGIN ICONS -->
+  <div class="nav-menu">
+    <div class="hamburger">
+      <span class="patty"></span>
+      <span class="patty"></span>
+      <span class="patty"></span>
+      <span class="patty"></span>
+      <span class="patty"></span>
+      <span class="patty"></span>
+    </div><!--.hamburger-->
+  </div><!--.nav-menu-->
+
+
+  <div class="nav-back">
+    <a class="back" href="javascript:history.back()"><i class="material-icons md-36">arrow_back</i></a>
+  </div>
+
+
+  <div class="nav-search">
+    <span class="search"></span>
+  </div><!--.nav-search-->
+
+
+  <!-- END OF ICONS -->
+
+  <div class="nav-bar-border"></div><!--.nav-bar-border-->
+
+  <!-- BEGIN OVERLAY HELPERS -->
+  <div class="overlay">
+    <div class="starting-point">
+      <span></span>
+    </div><!--.starting-point-->
+    <div class="logo">PolygonALL</div><!--.logo-->
+  </div><!--.overlay-->
+
+  <div class="overlay-secondary"></div><!--.overlay-secondary-->
+  <!-- END OF OVERLAY HELPERS -->
+
+</div><!--.nav-bar-container-->
+
+    <div class="content">
+        <div class="page-header brown full-content parallax opacity-hero" style="height: 600px; overflow: hidden">
+  <div class="parallax-bg" style="background: url('http://images.eurogamer.net/2013/articles/1/7/7/4/0/1/3/everybodys-gone-to-the-rapture-review-143928049295.jpg') 50% 50%; background-size: cover; width: 100%; height: 100%; position: absolute; left: 0; top: 0;">
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h1>review <small>short description</small></h1>
+    </div><!--.col-->
+    <div class="col-sm-6">
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="ion-home"></i></a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#" class="active">Blog</a></li>
+      </ol>
+    </div><!--.col-->
+  </div><!--.row-->
+
+</div><!--.page-header-->
+
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="text-center margin-bottom-40">Everybody's Gone to the Rapture : Review</h1>
+  </div><!--.col-->
+</div><!--.row-->
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+
+<p><p>I’ve never played a “walking simulator” before this, but I’m glad I did. This is the Bizarro-Destiny of games, where it is ALL story and no gameplay. And it works. REALLY well.</p>
+
+<p>I’ll try not to repeat myself from above, but just know that none of that stuff changed. Slightly creepy, immensely lonely, R2 to run… all that is still in the latter half of the game.</p>
+
+<h3 id="graphics">Graphics</h3>
+
+<p>This game is gorgeous. From the very first scene where you are looking out over a valley at a sunrise, to the final moments (I won’t spoil that scene) I was thoroughly impressed with what the CryEngine 3 can do. From the time shifts, to the weather changes to the sparks falling from the light balls that zip around the town, I was in awe at everything. And you get to really take it all in due to the slow pace you’ll be walking at. I really should have hitten the “Share” button once or twice, but I was so into everything going on around me that it never popped into my head to do so. I will definitely take advantage of that during my next Trophy hunting playthroughs. My only complaint is the framerate. It really, REALLY struggles at times, especially noticeable in the shadows. I’m hoping they fix this via patch as it was jarring enough to take me out of the moment several times. <a href="http://www.eurogamer.net/articles/digitalfoundry-2015-vs-everybodys-gone-to-the-rapture">You can read more about that here.</a></p>
+
+<h3 id="sound">Sound</h3>
+<p>The music. Wow. It is subtle at times and others it sent chills down my spine at just the right moment. Certain actions trigger more intense music and when nothing is going on, sometimes the background sound effects fill the atmosphere with a sense of life, yet utter loneliness. I’m talking gibberish. <a href="http://www.theguardian.com/technology/2015/jul/30/everybodys-gone-to-the-rapture-video-game-sound-music">Here is a great article that explains it way better than I can.</a></p>
+
+<h3 id="gameplay">Gameplay</h3>
+<p>Well… hmm… this is an interactive story—with much less emphasis on “interactive” than on “story.” There isn’t much here. You wander around, with the light trails gently nudging you in the correct directions, you press X a few times and tip your controller in one direction or another at certain points. And, yet… it was fun.</p>
+
+<p>This game DOES NOT hand-hold. If you are looking for a Batman Arkham Knight game that puts a dot on a map with a trail of arrows pointing you in the right direction and constant button prompts, this is not that game. I didn’t even figure out that I could hop certain fences until later in the game. This made me miss out on some story elements. But then again, I don’t think you’re supposed to catch everything the first time. And you get so used to NOT interacting with things, that you miss some Trophy opportunities.</p>
+
+<p><img src="http://i.ytimg.com/vi/aU4WT2LqpMA/maxresdefault.jpg" alt="http://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/6/19/1434715708491/7e7cbf63-e4c4-409d-8d4b-cfd1205319ab-620x372.jpeg?w=620&amp;q=85&amp;auto=format&amp;sharp=10&amp;s=1aebff12c03382ac460344505d6e698e" /></p>
+
+<h3 id="story">Story</h3>
+<p>What can I say? The whole game is story and it’s a good one. You “meet” various characters, and you follow them through the events that led to their disappearance. You get to see their personalities, good or bad, their struggles, their fears at what was going on… and in some cases, these stories nearly made my eyes water. Ok, maybe a little bit. Especially, the one that ends at a [spoiler]train station.[/spoiler] Even though you… hmm… I guess I have to leave that sentence unfinished.</p>
+
+<p>The ending. Let’s just say that my prediction in a previous post was… partially… correct. I think. See, the ending doesn’t hold your hand either, but hopefully you’ve uncovered enough of the pieces leading up to it to grasp the meaning. I actually can’t wait until more of you have played through it so we can discuss our interpretations of it.</p>
+
+<p><img src="http://i.imgur.com/FQw0Fhl.gif" alt="http://i.imgur.com/FQw0Fhl.gif" /></p>
+
+<h3 id="nitpicksmisc">Nitpicks/Misc</h3>
+<p>The Trophies. By the way, DO NOT read them before playing through the first time. One is kinda spoilery… kind of. But mostly, you’ll be focused on finding these things than what’s going on around you and you’ll miss the immersion which is why I think most of these trophies are things that won’t pop during a normal playthrough. They’d be distracting. Most of them require you to find something or somewhere and… do nothing. For minutes at a time. Others are finding everything of a certain type… very challenging. And then the final 2, well… that Platinum will be worth it. After I completed the game last night, I instantly began a new one because I missed an entire area early on. I got some more story there, one key piece I wish I had found the first time, and started the trophy hunt. I’ll need to play the entire story at least twice more to get them all. Whatever. It’s a great game that didn’t take a lot of time to complete—I’ll gladly play this game again and again.</p>
+
+<p>Actually, the only downsides are the framerate, the slow pace (which you can speed up slightly if you have to backtrack) and the fan… oh, yeah… the PS4 fan. I’ve read that the menu screens in this game do not have a capped framerate. So if you spend enough time looking at one, the framerate will skyrocket and your PS4’s fan will kick in and it will not stop until you quit the game. I had it running in the background and went to Netflix and the fan was out-of-control until I went back to the game and force quit it. That can be patched. Hopefully.</p>
+
+<p>Overall, I highly recommend this game as a nice change of pace to Destiny, Rocket League or some other action-packed title. If you want a quality story, with a beautiful environment, engaging dialogue, nifty music and have a few hours—this is the game. I recommend playing with headphones to get all the ambience and locking away family members, so you have no distractions. Also, finish it in 2 or 3 sessions, max, close together so you don’t forget character’s names or voices.</p>
+
+<p><strong>9 out of 10</strong></p>
+
+<p>EDIT: I’d love, love, love to see this as a Morpheus title one day.</p>
+
+</p>
+
+  </div><!--.col-->
+</div><!--.row-->
+
+      </div>
+
+
+    </div>
+    <!-- /End Layout-->
+
+    <!-- BEGIN GLOBAL AND THEME VENDORS -->
+    <script src="/js/global-vendors.js"></script>
+    <!-- END GLOBAL AND THEME VENDORS -->
+
+    <!-- BEGIN PLUGINS AREA -->
+    <!-- <script src="http://maps.google.com/maps/api/js?sensor=true&amp;libraries=places"></script> -->
+    <!-- <script src="../../assets/globals/plugins/gmaps/gmaps.js"></script> -->
+    <script src="/plugins/bxslider/jquery.bxslider.min.js"></script>
+    <script src="/plugins/d3/d3.min.js"></script>
+    <script src="/plugins/rickshaw/rickshaw.min.js"></script>
+    <script src="/plugins/jquery-knob/excanvas.js"></script>
+    <script src="/plugins/jquery-knob/dist/jquery.knob.min.js"></script>
+    <!-- <script src="../../assets/globals/plugins/gauge/gauge.min.js"></script> -->
+    <!-- END PLUGINS AREA -->
+
+    <!-- PLEASURE -->
+    <script src="/js/pleasure.js"></script>
+    <!-- ADMIN 1 -->
+    <script src="/js/layout.js"></script>
+
+    <script src="/scripts/sliders.js"></script>
+    <!-- <script src="../../assets/globals/scripts/maps-google.js"></script> -->
+    <script src="/scripts/widget-audio.js"></script>
+    <script src="/scripts/charts-knob.js"></script>
+    <script src="/scripts/index.js"></script>
+    <!-- BEGIN INITIALIZATION-->
+    <script>
+    $(document).ready(function () {
+      Pleasure.init();
+      Layout.init();
+
+      Index.init();
+      WidgetAudio.single();
+      ChartsKnob.init();
+
+    });
+    </script>
+
+    <script type="text/javascript">
+
+    function generateQuotes()
+    {
+        $.getJSON("/_data/GetQuotes.json", function(data) {
+            console.log("Getting Quotes...");
+
+			var tiles = "";
+			if (data.posts_count >8)
+				var arraylength = 8;
+			else
+				var arraylength = data.posts_count;
+			for (var i = arraylength - 1; i >= 0; i--) {
+				var post = data.post_stream.posts[i];
+
+        var quote = $(post.cooked).find("blockquote").text();
+        var quser = $(post.cooked).find(".title").text();
+        quser = quser.slice(0,-1);
+        var avatarURL = $(post.cooked).find(".title").find("img").attr("src");
+        var imageURL = $(post.cooked).find("img").attr("src");
+        var postLink = post.link_counts[0].url;
+        var postTitle = post.link_counts[0].title;
+
+        if (!post.link_counts[0].internal)
+        {
+            postLink = post.link_counts[1].url;
+            postTitle = post.link_counts[1].title;
+        }
+
+
+        console.log(post);
+				tiles += "<div class='col-md-4 margin-bottom-10'>";
+				 if(post.image_url !== null){
+                tiles += "<div class='card card-quote card-black bg-image bg-opaque5' style='background-image: url(" + imageURL + ")'></div>";
+				} else {
+					tiles += "<div class='card card-quote card-black bg-image bg-opaque5' style='background-image: url(//polygonalweave.com/Images/Generic/POLY08s.jpg)'></div>";
+				}
+					// tiles += "<a class='tile-hover' href=" + postLink + ">";
+				// 		tiles += "<h2 class='tile-title'>" + postTitle + "</h2>";
+            tiles += "    <div class='card-body text-color-white'>
+                  <div class='quote'>
+                    <i class='fa fa-quote-left'></i> " + quote + "<i class='fa fa-quote-right'></i>
+                    </div>";
+						// tiles += "<div class='tile-info'>" + postTitle + "<br><div class='comment-btn'><img alt='' width='40' height='40' src='" + avatarURL + "' class='avatar'></div></div>"; //tile
+
+					tiles += "<a href='" + postLink + "' class='author'>" + quser + "</a>"; //tile-hover
+				tiles += "</div>"; //tile
+			}
+
+			$("#quotes").html(tiles);
+		}
+
+    //         var postsCount = data.length;
+    //         var posts = data;
+    //
+    //         var randomIndexUsed = [];
+    //         var counter = 0;
+    //         var numberOfPosts = 5;
+    //
+    //         var divRandomPosts = $("#random_posts");
+    //
+    //         divRandomPosts.append('<h2>other posts</h2><hr />');
+    //
+    //         while (counter < numberOfPosts)
+    //         {
+    //             var randomIndex = Math.floor(Math.random() * postsCount);
+    //
+    //             if (randomIndexUsed.indexOf(randomIndex) == "-1")
+    //             {
+    //                 var postHREF = posts[randomIndex].href;
+    //                 var postTitle = posts[randomIndex].title;
+    //
+    //                 if (counter == (numberOfPosts - 1))
+    //                 {
+    //                     divRandomPosts.append('<p><a href="' + postHREF + '">' + postTitle + '</a></p>');
+    //                 }
+    //                 else
+    //                 {
+    //                     divRandomPosts.append('<p><a href="' + postHREF + '">' + postTitle + '</a></p><hr />');
+    //                 }
+    //
+    //                 randomIndexUsed.push(randomIndex);
+    //
+    //                 counter++;
+    //             }
+    //         }
+    //     });
+    // }
+
+    $(document).ready(function() {
+        generateQuotes();
+    });
+
+</script>
+    <!-- END INITIALIZATION-->
+
+    <!-- BEGIN Google Analytics -->
+    <!-- <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', Pleasure.settings.ga.urchin, Pleasure.settings.ga.url);
+      ga('send', 'pageview');
+    </script> -->
+    <!-- END Google Analytics -->
+
+    </body>
+    </html>

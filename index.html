@@ -1,1 +1,54 @@
-Testing
+---
+layout: default
+title: Home
+---
+
+<div class="display-animation">
+  <div class="row image-row margin-bottom-40">
+
+{% include highlight_post.html %}
+
+</div>
+</div>
+
+<div class='col-md-4 margin-bottom-10'>
+
+<li id="quotes0"></li>
+
+</div>
+
+<div class='col-md-4 margin-bottom-10'>
+
+<li id="quotes1"></li>
+
+</div>
+
+<div class='col-md-4 margin-bottom-10'>
+
+<li id="quotes2"></li>
+
+</div>
+
+    <div class="col-md-4">
+      <div class="card tile card-news-more material-animate">
+        <div class="card-heading bg-image bg-opaque5 toggle-card-news-more" {% if post.image %} style="background: url('{{ post.image }}') center/cover;" {% endif %}">
+          <div class="heading-content">
+            <span class="badge">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <span class="headline">{{ post.title }}</span>
+            <button class="btn btn-floating btn-pink toggle-card-news-more"><i class="material-icons md-36">format_quote</i></button>
+          </div>
+        </div><!--.card-heading-->
+        <div class="card-body">
+          {{ post.excerpt }}
+          <div class="card-footer">
+            <div class="btn-group btn-merged btn-group-sm pull-left">
+              <span class="badge">{{ post.date | date: "%b %-d, %Y" }}{{ page.categories }}</span>
+            </div>
+    						<div class="btn-group btn-merged btn-group-sm pull-right">
+    							<button type="button" class="btn btn-green btn-flat btn-ripple"><a href="{{ post.url | prepend: site.baseurl }}">Read More</a></button>
+    						</div>
+    					</div><!--.card-footer-->
+        </div><!--.card-body-->
+
+      </div><!--.card-->
+    </div><!--.col-->

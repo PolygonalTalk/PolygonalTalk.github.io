@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+  <title>About</title>
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+  <link rel="canonical" href="http://yourdomain.com/about/">
+  <link rel="alternate" type="application/rss+xml" title="Polygonal Talk" href="http://yourdomain.com/feed.xml" />
+
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-touch-fullscreen" content="yes">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- BEGIN CORE CSS -->
+  <!-- <link rel="stylesheet" href="/css/main.css"> -->
+  <link rel="stylesheet" href="/css/admin1.css">
+  <link rel="stylesheet" href="/css/elements.css">
+  <!-- END CORE CSS -->
+
+  <!-- BEGIN PLUGINS CSS -->
+  <link rel="stylesheet" href="/plugins/rickshaw/rickshaw.min.css">
+  <link rel="stylesheet" href="/plugins/bxslider/jquery.bxslider.css">
+
+  <link rel="stylesheet" href="/css/plugins.css">
+  <!-- END PLUGINS CSS -->
+
+  <!-- BEGIN SHORTCUT AND TOUCH ICONS -->
+  <!-- <link rel="shortcut icon" href="../../assets/globals/img/icons/favicon.ico">
+  <link rel="apple-touch-icon" href="../../assets/globals/img/icons/apple-touch-icon.png"> -->
+  <!-- END SHORTCUT AND TOUCH ICONS -->
+
+  <!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script> -->
+
+  <script src="/plugins/modernizr/modernizr.min.js"></script>
+
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <script type="text/javascript">
+
+      function generateQuotes()
+      {
+  console.log("tests...");
+      $.getJSON("/GameQuotes.json", function(data) {
+          console.log("Getting Quotes...");
+
+    var tiles = "";
+    if (data.posts_count >8)
+      var arraylength = 8;
+    else
+      var arraylength = data.posts_count;
+    for (var i = arraylength - 1; i >= 0; i--) {
+      tiles = "";
+      var post = data.post_stream.posts[i];
+
+      var quote = $(post.cooked).find("blockquote").text();
+      var quser = $(post.cooked).find(".title").text();
+      quser = quser.slice(0,-1);
+      var avatarURL = $(post.cooked).find(".title").find("img").attr("src");
+      var imageURL = $(post.cooked).find("img").attr("src");
+      var postLink = post.link_counts[0].url;
+      var postTitle = post.link_counts[0].title;
+
+      if (!post.link_counts[0].internal)
+      {
+          postLink = post.link_counts[1].url;
+          postTitle = post.link_counts[1].title;
+      }
+
+      // tiles += "<li>";
+       if(post.image_url !== null){
+              tiles += "<div class='card tile card-quote card-black bg-image bg-opaque5' style='background: url(" + imageURL + ") center/cover'>";
+      } else {
+        tiles += "<div class='card card-quote card-black bg-image bg-opaque5' style='background-image: url(//polygonalweave.com/Images/Generic/POLY08s.jpg)'>";
+      }
+        // tiles += "<a class='tile-hover' href=" + postLink + ">";
+      // 		tiles += "<h2 class='tile-title'>" + postTitle + "</h2>";
+          tiles += "<div class='card-body text-color-white'><div class='quote'><i class='fa fa-quote-left'></i> " + quote + "<i class='fa fa-quote-right'></i></div>";
+          // tiles += "<div class='tile-info'>" + postTitle + "<br><div class='comment-btn'><img alt='' width='40' height='40' src='" + avatarURL + "' class='avatar'></div></div>"; //tile
+
+        tiles += "<a href='" + postLink + "' class='author'>" + quser + "</a>"; //tile-hover
+      tiles += "</div>"; //tile
+      $("#quotes"+i).html(tiles);
+    }
+  });
+}
+
+  $(document).ready(function() {
+    console.log("Doc Ready...");
+      generateQuotes();
+  });
+
+  </script>
+</head>
+
+
+  <body>
+
+    <!-- Start Layout -->
+    <div class="nav-bar-container">
+
+  <!-- BEGIN ICONS -->
+  <div class="nav-menu">
+    <div class="hamburger">
+      <span class="patty"></span>
+      <span class="patty"></span>
+      <span class="patty"></span>
+      <span class="patty"></span>
+      <span class="patty"></span>
+      <span class="patty"></span>
+    </div><!--.hamburger-->
+  </div><!--.nav-menu-->
+
+
+  <div class="nav-back">
+    <a class="back" href="javascript:history.back()"><i class="material-icons md-36">arrow_back</i></a>
+  </div>
+
+
+  <div class="nav-search">
+    <span class="search"></span>
+  </div><!--.nav-search-->
+
+
+  <!-- END OF ICONS -->
+
+  <div class="nav-bar-border"></div><!--.nav-bar-border-->
+
+  <!-- BEGIN OVERLAY HELPERS -->
+  <div class="overlay">
+    <div class="starting-point">
+      <span></span>
+    </div><!--.starting-point-->
+    <div class="logo">PolygonALL</div><!--.logo-->
+  </div><!--.overlay-->
+
+  <div class="overlay-secondary"></div><!--.overlay-secondary-->
+  <!-- END OF OVERLAY HELPERS -->
+
+</div><!--.nav-bar-container-->
+
+      <div class="content">
+<div class="page-header full-content">
+  <div class="row">
+    <div class="col-sm-6">
+      
+      
+        
+    
+        
+      <h1>About</h1>
+      
+    
+        
+    
+        
+      <h1>Home</h1>
+      
+    
+        
+    
+    
+    </div><!--.col-->
+    <div class="col-sm-6">
+      <ol class="breadcrumb">
+        <li><a href="#" class="active"><i class="material-icons">home</i></i> Homepage</a></li>
+      </ol>
+    </div><!--.col-->
+  </div><!--.row-->
+</div><!--.page-header-->
+
+        <div class="post-ribbon"></div>
+<main class="post-main mdl-layout__content">
+  <div class="post-container mdl-grid">
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+    <div class="post-section mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+      <div class="mdl-color-text--grey-500">
+      
+      </div>
+      <h3>About</h3>
+      <article class="post-content">
+        <p><h6 id="a-jekyll-theme-based-in-google-material-design-lite-library">A Jekyll theme based in Google Material Design Lite library.</h6>
+
+<p>This is the base Jekyll Material Design Lite theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="http://jekyllrb.com/">jekyllrb.com</a></p>
+
+<p>You can find the source code for the Jekyll MDL theme at: <a href="https://github.com/gdg-managua/jekyll-mdl">github.com/gdg-managua/jekyll-mdl</a></p>
+
+<p>You can find the source code for Jekyll at <a href="https://github.com/jekyll/jekyll">github.com/jekyll/jekyll</a></p>
+
+<h6 id="sites-using-jekyll-mdl">Sites using jekyll-mdl</h6>
+
+<p>If you are using this cool jekyll theme, please open an issue or fork the project, add your site to the list and send a pull request, we will be happy to know where the theme are using.</p>
+
+<p><a href="http://fandekasp.github.io/">fandekasp.github.io</a></p>
+
+<h6 id="custom-themes">Custom Themes</h6>
+
+<p>If you don’t want the default site colors, you can create custom themes for the site in the <a href="http://www.getmdl.io/customize/index.html">mdl theme creator</a>. The site will create a custom css, something like this:</p>
+
+<pre><code> &lt;link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.teal-green.min.css" /&gt;
+</code></pre>
+
+<p>Now add this in the _includes/head.html file, under the main css and enjoy your new theme.</p>
+
+<h6 id="post-options">Post Options</h6>
+
+<p>All the post, require an image and maybe an author, the image are used in the cards and the autor used for the footer in the cards. For use the images and author, just add a new key in the post config, something like this:</p>
+
+<pre><code>---
+layout: post
+title:  "Welcome to jekyll-mdl"
+date:   2015-07-11 11:34:20
+categories: jekyll
+image: http://www.wchs4pets.org/wp-content/uploads/2015/03/cat_1-jpg.jpg
+author: Google Developers Group Managua
+---
+</code></pre>
+
+<h6 id="layout-configuration">Layout Configuration</h6>
+<p>You can setup 4 types of layout</p>
+
+<pre><code>- Fixed Nav + Simple Card Grid
+- Fixed Nav + Highlight Post + Card Grid
+- Drawer Nav + Simple Card Grid
+- Drawer Nav + Highlight Post + Card Grid
+</code></pre>
+
+<p>For use this in the <a href="https://github.com/gdg-managua/jekyll-mdl/blob/master/_config.yml">_config.yml</a> select the type of layout, rebuild the website and voilà :smile:</p>
+
+<h6 id="contributing">Contributing</h6>
+<p>If you want to contribute to this project, please read the <a href="https://github.com/gdg-managua/jekyll-mdl/blob/master/CONTRIBUTING.md">CONTRIBUTING</a> file and perform the following steps</p>
+
+<pre><code># Fork this repository
+# Clone your fork
+jekyll serve --watch
+
+git checkout -b feature_branch
+# Implement your feature and tests
+git add . &amp;&amp; git commit
+git push -u origin feature_branch
+# Send a pull request for your feature branch
+</code></pre>
+
+<h6 id="team">Team</h6>
+<p><a href="http://github.com/oscarmcm"><img src="https://avatars.githubusercontent.com/u/2553459?v=3&amp;s=100" alt="Oscar Cortez" /></a>
+<a href="https://github.com/byroncorrales"><img src="https://avatars.githubusercontent.com/u/99616?v=3&amp;s=100" alt="Byron Corrales" /></a></p>
+
+<h6 id="license">License</h6>
+<p>Licensed under the Apache 2.0 license.</p>
+
+<p>See the <a href="https://github.com/gdg-managua/jekyll-mdl/blob/master/LICENSE.md">LICENSE</a> file for more details.</p>
+
+<p>Copyright © 2015 <a href="http://www.gdgmanagua.org">Google Developers Group Managua</a>.</p>
+</p>
+      </article>
+    </div>
+  </div>
+</main>
+
+      </div>
+
+      <div class="col-lg-6">
+<a href="http://www.pushsquare.com/news/2015/08/first_impressions_eyes-on_with_ps4s_virtual_reality_headset_project_morpheus" class="embedly-card"></a>
+
+</div>
+
+
+
+
+<!-- <div class='col-md-4 margin-bottom-10'>
+<ul class='bxslider width-percent-100' data-bx-slider-pager='false' data-bx-slider-controls='false' data-bx-slider-auto='true' data-bx-slider-mode='vertical'>
+<li id="quotes3"></li>
+<li id="quotes4" class="bx-clone"></li>
+<li id="quotes0"></li>
+</ul>
+</div> -->
+    </div>
+    <!-- /End Layout-->
+
+    <!-- BEGIN GLOBAL AND THEME VENDORS -->
+    <script src="/js/global-vendors.js"></script>
+    <!-- END GLOBAL AND THEME VENDORS -->
+
+    <!-- BEGIN PLUGINS AREA -->
+    <!-- <script src="http://maps.google.com/maps/api/js?sensor=true&amp;libraries=places"></script> -->
+    <!-- <script src="../../assets/globals/plugins/gmaps/gmaps.js"></script> -->
+    <script src="/plugins/bxslider/jquery.bxslider.min.js"></script>
+    <script src="/plugins/d3/d3.min.js"></script>
+    <script src="/plugins/rickshaw/rickshaw.min.js"></script>
+    <script src="/plugins/jquery-knob/excanvas.js"></script>
+    <script src="/plugins/jquery-knob/dist/jquery.knob.min.js"></script>
+    <!-- <script src="../../assets/globals/plugins/gauge/gauge.min.js"></script> -->
+    <!-- END PLUGINS AREA -->
+
+    <!-- PLEASURE -->
+    <script src="/js/pleasure.js"></script>
+    <!-- ADMIN 1 -->
+    <script src="/js/layout.js"></script>
+
+    <script src="/scripts/sliders.js"></script>
+    <!-- <script src="../../assets/globals/scripts/maps-google.js"></script> -->
+    <script src="/scripts/widget-audio.js"></script>
+    <script src="/scripts/charts-knob.js"></script>
+    <script src="/scripts/index.js"></script>
+    <!-- BEGIN INITIALIZATION-->
+    <script>
+    $(document).ready(function () {
+      Pleasure.init();
+      Layout.init();
+
+      Index.init();
+      WidgetAudio.single();
+      ChartsKnob.init();
+
+    });
+    </script>
+
+    <script>
+  (function(w, d){
+   var id='embedly-platform', n = 'script';
+   if (!d.getElementById(id)){
+     w.embedly = w.embedly || function() {(w.embedly.q = w.embedly.q || []).push(arguments);};
+     var e = d.createElement(n); e.id = id; e.async=1;
+     e.src = ('https:' === document.location.protocol ? 'https' : 'http') + '://cdn.embedly.com/widgets/platform.js';
+     var s = d.getElementsByTagName(n)[0];
+     s.parentNode.insertBefore(e, s);
+   }
+  })(window, document);
+  embedly("defaults", {
+  cards: {
+    controls: 0
+  }
+});
+</script>
+
+
+</script>
+    <!-- END INITIALIZATION-->
+
+    <!-- BEGIN Google Analytics -->
+    <!-- <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', Pleasure.settings.ga.urchin, Pleasure.settings.ga.url);
+      ga('send', 'pageview');
+    </script> -->
+    <!-- END Google Analytics -->
+
+    </body>
+    </html>

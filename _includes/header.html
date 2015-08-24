@@ -1,0 +1,21 @@
+<div class="content">
+<div class="page-header full-content">
+  <div class="row">
+    <div class="col-sm-6">
+      {% if page.title == 'Home' %}
+      <h1>Ptalk</h1>
+      {% else %}
+      {% for page in site.pages %}
+        {% if page.title %}
+      <h1>{{ page.title }}</h1>
+      {% endif %}
+    {% endfor %}
+    {% endif %}
+    </div><!--.col-->
+    <div class="col-sm-6">
+      <ol class="breadcrumb">
+        <li><a href="#" class="active"><i class="material-icons">home</i></i> Homepage</a></li>
+      </ol>
+    </div><!--.col-->
+  </div><!--.row-->
+</div><!--.page-header-->

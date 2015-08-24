@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    <!-- Start Layout -->
+    {% include sidebar.html %}
+      {% include header.html %}
+        {{ content }}
+      {% include footer.html %}
+      <div class="col-lg-6">
+<a href="http://www.pushsquare.com/news/2015/08/first_impressions_eyes-on_with_ps4s_virtual_reality_headset_project_morpheus" class="embedly-card"></a>
+
+</div>
+
+
+
+
+<!-- <div class='col-md-4 margin-bottom-10'>
+<ul class='bxslider width-percent-100' data-bx-slider-pager='false' data-bx-slider-controls='false' data-bx-slider-auto='true' data-bx-slider-mode='vertical'>
+<li id="quotes3"></li>
+<li id="quotes4" class="bx-clone"></li>
+<li id="quotes0"></li>
+</ul>
+</div> -->
+    </div>
+    <!-- /End Layout-->
+
+    <!-- BEGIN GLOBAL AND THEME VENDORS -->
+    <script src="{{ "/js/global-vendors.js" | prepend: site.baseurl }}"></script>
+    <!-- END GLOBAL AND THEME VENDORS -->
+
+    <!-- BEGIN PLUGINS AREA -->
+    <!-- <script src="http://maps.google.com/maps/api/js?sensor=true&amp;libraries=places"></script> -->
+    <!-- <script src="../../assets/globals/plugins/gmaps/gmaps.js"></script> -->
+    <script src="{{ "/plugins/bxslider/jquery.bxslider.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/plugins/d3/d3.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/plugins/rickshaw/rickshaw.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/plugins/jquery-knob/excanvas.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/plugins/jquery-knob/dist/jquery.knob.min.js" | prepend: site.baseurl }}"></script>
+    <!-- <script src="../../assets/globals/plugins/gauge/gauge.min.js"></script> -->
+    <!-- END PLUGINS AREA -->
+
+    <!-- PLEASURE -->
+    <script src="{{ "/js/pleasure.js" | prepend: site.baseurl }}"></script>
+    <!-- ADMIN 1 -->
+    <script src="{{ "/js/layout.js" | prepend: site.baseurl }}"></script>
+
+    <script src="{{ "/scripts/sliders.js" | prepend: site.baseurl }}"></script>
+    <!-- <script src="../../assets/globals/scripts/maps-google.js"></script> -->
+    <script src="{{ "/scripts/widget-audio.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/scripts/charts-knob.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/scripts/index.js" | prepend: site.baseurl }}"></script>
+    <!-- BEGIN INITIALIZATION-->
+    <script>
+    $(document).ready(function () {
+      Pleasure.init();
+      Layout.init();
+
+      Index.init();
+      WidgetAudio.single();
+      ChartsKnob.init();
+
+    });
+    </script>
+
+    <script>
+  (function(w, d){
+   var id='embedly-platform', n = 'script';
+   if (!d.getElementById(id)){
+     w.embedly = w.embedly || function() {(w.embedly.q = w.embedly.q || []).push(arguments);};
+     var e = d.createElement(n); e.id = id; e.async=1;
+     e.src = ('https:' === document.location.protocol ? 'https' : 'http') + '://cdn.embedly.com/widgets/platform.js';
+     var s = d.getElementsByTagName(n)[0];
+     s.parentNode.insertBefore(e, s);
+   }
+  })(window, document);
+  embedly("defaults", {
+  cards: {
+    controls: 0
+  }
+});
+</script>
+
+
+</script>
+    <!-- END INITIALIZATION-->
+
+    <!-- BEGIN Google Analytics -->
+    <!-- <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', Pleasure.settings.ga.urchin, Pleasure.settings.ga.url);
+      ga('send', 'pageview');
+    </script> -->
+    <!-- END Google Analytics -->
+
+    </body>
+    </html>
