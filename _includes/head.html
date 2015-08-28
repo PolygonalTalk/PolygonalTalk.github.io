@@ -231,7 +231,7 @@
 
         var slug = topic.slug;
         var id = topic.id;
-        var gameurl = "http://talk.polygonalweave.com/t/" + slug + "/" + id;
+        var gameurl = "http://talk.polygonalweave.com/t/" + slug + "/" + id + ".json";
 
 
         var topicTitle = topic.title;
@@ -258,7 +258,7 @@
             var topic = data.topic_list.topics[i];
             var slug = topic.slug;
             var id = topic.id;
-            var gameurl = "http://talk.polygonalweave.com/t/" + slug + "/" + id;
+            var gameurl = "http://talk.polygonalweave.com/t/" + slug + "/" + id + ".json";
 
             var topicTitle = topic.title;
             var thumbnail = topic.image_url;
@@ -296,7 +296,7 @@
     function populateLatestGames() {
       var latestarray = [];
       asyncLoop(4, function(loop) {
-        generateLatestGames(loop.iteration(), function(gameurl, topicTitle, thumbnail, user, relative, id) {
+        generateLatestGames(loop.iteration()+1, function(gameurl, topicTitle, thumbnail, user, relative, id) {
           var tiles = newtile = "";
           latestarray.push(id);
 
