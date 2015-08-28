@@ -296,7 +296,7 @@
     function populateLatestGames() {
       var latestarray = [];
       asyncLoop(4, function(loop) {
-        generateLatestGames(loop.iteration()+1, function(gameurl, topicTitle, thumbnail, user, relative, id) {
+        generateLatestGames((loop.iteration() + 1), function(gameurl, topicTitle, thumbnail, user, relative, id) {
           var tiles = newtile = "";
           latestarray.push(id);
 
