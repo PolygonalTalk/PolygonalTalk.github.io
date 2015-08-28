@@ -115,6 +115,7 @@
 
 
         var tiles = "";
+        var n = 0;
         if (data.posts_count > 8)
           var arraylength = 8;
         else
@@ -149,7 +150,8 @@
 
           tiles += "<a href='" + postLink + "' class='author'>" + quser + "</a>"; //tile-hover
           tiles += "</div>"; //tile
-          $("#quotes" + i).html(tiles);
+          $("#quotes" + n).html(tiles);
+          n++;
         }
       });
     }
