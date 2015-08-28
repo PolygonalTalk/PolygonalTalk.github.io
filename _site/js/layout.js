@@ -492,7 +492,7 @@ var Layout = {
 						$parallaxBg = $('.parallax-bg');
 
 				$parallaxBg.css('top', (documentScrollTop*0.5));
-				$parallaxBg.css('opacity', (.7 - documentScrollTop/headerHeight*1));
+				$parallaxBg.css('opacity', (1 - documentScrollTop/headerHeight*1));
 
 			});
 		}
@@ -532,3 +532,4 @@ var Layout = {
 	}
 
 };
+

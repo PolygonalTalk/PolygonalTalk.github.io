@@ -322,6 +322,8 @@
       asyncLoop(5, function(loop) {
         generateLatestGames(loop.iteration(), function(gameurl, topicTitle, thumbnail, user, relative, newgame) {
           var tiles = "";
+          var urlstring = "' + gameurl + '"
+          console.log(urlstring);
           // generateGameID("{{ '/RocketLeague.json' | prepend: site.baseurl }}", function(url) {
           generateGameID("' + gameurl + '", function(url) {
             // tiles += "<a href='" + url + "' alt=''>";
