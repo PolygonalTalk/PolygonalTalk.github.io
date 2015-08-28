@@ -8597,6 +8597,33 @@ select[data-style="btn-blue-grey"] + .bootstrap-select li.selected a {
   border-radius: 16px;
   box-shadow: 0 1px 3px #000;
 }
+
+.card.card-news-more .card-heading .author {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+.card.card-news-more .card-heading .author img {
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px #000;
+}
+
+.hi-bg-image .author {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+.hi-bg-image .author img {
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px #000;
+}
+
 .card.card-news .card-heading .card-title {
   position: absolute;
   left: 20px;
@@ -9123,7 +9150,7 @@ select[data-style="btn-blue-grey"] + .bootstrap-select li.selected a {
   right: 0;
   color: #fff;
   padding: 12px 16px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .card .context.transparent {
   background-color: rgba(0, 0, 0, 0);
@@ -9174,7 +9201,7 @@ select[data-style="btn-blue-grey"] + .bootstrap-select li.selected a {
   overflow: hidden;
 }
 .card.card-image {
-  height: 250px;
+  height: 204px;
 }
 .card.card-image .card-heading {
   position: absolute;
@@ -9423,6 +9450,14 @@ select[data-style="btn-blue-grey"] + .bootstrap-select li.selected a {
   display: block;
   text-align: right;
 }
+
+.card.card-news-more .author {
+  font-size: 14px;
+  font-style: italic;
+  display: block;
+  text-align: left;
+}
+
 .card.card-iconic {
   overflow: hidden;
 }
@@ -14110,11 +14145,12 @@ pre .hljs {
 }
 .page-header .profile-info,
 .header .profile-info {
-  position: absolute;
-  left: 40px;
-  bottom: 100px;
-  clear: both;
+    position: absolute;
+    bottom: 60px;
+    clear: both;
+    padding-left: 40px;
 }
+
 .page-header .profile-info .profile-photo,
 .header .profile-info .profile-photo {
   float: left;
@@ -14126,6 +14162,15 @@ pre .hljs {
   height: auto;
   border-radius: 50%;
 }
+
+#parallaxgame .profile-photo img,
+#parallaxgame .profile-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 0%;
+  padding: 10px;
+}
+
 .page-header .profile-info .profile-text,
 .header .profile-info .profile-text {
   margin: 10px 0 0 120px;

@@ -3,18 +3,18 @@
   <div class="row">
     <div class="col-sm-6">
       {% if page.title == 'Home' %}
-      <h1>Ptalk</h1>
+      <img src="http://talk.polygonalweave.com/uploads/default/24/034dcff74c2f7d44.png" height="42" width="42"> <h1><b>Polygonal</b> Talk</h1>
       {% else %}
-      {% for page in site.pages %}
+
         {% if page.title %}
       <h1>{{ page.title }}</h1>
       {% endif %}
-    {% endfor %}
+
     {% endif %}
     </div><!--.col-->
     <div class="col-sm-6">
       <ol class="breadcrumb">
-        <li><a href="#" class="active"><i class="material-icons">home</i></i> Homepage</a></li>
+        <li><a href="#" class="active"><i class="ion-android-apps"></i> DASHBOARD</a></li>
       </ol>
     </div><!--.col-->
   </div><!--.row-->

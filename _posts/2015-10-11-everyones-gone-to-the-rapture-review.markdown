@@ -1,9 +1,11 @@
 ---
 layout: review
-title:  "Everybody's Gone to the Rapture : Review"
+title:  "Everybody's Gone to the Rapture"
 date:   2015-10-11 04:34:20
 categories: Review
 image: http://images.eurogamer.net/2013/articles/1/7/7/4/0/1/3/everybodys-gone-to-the-rapture-review-143928049295.jpg
+author: DarthSmurfX
+avatar: http://talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/darthsmurfx/120/73_1.png
 ---
 I've never played a "walking simulator" before this, but I'm glad I did. This is the Bizarro-Destiny of games, where it is ALL story and no gameplay. And it works. REALLY well.
 

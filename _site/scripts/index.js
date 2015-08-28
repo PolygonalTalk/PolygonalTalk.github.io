@@ -6,124 +6,124 @@ var Index = {
 		}, 3000);
 	},
 
-	createMap: function () {
-		var map;
-		var markers = [];
-
-		var mapOptions = {
-			center: new google.maps.LatLng(41.386469,2.175235),
-			zoom: 12,
-			zoomControl: false,
-			mapTypeControl: false,
-			scaleControl: false,
-			scrollwheel: false,
-			panControl: false,
-			streetViewControl: false,
-			draggable : true,
-			overviewMapControl: false,
-			overviewMapControlOptions: {
-				opened: false,
-			},
-			mapTypeId: google.maps.MapTypeId.ROADMAP,
-			styles: [
-				{"featureType": "all",
-					"stylers":[
-						{"saturation": 0},
-						{"hue": "#e7ecf0"}
-					]
-				},
-				{"featureType": "road",
-					"stylers":[
-						{"saturation": -70}
-					]
-				},
-				{"featureType": "transit",
-					"stylers":[
-						{"visibility": "off"}
-					]
-				},
-				{"featureType": "poi",
-					"stylers":[
-						{"visibility": "off"}
-					]
-				},
-				{"featureType": "water",
-					"stylers":[
-						{"visibility": "simplified"},
-						{"saturation": -60}
-					]
-				}
-			]
-		}
-
-		var mapElement = document.getElementById('gmaps-dashboard');
-		var map = new google.maps.Map(mapElement, mapOptions);
-		var locations = [['Team Fox', 'undefined', 'undefined', 'undefined', 'undefined', 41.3850639, 2.1734034999999494, Pleasure.settings.paths.images+'/map-marker-ellipse-blue.png']];
-
-		var input = (document.getElementById('pac-input'));
-		map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
-		var searchBox = new google.maps.places.SearchBox((input));
-
-		google.maps.event.addListener(searchBox, 'places_changed', function() {
-			var places = searchBox.getPlaces();
-
-			if (places.length == 0) {
-				return;
-			}
-			for (var i = 0, marker; marker = markers[i]; i++) {
-				marker.setMap(null);
-			}
-
-			// For each place, get the icon, place name, and location.
-			markers = [];
-			var bounds = new google.maps.LatLngBounds();
-			for (var i = 0, place; place = places[i]; i++) {
-				var image = {
-					url: place.icon,
-					size: new google.maps.Size(71, 71),
-					origin: new google.maps.Point(0, 0),
-					anchor: new google.maps.Point(17, 34),
-					scaledSize: new google.maps.Size(25, 25)
-				};
-
-				// Create a marker for each place.
-				var marker = new google.maps.Marker({
-					map: map,
-					icon: Pleasure.settings.paths.images+'/map-marker-ellipse-blue.png',
-					title: place.name,
-					position: place.geometry.location
-				});
-
-				markers.push(marker);
-				bounds.extend(place.geometry.location);
-			}
-			map.fitBounds(bounds);
-		});
-
-		google.maps.event.addListener(map, 'bounds_changed', function() {
-			var bounds = map.getBounds();
-			searchBox.setBounds(bounds);
-		});
-
-		for (i = 0; i < locations.length; i++) {
-			if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1]; }
-			if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2]; }
-			if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3]; }
-				if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4]; }
-				if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7]; }
-					marker = new google.maps.Marker({
-						icon: markericon,
-						position: new google.maps.LatLng(locations[i][5], locations[i][6]),
-						map: map,
-						title: locations[i][0],
-						desc: description,
-						tel: telephone,
-						email: email,
-						web: web
-					});
-				link = '';
-		}
-	},
+	// createMap: function () {
+	// 	var map;
+	// 	var markers = [];
+	//
+	// 	var mapOptions = {
+	// 		center: new google.maps.LatLng(41.386469,2.175235),
+	// 		zoom: 12,
+	// 		zoomControl: false,
+	// 		mapTypeControl: false,
+	// 		scaleControl: false,
+	// 		scrollwheel: false,
+	// 		panControl: false,
+	// 		streetViewControl: false,
+	// 		draggable : true,
+	// 		overviewMapControl: false,
+	// 		overviewMapControlOptions: {
+	// 			opened: false,
+	// 		},
+	// 		mapTypeId: google.maps.MapTypeId.ROADMAP,
+	// 		styles: [
+	// 			{"featureType": "all",
+	// 				"stylers":[
+	// 					{"saturation": 0},
+	// 					{"hue": "#e7ecf0"}
+	// 				]
+	// 			},
+	// 			{"featureType": "road",
+	// 				"stylers":[
+	// 					{"saturation": -70}
+	// 				]
+	// 			},
+	// 			{"featureType": "transit",
+	// 				"stylers":[
+	// 					{"visibility": "off"}
+	// 				]
+	// 			},
+	// 			{"featureType": "poi",
+	// 				"stylers":[
+	// 					{"visibility": "off"}
+	// 				]
+	// 			},
+	// 			{"featureType": "water",
+	// 				"stylers":[
+	// 					{"visibility": "simplified"},
+	// 					{"saturation": -60}
+	// 				]
+	// 			}
+	// 		]
+	// 	}
+	//
+	// 	var mapElement = document.getElementById('gmaps-dashboard');
+	// 	var map = new google.maps.Map(mapElement, mapOptions);
+	// 	var locations = [['Team Fox', 'undefined', 'undefined', 'undefined', 'undefined', 41.3850639, 2.1734034999999494, Pleasure.settings.paths.images+'/map-marker-ellipse-blue.png']];
+	//
+	// 	var input = (document.getElementById('pac-input'));
+	// 	map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
+	// 	var searchBox = new google.maps.places.SearchBox((input));
+	//
+	// 	google.maps.event.addListener(searchBox, 'places_changed', function() {
+	// 		var places = searchBox.getPlaces();
+	//
+	// 		if (places.length == 0) {
+	// 			return;
+	// 		}
+	// 		for (var i = 0, marker; marker = markers[i]; i++) {
+	// 			marker.setMap(null);
+	// 		}
+	//
+	// 		// For each place, get the icon, place name, and location.
+	// 		markers = [];
+	// 		var bounds = new google.maps.LatLngBounds();
+	// 		for (var i = 0, place; place = places[i]; i++) {
+	// 			var image = {
+	// 				url: place.icon,
+	// 				size: new google.maps.Size(71, 71),
+	// 				origin: new google.maps.Point(0, 0),
+	// 				anchor: new google.maps.Point(17, 34),
+	// 				scaledSize: new google.maps.Size(25, 25)
+	// 			};
+	//
+	// 			// Create a marker for each place.
+	// 			var marker = new google.maps.Marker({
+	// 				map: map,
+	// 				icon: Pleasure.settings.paths.images+'/map-marker-ellipse-blue.png',
+	// 				title: place.name,
+	// 				position: place.geometry.location
+	// 			});
+	//
+	// 			markers.push(marker);
+	// 			bounds.extend(place.geometry.location);
+	// 		}
+	// 		map.fitBounds(bounds);
+	// 	});
+	//
+	// 	google.maps.event.addListener(map, 'bounds_changed', function() {
+	// 		var bounds = map.getBounds();
+	// 		searchBox.setBounds(bounds);
+	// 	});
+	//
+	// 	for (i = 0; i < locations.length; i++) {
+	// 		if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1]; }
+	// 		if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2]; }
+	// 		if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3]; }
+	// 			if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4]; }
+	// 			if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7]; }
+	// 				marker = new google.maps.Marker({
+	// 					icon: markericon,
+	// 					position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+	// 					map: map,
+	// 					title: locations[i][0],
+	// 					desc: description,
+	// 					tel: telephone,
+	// 					email: email,
+	// 					web: web
+	// 				});
+	// 			link = '';
+	// 	}
+	// },
 
 	createSalesChart: function () {
 		var chartSalesData = [ [], [] ];
@@ -303,6 +303,15 @@ var Index = {
 	},
 
 	createSalesByYearChart : function () {
+	// 	$.getJSON("{{ '/PostsThisMonth.json' | prepend: site.baseurl }}", function(data) {
+	// 		var chartjsData = [];
+	// 		var labelsData = [];
+	// for (var i = 0; i < 28; i++) {
+	// 		chartjsData.push(data.report.data[i].y);
+	// 		labelsData.push(data.report.data[i].x);
+	// }
+	// });
+
 		var chartSalesByYear = new Rickshaw.Graph( {
 			element: document.querySelector('.chart-sales-by-year'),
 			renderer: 'lineplot',
@@ -312,18 +321,22 @@ var Index = {
 				color: Pleasure.colors.blue,
 
 				data: [
-					{ x: 1388527200, y: 4859 },
-					{ x: 1391205600, y: 6132 },
-					{ x: 1393624800, y: 8650 },
-					{ x: 1396303200, y: 14043 },
-					{ x: 1398895200, y: 8938 },
-					{ x: 1401573600, y: 7354 },
-					{ x: 1404165600, y: 2189 },
-					{ x: 1406844000, y: 1325 },
-					{ x: 1409522400, y: 6321 },
-					{ x: 1412114400, y: 9913 },
-					{ x: 1414792800, y: 15699 },
-					{ x: 1417384800, y: 13332 } ]
+					// { x: chartjsData[0], y: labelsData[0] },
+					// { x: chartjsData[1], y: labelsData[1] },
+					// { x: chartjsData[2], y: labelsData[2] },
+					// { x: chartjsData[3], y: labelsData[3] },
+					// { x: chartjsData[4], y: labelsData[4] },
+					// { x: chartjsData[5], y: labelsData[5] } ]
+					{ x: 1388527200, y: 11040 },
+					{ x: 1391205600, y: 9239 },
+					{ x: 1393624800, y: 10631 },
+					{ x: 1396303200, y: 11543 },
+					{ x: 1398895200, y: 12338 },
+					{ x: 1401573600, y: 13354 },
+					{ x: 1404165600, y: 16189 },
+					{ x: 1406844000, y: 12325 },
+					{ x: 1409522400, y: 11621 },
+					{ x: 1412114400, y: 11913 } ]
 			}]
 		});
 
@@ -396,7 +409,7 @@ var Index = {
 
 	init: function () {
 		//this.createNotification();
-		this.createMap();
+		// this.createMap();
 		this.createSalesChart();
 		this.createBalanceChart();
 		this.createFollowersChart();
@@ -407,7 +420,3 @@ var Index = {
 		this.fakePageResponsive();
 	}
 }
-
-
-
-

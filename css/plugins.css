@@ -2,6 +2,51 @@
     height: 200px !important; //provide height of slider
 }
 
+.game-thumbnail{
+  height: 90px;
+  width: 100px;
+  float: left;
+}
+
+ul.list-material li.has-action-left{
+  height: 80px;
+  margin-bottom: 4px;
+}
+
+#gametitle h1 {
+  font-size: 46px;
+}
+
+#parallaxgame .profile-info {
+  width: 100%;
+  background-color: rgba(0,0,0,.5);
+}
+
+.parallax-bg{
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: .7;
+}
+
+.parallax-content{
+  position: absolute;
+    top: 500px;
+}
+
+.card-footer .author{
+  width: 32px;
+height: 32px;
+border-radius: 16px;
+}
+
+.page-header.full-content{
+  margin-bottom: 0px;
+}
+
 /* Chosen Select Plugin */
 /* icheck */
 .icheck .radio label,

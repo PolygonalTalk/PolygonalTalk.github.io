@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+  <title>Rogue One</title>
+  <meta name="description" content="Some of you may be aware that this exists but if not then your in for a treat. As excited as I am for EP7 I may be more excited for this. This is the first i...">
+
+  <link rel="canonical" href="http://yourdomain.com/preview/2015/10/09/rogue-one-preview.html">
+  <link rel="alternate" type="application/rss+xml" title="Polygonal Talk" href="http://yourdomain.com /feed.xml " />
+
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-touch-fullscreen" content="yes">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+  <!-- BEGIN CORE CSS -->
+  <!-- <link rel="stylesheet" href="/css/main.css"> -->
+  <link rel="stylesheet" href=" /css/admin1.css ">
+  <link rel="stylesheet" href=" /css/elements.css ">
+  <!-- END CORE CSS -->
+
+  <!-- BEGIN PLUGINS CSS -->
+  <!-- <link rel="stylesheet" href="/plugins/rickshaw/rickshaw.min.css"> -->
+  <link rel="stylesheet" href=" /plugins/bxslider/jquery.bxslider.css ">
+
+  <link rel="stylesheet" href=" /css/plugins.css ">
+  <!-- END PLUGINS CSS -->
+
+  <!-- BEGIN SHORTCUT AND TOUCH ICONS -->
+  <!-- <link rel="shortcut icon" href="../../assets/globals/img/icons/favicon.ico">
+  <link rel="apple-touch-icon" href="../../assets/globals/img/icons/apple-touch-icon.png"> -->
+  <!-- END SHORTCUT AND TOUCH ICONS -->
+
+  <!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script> -->
+
+  <script src=" /plugins/modernizr/modernizr.min.js "></script>
+
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      $.xhrPool = [];
+      $.xhrPool.abortAll = function() {
+        $(this).each(function(i, jqXHR) { //  cycle through list of recorded connection
+          jqXHR.abort(); //  aborts connection
+          $.xhrPool.splice(i, 1); //  removes from list by index
+        });
+      }
+      $.ajaxSetup({
+        beforeSend: function(jqXHR) {
+          $.xhrPool.push(jqXHR);
+        }, //  annd connection to list
+        complete: function(jqXHR) {
+          var i = $.xhrPool.indexOf(jqXHR); //  get index for current connection completed
+          if (i > -1) $.xhrPool.splice(i, 1); //  removes from list by index
+        }
+      });
+    })
+  </script>
+
+  <script type="text/javascript">
+    function GetURLParameter(sParam) {
+      var sPageURL = window.location.search.substring(1);
+      var sURLVariables = sPageURL.split('&');
+      for (var i = 0; i < sURLVariables.length; i++) {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) {
+          return sParameterName[1];
+        }
+      }
+    }
+
+    function asyncLoop(iterations, func, callback) {
+      var index = 0;
+      var done = false;
+      var loop = {
+        next: function() {
+          if (done) {
+            return;
+          }
+
+          if (index < iterations) {
+            index++;
+            func(loop);
+
+          } else {
+            done = true;
+            callback();
+          }
+        },
+
+        iteration: function() {
+          return index - 1;
+        },
+
+        break: function() {
+          done = true;
+          callback();
+        }
+      };
+      loop.next();
+      return loop;
+    }
+
+
+    function generateQuotes() {
+
+      $.getJSON("/GameQuotes.json", function(data) {
+
+
+        var tiles = "";
+        if (data.posts_count > 8)
+          var arraylength = 8;
+        else
+          var arraylength = data.posts_count;
+        for (var i = arraylength - 1; i >= 0; i--) {
+          tiles = "";
+          var post = data.post_stream.posts[i];
+
+          var quote = $(post.cooked).find("blockquote").text();
+          var quser = $(post.cooked).find(".title").text();
+          quser = quser.slice(0, -1);
+          var avatarURL = $(post.cooked).find(".title").find("img").attr("src");
+          var imageURL = $(post.cooked).find("img").attr("src");
+          var postLink = post.link_counts[0].url;
+          var postTitle = post.link_counts[0].title;
+
+          if (!post.link_counts[0].internal) {
+            postLink = post.link_counts[1].url;
+            postTitle = post.link_counts[1].title;
+          }
+
+          // tiles += "<li>";
+          if (post.image_url !== null) {
+            tiles += "<div class='card tile card-quote card-black bg-image bg-opaque5' style='background: url(" + imageURL + ") center/cover'>";
+          } else {
+            tiles += "<div class='card card-quote card-black bg-image bg-opaque5' style='background-image: url(//polygonalweave.com/Images/Generic/POLY08s.jpg)'>";
+          }
+          // tiles += "<a class='tile-hover' href=" + postLink + ">";
+          // 		tiles += "<h2 class='tile-title'>" + postTitle + "</h2>";
+          tiles += "<div class='card-body text-color-white'><div class='quote'><i class='fa fa-quote-left'></i> " + quote + "<i class='fa fa-quote-right'></i></div>";
+          // tiles += "<div class='tile-info'>" + postTitle + "<br><div class='comment-btn'><img alt='' width='40' height='40' src='" + avatarURL + "' class='avatar'></div></div>"; //tile
+
+          tiles += "<a href='" + postLink + "' class='author'>" + quser + "</a>"; //tile-hover
+          tiles += "</div>"; //tile
+          $("#quotes" + i).html(tiles);
+        }
+      });
+    }
+
+    function generateLinks() {
+
+      $.getJSON("/GameLinks.json", function(data) {
+
+        var tiles = "";
+        if (data.posts_count > 8)
+          var arraylength = 8;
+        else
+          var arraylength = data.posts_count;
+        for (var i = arraylength - 1; i >= 0; i--) {
+          tiles = "";
+          var post = data.post_stream.posts[i];
+
+          var url = $(post.cooked).find("blockquote").find("a").attr("href");
+
+          tiles += "<a href='" + url + "' class='embedly-card' data-card-controls='0' data-card-chrome='0' height='300'></a>";
+
+          $("#links" + i).html(tiles);
+        }
+      });
+    }
+
+    function generateTrailers() {
+
+      $.getJSON("/GameTrailers.json", function(data) {
+
+        var tiles = "";
+        if (data.posts_count > 8)
+          var arraylength = 8;
+        else
+          var arraylength = data.posts_count;
+        for (var i = arraylength - 1; i >= 0; i--) {
+          tiles = "";
+          var post = data.post_stream.posts[i];
+          var postTitle = post.link_counts[0].title;
+          // console.log(data);
+          var youtubeID = $(post.cooked).find(".lazyYT").attr("data-youtube-id");
+          var url = "http://www.youtube.com/watch?v=" + youtubeID;
+
+          tiles += "<div class='card-heading'>";
+          tiles += "<a href='" + url + "' class='embedly-card' data-card-controls='0' data-card-chrome='0'></a>";
+          // tiles += "<div class='embedly-card' data-card-controls='0' data-card-embed='" + url + "'></div>";
+          tiles += "</div><div class='card-body'><h4>" + postTitle + "</h4></div>";
+
+
+          $("#trailer" + i).html(tiles);
+        }
+      });
+    }
+
+    function generateGameID(gameurl, callback) {
+      $.getJSON(gameurl, function(data) {
+        var post = data.post_stream.posts[0];
+        console.log(data);
+        var sourceURL = $(post.cooked).find(".track-link").attr("href");
+        var gameID = sourceURL.slice(-6).slice(0, -1);
+        var url = "game.html?gameid=" + gameID;
+        callback(url);
+      });
+    }
+
+    function generateLatestGames(n, callback) {
+      $.getJSON("/LatestGames.json", function(data) {
+        var tiles = "";
+        var newgame = false;
+        // if (data.posts_count >8)
+        var arraylength = n;
+        // else
+        // var arraylength = data.posts_count;
+        // for (var i = 0; i < n; i++) {
+        tiles = "";
+        var topic = data.topic_list.topics[n];
+
+        var slug = topic.slug;
+        var id = topic.id;
+        var gameurl = "http://talk.polygonalweave.com/t/" + slug + "/" + id;
+
+
+        var topicTitle = topic.title;
+        var thumbnail = topic.image_url;
+        var user = topic.last_poster_username;
+        var d = new Date(topic.bumped_at);
+        // var s = date.fromNow() + (diff >= 1 && diff <= 7 ? date.format(" (ddd)") : "");
+        var relative = moment(d, "ddd MMMM DD YYYY hh:mm:ss").fromNow();
+
+        callback(gameurl, topicTitle, thumbnail, user, relative, id);
+      });
+    }
+
+    function generateNewGames(array) {
+      $.getJSON("/newgames.json", function(data) {
+        var winners = 0;
+        if (array.length == 4) {  //wait for array to populate
+          var dynamiclength = 4; //ability to keep looking if id matches
+          for (var i = 0; i < dynamiclength; i++) {
+            // console.log(array[i]);
+            var tiles = "";
+
+            var topic = data.topic_list.topics[i];
+            var slug = topic.slug;
+            var id = topic.id;
+            var gameurl = "http://talk.polygonalweave.com/t/" + slug + "/" + id;
+
+            var topicTitle = topic.title;
+            var thumbnail = topic.image_url;
+            var user = topic.last_poster_username;
+            var d = new Date(topic.bumped_at);
+            // var s = date.fromNow() + (diff >= 1 && diff <= 7 ? date.format(" (ddd)") : "");
+            var relative = moment(d, "ddd MMMM DD YYYY hh:mm:ss").fromNow();
+
+            for (var n = 0; n < 4; n++) { //cycle through latest games
+              // console.log(id, array[n]);
+              if (id != array[n]){
+                if (n == 3){
+                  // console.log("winners:", id);
+                  tiles +='<div class="card tile card-image card-black bg-image" style="background: url(' + thumbnail + ') center/cover">'
+                  tiles +='<div class="context ">'
+                  tiles +='<div class="tile-content">'
+                  tiles +='<span class="text-title">'+ topicTitle +'</span>'
+                  tiles +='<span class="text-subtitle">latest post - ' + user + '</span></div></div></div>'
+
+                  $("#newgames" + winners).html(tiles);
+                  winners++;
+                }
+              } else{
+                // console.log("match!");
+                dynamiclength++;
+                break;
+              }
+            }
+          }
+        }
+      });
+    }
+
+
+    function populateLatestGames() {
+      var latestarray = [];
+      asyncLoop(4, function(loop) {
+        generateLatestGames(loop.iteration(), function(gameurl, topicTitle, thumbnail, user, relative, id) {
+          var tiles = newtile = "";
+          latestarray.push(id);
+
+          generateNewGames(latestarray);
+
+          tiles += "<a href='' alt=''>";
+          tiles += "<div class='game-thumbnail' style='background: url(" + thumbnail + ") center/cover'>";
+          tiles += "</div></a>";
+          // tiles += "<div class='embedly-card' data-card-controls='0' data-card-embed='" + url + "'></div>";
+          tiles += "<div class='friend-content'><p class='title'>" + topicTitle + "</p><p><a href='user-profile.html'>updated by " + user + "</a></p>";
+          tiles += "<a class='btn btn-flat btn-primary btn-xs'>" + relative + "</a>";
+          tiles += "</div>";
+
+          // console.log(tiles);
+          $("#latestgames" + loop.iteration()).html(tiles);
+          loop.next();
+        });
+
+      });
+
+      asyncLoop(5, function(loop) {
+        generateLatestGames(loop.iteration(), function(gameurl, topicTitle, thumbnail, user, relative, newgame) {
+          var tiles = "";
+          generateGameID("/RocketLeague.json", function(url) {
+            // tiles += "<a href='" + url + "' alt=''>";
+            // console.log(loop.iteration());
+            $("#latestgames" + loop.iteration()).find("a").attr("href", url);
+            loop.next();
+          });
+        });
+      });
+    }
+
+    function generateLatestSearch() {
+
+      $.getJSON("/LatestGames.json", function(data) {
+
+        var result = "";
+        // if (data.posts_count >8)
+        var arraylength = 8;
+        // else
+        // var arraylength = data.posts_count;
+        for (var i = 1; i < arraylength; i++) {
+          result = "";
+          var topic = data.topic_list.topics[i];
+          var topicTitle = topic.title;
+          // console.log(topicTitle);
+          var thumbnail = topic.image_url;
+          var user = topic.last_poster_username;
+          var d = new Date(topic.bumped_at);
+          var relative = moment(d, "ddd MMMM DD YYYY hh:mm:ss").fromNow();
+          var url = "#";
+
+          result += '<div class="list-action-left">';
+          result += "<div class='game-thumbnail' style='background: url(" + thumbnail + ") center/cover'></div></div>";
+          result += '<div class="list-content">';
+          result += '<span class="title">' + topicTitle + '</span>';
+          result += '<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>';
+          result += '</div>'
+
+
+          $("#latestgamessearch" + i).html(result);
+        }
+      });
+    }
+
+
+    function gbgame(data) {
+      console.log(data);
+      // var result, gametitle, imageLarge, imageSmall, deck = "";
+      var tabs = characters = similar = "";
+      var post = data.results;
+
+
+      // console.log(post.characters);
+
+      if (post.deck) {
+        tabs += '<li class="active"><a href="#about_overview" data-toggle="tab">Overview</a></li>';
+      }
+      if (post.characters) {
+        tabs += '<li><a href="#about_characters" data-toggle="tab">Characters</a></li>';
+        for (var i = 0; i < post.characters.length; i++) {
+          characters += '<li>' + post.characters[i].name + '<li>';
+        }
+      }
+      if (post.similar_games) {
+        tabs += '<li><a href="#about_similar" data-toggle="tab">Similar Games</a></li>';
+        for (var i = 0; i < post.similar_games.length; i++) {
+          similar += '<li>' + post.similar_games[i].name + '<li>';
+        }
+      }
+
+      var imageLargeURL = post.image.super_url;
+      var imageSmallURL = post.image.small_url;
+      var title = post.name;
+
+      var gametitle = '<h1>' + post.name + '</h1>';
+      var imageLarge = "<div class='parallax-bg bg-opaque5' style='-webkit-filter: blur(2px); filter: blur(2px); background: rgba(0, 0, 0, 0.5) url(" + imageLargeURL +
+        ") 50% 50%; background-size: cover; width: 100%; opacity: .7; height: 100%; position: absolute; left: 0; top: 0;'>";
+      var imageSmall = '<img src="' + imageSmallURL + '" alt="">'
+      var deck = '<h3>' + post.deck + '</h3>';
+      var desc = '<p>' + post.description + '</p>';
+
+
+      $("#about_tabs").html(tabs);
+      $("#gametitle").html(gametitle);
+      $("#gamedeck").html(deck);
+      $("#gamedesc").html(desc);
+      $("#about_characters").html(characters);
+      $("#about_similar").html(similar);
+      $("#parallaxgame").prepend(imageLarge);
+      $(".profile-photo").prepend(imageSmall);
+    }
+
+    // function game(data) {
+    //   console.log(data);
+    //   var result = "",
+    //     titlediv = "",
+    //     imageLarge = "",
+    //     imageSmall = "";
+    //
+    //   var post = data.results;
+    //   var imageLargeURL = post.image.super_url;
+    //   var imageSmallURL = post.image.small_url;
+    //   var title = post.name;
+    //
+    //
+    //   titlediv += '<h1>' + title + '</h1>';
+    //   imageLarge += "<div class='parallax-bg bg-opaque5' style='-webkit-filter: blur(2px); filter: blur(2px); background: rgba(0, 0, 0, 0.5) url(" + imageLargeURL +
+    //     ") 50% 50%; background-size: cover; width: 100%; opacity: .7; height: 100%; position: absolute; left: 0; top: 0;'>";
+    //   imageSmall += '<img src="' + imageSmallURL + '" alt="">'
+    //   result += '<div class="list-content">';
+    //   result += '<span class="title">' + title + '</span>';
+    //   result += '<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>';
+    //   result += '</div>'
+    //
+    //   $("#gametitle").html(titlediv);
+    //   $("#parallaxgame").prepend(imageLarge);
+    //   $(".profile-photo").prepend(imageSmall);
+    // }
+
+    // function generatePostsMonthChart()
+    // {
+    //
+    // $.getJSON("/PostsThisMonth.json", function(data) {
+    //     console.log("Getting Posts...");
+    //
+    //     var chartjsData = [];
+    //     var labelsData = [];
+    // for (var i = 0; i < 28; i++) {
+    //     chartjsData.push(data.report.data[i].y);
+    //     labelsData.push(data.report.data[i].x);
+    // }
+    //
+    // var barChartData = {
+    //             labels :["test", "test", "test"],datasets : [
+    //                 {
+    //                     fillColor : "rgba(220,280,220,0.5)",
+    //                     strokeColor : "rgba(220,220,220,1)",
+    //                     data : chartjsData
+    //
+    //                 }
+    //             ]
+    //         };
+    //     var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData);
+    //
+    //   });
+    //   }
+
+    $(document).ready(function() {
+      var gameID = GetURLParameter('gameid');
+
+      if (gameID) {
+        $.ajax({
+          url: "http://www.giantbomb.com/api/game/3030-" + gameID + "/",
+          type: "get",
+          data: {
+            api_key: "1f2fbb08dde5a07ceb29f21e581301f3105598e8",
+            // field_list: "name,image,deck,description,developers,images,original_release_date,people,platforms,publishers,similar_games,site_detail_url,videos",
+            format: "jsonp",
+            json_callback: "gbgame"
+          },
+          dataType: "jsonp"
+        });
+      }
+
+      generateQuotes();
+      generateLinks();
+      generateTrailers();
+      populateLatestGames();
+      generateLatestSearch();
+      // generateGameData();
+      // generatePostsMonthChart();
+    });
+  </script>
+</head>
+
+
+  <body>
+<!-- BEGIN SEARCH LAYER -->
+<div class="search-layer">
+  <div class="search">
+    <form action="pages-search-results.html">
+      <div class="form-group">
+        <input type="text" id="input-search" class="form-control" placeholder="type something">
+        <button type="submit" class="btn btn-default disabled"><i class="ion-search"></i></button>
+      </div>
+    </form>
+  </div><!--.search-->
+
+  <div class="results">
+    <div class="row">
+<div id="LatestGamesSearch">
+      <div class="col-md-4">
+        <div class="result result-posts">
+          <h4>Latest Games <small>(5)</small></h4>
+
+          <ul class="list-material">
+            <li class="has-action-left">
+              <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
+              <a href="#" id="latestgamessearch1" class="visible">
+              </a>
+            </li>
+            <li class="has-action-left">
+              <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
+              <a href="#" id="latestgamessearch2" class="visible">
+              </a>
+            </li>
+            <li class="has-action-left">
+              <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
+              <a href="#" id="latestgamessearch3" class="visible">
+              </a>
+            </li>
+            <li class="has-action-left">
+              <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
+              <a href="#" id="latestgamessearch4" class="visible">
+              </a>
+            </li>
+            <li class="has-action-left">
+              <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
+              <a href="#" id="latestgamessearch5" class="visible">
+              </a>
+            </li>
+          </ul>
+
+        </div><!--.results-posts-->
+      </div><!--.col-->
+</div>
+
+
+  <div id="loading" class="hidden">
+    <div class="col-md-4">
+  <div class="loading-bar indeterminate margin-top-10"></div>
+  </div>
+</div>
+
+<div id="ResultsGames" class="hidden">
+      <div class="col-md-4">
+        <div class="result result-posts">
+          <h4>Games <small>(5)</small></h4>
+
+          <ul class="list-material">
+            <li class="has-action-left">
+              <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
+              <a href="#" id="gameresult0" class="visible">
+              </a>
+            </li>
+            <li class="has-action-left">
+              <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
+              <a href="#" id="gameresult1" class="visible">
+              </a>
+            </li>
+            <li class="has-action-left">
+              <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
+              <a href="#" id="gameresult2" class="visible">
+              </a>
+            </li>
+            <li class="has-action-left">
+              <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
+              <a href="#" id="gameresult3" class="visible">
+              </a>
+            </li>
+            <li class="has-action-left">
+              <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
+              <a href="#" id="gameresult4" class="visible">
+              </a>
+            </li>
+          </ul>
+
+        </div><!--.results-posts-->
+      </div><!--.col-->
+</div>
+      <div class="col-md-4">
+        <div class="result result-users">
+          <h4>USERS <small>(3)</small></h4>
+
+          <ul class="list-material">
+            <li class="has-action-left">
+              <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
+              <a href="#" class="visible">
+                <div class="list-action-left">
+                  <img src="../../assets/globals/img/faces/1.jpg" class="face-radius" alt="">
+                </div>
+                <div class="list-content">
+                  <span class="title">Pari Subramanium</span>
+                  <span class="caption">Legacy Response Assistant</span>
+                </div>
+              </a>
+            </li>
+            <li class="has-action-left">
+              <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
+              <a href="#" class="visible">
+                <div class="list-action-left">
+                  <img src="../../assets/globals/img/faces/10.jpg" class="face-radius" alt="">
+                </div>
+                <div class="list-content">
+                  <span class="title">Andrew Fox</span>
+                  <span class="caption">National Branding Technician</span>
+                </div>
+              </a>
+            </li>
+            <li class="has-action-left">
+              <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
+              <a href="#" class="visible">
+                <div class="list-action-left">
+                  <img src="../../assets/globals/img/faces/11.jpg" class="face-radius" alt="">
+                </div>
+                <div class="list-content">
+                  <span class="title">Lieke Vermeulen</span>
+                  <span class="caption">Global Tactics Consultant</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+        </div><!--.results-user-->
+      </div><!--.col-->
+
+      <div class="col-md-4">
+        <div class="result result-files">
+          <h4>FILES <small>(0)</small></h4>
+          <p>No results were found</p>
+        </div><!--.results-files-->
+      </div><!--.col-->
+
+    </div><!--.row-->
+  </div><!--.results-->
+</div><!--.search-layer-->
+<!-- END OF SEARCH LAYER -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#LatestGamesSearch").removeClass( "hidden" );
+  // generateLatestGames();
+
+  var delay = (function(){
+    var timer = 0;
+    return function(callback, ms){
+      clearTimeout (timer);
+      timer = setTimeout(callback, ms);
+    };
+  })();
+  /* our handler to the ajax request */
+  var xhr = null;
+
+  $("#input-search").keyup(function(){
+
+    /* if there is a previous ajax request, then we abort it and then set xhr to null */
+      $.xhrPool.abortAll();
+
+        $("#ResultsGames").addClass( "hidden" );
+        $("#LatestGamesSearch").addClass( "hidden" );
+        $("#loading").removeClass( "hidden" );
+
+        // Retrieve the input field text and reset the count to zero
+        var filter = $(this).val(), count = 0;
+
+        if (filter.length > 2){
+          delay(function(){
+        xhr = $.ajax({
+          url: "http://api.giantbomb.com/search/",
+          type: "get",
+          data: {api_key : "1f2fbb08dde5a07ceb29f21e581301f3105598e8", query: filter, field_list : "name,image,id", resources: "game", format : "jsonp", json_callback : "gamer" },
+          dataType: "jsonp",
+          success: function(msg) {
+                        /* handle the ajax response */
+                }
+        });
+        }, 1000);
+        }
+        else{
+          $("#loading").addClass( "hidden" );
+          $("#ResultsGames").addClass( "hidden" );
+          $("#LatestGamesSearch").removeClass( "hidden" );
+        }
+
+        var numberItems = count;
+        $("#filter-count").text("Number of Comments = "+count);
+
+    });
+
+});
+
+function gamer(data) {
+    // console.log(data);
+    var result = "";
+
+    for (var i = 0; i < 5; i++) {
+    result = "";
+    var post = data.results[i];
+    var imageURL = post.image.thumb_url;
+    var title = post.name;
+    var gameID = post.id;
+
+    result += '<div class="list-action-left">';
+    result += "<div class='game-thumbnail' style='background: url(" + imageURL + ") center/cover'></div></div>";
+    result += '<div class="list-content">';
+    result += '<span class="title">' + title + '</span>';
+    result += '<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>';
+    result += '</div>'
+
+    $("#gameresult"+i).html(result);
+    $("#gameresult"+i).attr('href','/game.html?gameid=' + gameID);
+    $("#loading").addClass( "hidden" );
+    var filter = $("#input-search").val().length;
+    console.log(filter);
+    if (filter > 2){
+    $("#ResultsGames").removeClass( "hidden" );
+  }
+
+  }
+}
+</script>
+ 
+    <!-- Start Layout -->
+    <div class="nav-bar-container">
+
+  <!-- BEGIN ICONS -->
+  <div class="nav-menu">
+    <div class="hamburger">
+      <span class="patty"></span>
+      <span class="patty"></span>
+      <span class="patty"></span>
+      <span class="patty"></span>
+      <span class="patty"></span>
+      <span class="patty"></span>
+    </div><!--.hamburger-->
+  </div><!--.nav-menu-->
+
+
+  <div class="nav-back">
+    <!-- <a class="back" href="javascript:history.back()"><i class="material-icons md-36">arrow_back</i></a> -->
+    <a class="back" href="/"><i class="material-icons md-36">arrow_back</i></a>
+  </div>
+
+
+  <div class="nav-search">
+    <span class="search"></span>
+  </div><!--.nav-search-->
+
+
+  <!-- END OF ICONS -->
+
+  <div class="nav-bar-border"></div><!--.nav-bar-border-->
+
+  <!-- BEGIN OVERLAY HELPERS -->
+  <div class="overlay">
+    <div class="starting-point">
+      <span></span>
+    </div><!--.starting-point-->
+    <div class="logo">Polygonal Talk</div><!--.logo-->
+  </div><!--.overlay-->
+
+  <div class="overlay-secondary"></div><!--.overlay-secondary-->
+  <!-- END OF OVERLAY HELPERS -->
+
+</div><!--.nav-bar-container-->
+
+    <div class="content">
+        <div id="parallaxgame" class="page-header brown full-content parallax opacity-hero" style="height: 600px; overflow: hidden">
+  <div class="parallax-bg" style="background: url('http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/08/rogue-one-cast-photo-d23-1024x682.jpg') 50% 50%;">
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h1>preview <small>by Jango</small></h1>
+    </div><!--.col-->
+    <div class="col-sm-6">
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="ion-home"></i></a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#" class="active">Blog</a></li>
+      </ol>
+    </div><!--.col-->
+  </div><!--.row-->
+
+</div><!--.page-header-->
+<div class="parallax-content">
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="text-center margin-bottom-40 text-color-white">Rogue One</h1>
+  </div><!--.col-->
+</div><!--.row-->
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+
+<p><p>Some of you may be aware that this exists but if not then your in for a treat. As excited as I am for EP7 I may be more excited for this. This is the first in the Star Wars Anthology series which will be one off movies in the universe at various points in time. In short, we are having a new Star Wars movie every year through 2020.</p>
+
+<ul>
+  <li>2015 - EP7</li>
+  <li>2016 - Rogue One</li>
+  <li>2017 - EP8</li>
+  <li>2018 - Han Solo Anthology. Yes, it’s already been confirmed. It follow a Han - Solo on adventure in his 20s. So 10-15 years before A New Hope.</li>
+  <li>2019 - EP9</li>
+  <li>2020 - Boba Fett Anthology. Katleen Kennedy from Disney kinda sorta let this one slip a few days ago.</li>
+</ul>
+
+<p>Sahweet.</p>
+
+<p>Anyways, back to Rogue One.</p>
+
+<p><img src="http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/08/rogue-one-title-treatment-1024x357.jpg" alt="http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/08/rogue-one-title-treatment-1024x357.jpg" /></p>
+
+<p>Lucasfilm announced today that their first film in the new standalone Star Wars stories series, Rogue One, has begun principal photography. Gareth Edwards (Godzilla, Monsters) is directing Rogue One, which tells the story of resistance fighters who have united to steal plans to the dreaded Death Star. The film is produced by Kathleen Kennedy and is slated for a December 16, 2016 release.</p>
+
+<p><img src="http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/08/rogue-one-cast-photo-d23-1024x682.jpg" alt="http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/08/rogue-one-cast-photo-d23-1024x682.jpg" /></p>
+
+<p>The filmmakers have assembled a stellar cast, including Felicity Jones, nominated for an Academy Award for her leading role in The Theory of Everything; Diego Luna, who was featured in 2008’s Oscar-winning Milk and the critically acclaimed Killing Them Softly; Ben Mendelsohn, recently nominated for an Emmy for his leading role in Bloodline and co-starring in the upcoming Mississippi Grind; Donnie Yen, Hong Kong action star and martial artist who starred in Ip Man and Blade II; Jiang Wen, who co-wrote, produced , directed and starred in the award-winning Let the Bullets Fly and Devils on the Doorstep; Forest Whitaker, recently featured in the critically-acclaimed Lee Daniels’ The Butler and winner of an Academy Award for his leading role in 2006’s The Last King of Scotland; Mads Mikkelsen, who starred in The Hunt and was the memorable villain from 2006’s Casino Royale; Alan Tudyk, who plays a performance-capture character in Rogue One, stars in the soon-to-be-released Con Man series and Trumbo, which releases this November; and Riz Ahmed, who was recently featured in Nightcrawler and starred in the BAFTA-winning film Four Lions.</p>
+
+<p>“Rogue One takes place before the events of Star Wars: A New Hope and will be a departure from the saga films but have elements that are familiar to the Star Wars universe,” says Kathleen Kennedy. “It goes into new territory, exploring the galactic struggle from a ground-war perspective while maintaining that essential Star Wars feel that fans have come to know. Gareth is such an innovative director and I’m so excited to be working with him and the extraordinary ensemble cast he’s selected for ‘Rogue One.’”</p>
+
+<p>Veteran ILM visual effects supervisor John Knoll, who shares a long history with the Star Wars movies, dating back to the mid-1990s, originated the idea for the movie. Allison Shearmur (The Hunger Games: Catching Fire, Cinderella), John Knoll, Simon Emanuel (The Dark Knight Rises, Fast &amp; Furious 6) and Jason McGatlin (Tintin, War of the Worlds) are executive producers. Kiri Hart and John Swartz (Star Wars: The Force Awakens) are co-producers.</p>
+
+<p>To create the lived-in, realistic feel of Rogue One, Edwards chose Greig Fraser (Zero Dark Thirty, Foxcatcher) to be his director of photography and Neil Corbould (Black Hawk Down, Gladiator, Saving Private Ryan) to be his special effects supervisor. Star Wars and Lucasfilm veteran Doug Chiang (Star Wars: Episodes I-II, Forrest Gump) and Neil Lamont (supervising art director for the Harry Potter series, Edge of Tomorrow) will be the production designers. Additional crew members will include stunt coordinator Rob Inch (World War Z, Marvel’s Captain America: The First Avenger), creature effects supervisor Neal Scanlan (Prometheus) and co-costume designers Dave Crossman (costume supervisor for the Harry Potter series, Saving Private Ryan) and Glyn Dillon (costume concept artist for Kingsman: The Secret Service, Jupiter Ascending).</p>
+
+<p>Here’s some bonus photos from the set and some concept art.</p>
+
+<p><img src="http://i.imgur.com/YuEPtyD.jpg" alt="http://i.imgur.com/YuEPtyD.jpg" /></p>
+
+<p><img src="http://i3.mirror.co.uk/incoming/article6213284.ece/ALTERNATES/s615/PAY-Cast-of-the-new-Star-Wars-movie-Episode-7.jpg" alt="http://i3.mirror.co.uk/incoming/article6213284.ece/ALTERNATES/s615/PAY-Cast-of-the-new-Star-Wars-movie-Episode-7.jpg" /></p>
+
+<p><img src="http://i1.mirror.co.uk/incoming/article6213331.ece/ALTERNATES/s615/Cast-of-the-new-Star-Wars-movie-Episode-7.jpg" alt="http://i1.mirror.co.uk/incoming/article6213331.ece/ALTERNATES/s615/Cast-of-the-new-Star-Wars-movie-Episode-7.jpg" /></p>
+
+<p><img src="http://i1.mirror.co.uk/incoming/article6213332.ece/ALTERNATES/s615/PAY-Cast-of-the-new-Star-Wars-movie-Episode-7.jpg" alt="http://i1.mirror.co.uk/incoming/article6213332.ece/ALTERNATES/s615/PAY-Cast-of-the-new-Star-Wars-movie-Episode-7.jpg" /></p>
+
+<p><img src="http://i2.mirror.co.uk/incoming/article6213283.ece/ALTERNATES/s615/PAY-Cast-of-the-new-Star-Wars-movie-Episode-7.jpg" alt="http://i2.mirror.co.uk/incoming/article6213283.ece/ALTERNATES/s615/PAY-Cast-of-the-new-Star-Wars-movie-Episode-7.jpg" /></p>
+
+<p>Can’t wait. great time to be a Star Wars fan.</p>
+</p>
+
+  </div><!--.col-->
+</div><!--.row-->
+</div>
+
+      </div>
+
+
+    </div>
+    <!-- /End Layout-->
+
+    <!-- BEGIN GLOBAL AND THEME VENDORS -->
+    <script src="/js/global-vendors.js"></script>
+    <!-- END GLOBAL AND THEME VENDORS -->
+
+    <!-- BEGIN PLUGINS AREA -->
+    <!-- <script src="http://maps.google.com/maps/api/js?sensor=true&amp;libraries=places"></script> -->
+    <!-- <script src="../../assets/globals/plugins/gmaps/gmaps.js"></script> -->
+    <script src="/plugins/bxslider/jquery.bxslider.min.js"></script>
+    <script src="/plugins/d3/d3.min.js"></script>
+    <script src="/plugins/rickshaw/rickshaw.min.js"></script>
+    <script src="/plugins/jquery-knob/excanvas.js"></script>
+    <script src="/plugins/jquery-knob/dist/jquery.knob.min.js"></script>
+    <!-- <script src="../../assets/globals/plugins/gauge/gauge.min.js"></script> -->
+    <!-- END PLUGINS AREA -->
+
+    <!-- PLEASURE -->
+    <script src="/js/pleasure.js"></script>
+    <!-- ADMIN 1 -->
+    <script src="/js/layout.js"></script>
+
+    <script src="/scripts/sliders.js"></script>
+    <!-- <script src="../../assets/globals/scripts/maps-google.js"></script> -->
+    <script src="/scripts/widget-audio.js"></script>
+    <script src="/scripts/charts-knob.js"></script>
+    <script src="/scripts/index.js"></script>
+    <!-- BEGIN INITIALIZATION-->
+    <script>
+    $(document).ready(function () {
+      Pleasure.init();
+      Layout.init();
+
+      Index.init();
+      WidgetAudio.single();
+      ChartsKnob.init();
+
+    });
+    </script>
+
+
+    <!-- END INITIALIZATION-->
+
+    <!-- BEGIN Google Analytics -->
+    <!-- <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', Pleasure.settings.ga.urchin, Pleasure.settings.ga.url);
+      ga('send', 'pageview');
+    </script> -->
+    <!-- END Google Analytics -->
+
+    </body>
+    </html>

@@ -4,27 +4,13 @@
   {% include head.html %}
 
   <body>
-
+{% include search.html %} 
     <!-- Start Layout -->
     {% include sidebar.html %}
       {% include header.html %}
         {{ content }}
       {% include footer.html %}
-      <div class="col-lg-6">
-<a href="http://www.pushsquare.com/news/2015/08/first_impressions_eyes-on_with_ps4s_virtual_reality_headset_project_morpheus" class="embedly-card"></a>
 
-</div>
-
-
-
-
-<!-- <div class='col-md-4 margin-bottom-10'>
-<ul class='bxslider width-percent-100' data-bx-slider-pager='false' data-bx-slider-controls='false' data-bx-slider-auto='true' data-bx-slider-mode='vertical'>
-<li id="quotes3"></li>
-<li id="quotes4" class="bx-clone"></li>
-<li id="quotes0"></li>
-</ul>
-</div> -->
     </div>
     <!-- /End Layout-->
 
@@ -40,6 +26,11 @@
     <script src="{{ "/plugins/rickshaw/rickshaw.min.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/plugins/jquery-knob/excanvas.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/plugins/jquery-knob/dist/jquery.knob.min.js" | prepend: site.baseurl }}"></script>
+
+    <script src="{{ "/plugins/video.js/dist/video-js/video.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/plugins/video.js/plugins/playlist/videojs-playlists.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/plugins/video.js/plugins/youtube/youtube.js" | prepend: site.baseurl }}"></script>
+
     <!-- <script src="../../assets/globals/plugins/gauge/gauge.min.js"></script> -->
     <!-- END PLUGINS AREA -->
 
@@ -51,8 +42,10 @@
     <script src="{{ "/scripts/sliders.js" | prepend: site.baseurl }}"></script>
     <!-- <script src="../../assets/globals/scripts/maps-google.js"></script> -->
     <script src="{{ "/scripts/widget-audio.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/scripts/widget-video.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/scripts/charts-knob.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/scripts/index.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/scripts/typewatch.js" | prepend: site.baseurl }}"></script>
     <!-- BEGIN INITIALIZATION-->
     <script>
     $(document).ready(function () {

@@ -4,7 +4,7 @@
   {% include head.html %}
 
   <body>
-
+{% include search.html %} 
     <!-- Start Layout -->
     {% include sidebar.html %}
     <div class="content">
@@ -52,100 +52,7 @@
     });
     </script>
 
-    <script type="text/javascript">
 
-    function generateQuotes()
-    {
-        $.getJSON("/_data/GetQuotes.json", function(data) {
-            console.log("Getting Quotes...");
-
-			var tiles = "";
-			if (data.posts_count >8)
-				var arraylength = 8;
-			else
-				var arraylength = data.posts_count;
-			for (var i = arraylength - 1; i >= 0; i--) {
-				var post = data.post_stream.posts[i];
-
-        var quote = $(post.cooked).find("blockquote").text();
-        var quser = $(post.cooked).find(".title").text();
-        quser = quser.slice(0,-1);
-        var avatarURL = $(post.cooked).find(".title").find("img").attr("src");
-        var imageURL = $(post.cooked).find("img").attr("src");
-        var postLink = post.link_counts[0].url;
-        var postTitle = post.link_counts[0].title;
-
-        if (!post.link_counts[0].internal)
-        {
-            postLink = post.link_counts[1].url;
-            postTitle = post.link_counts[1].title;
-        }
-
-
-        console.log(post);
-				tiles += "<div class='col-md-4 margin-bottom-10'>";
-				 if(post.image_url !== null){
-                tiles += "<div class='card card-quote card-black bg-image bg-opaque5' style='background-image: url(" + imageURL + ")'></div>";
-				} else {
-					tiles += "<div class='card card-quote card-black bg-image bg-opaque5' style='background-image: url(//polygonalweave.com/Images/Generic/POLY08s.jpg)'></div>";
-				}
-					// tiles += "<a class='tile-hover' href=" + postLink + ">";
-				// 		tiles += "<h2 class='tile-title'>" + postTitle + "</h2>";
-            tiles += "    <div class='card-body text-color-white'>
-                  <div class='quote'>
-                    <i class='fa fa-quote-left'></i> " + quote + "<i class='fa fa-quote-right'></i>
-                    </div>";
-						// tiles += "<div class='tile-info'>" + postTitle + "<br><div class='comment-btn'><img alt='' width='40' height='40' src='" + avatarURL + "' class='avatar'></div></div>"; //tile
-
-					tiles += "<a href='" + postLink + "' class='author'>" + quser + "</a>"; //tile-hover
-				tiles += "</div>"; //tile
-			}
-
-			$("#quotes").html(tiles);
-		}
-
-    //         var postsCount = data.length;
-    //         var posts = data;
-    //
-    //         var randomIndexUsed = [];
-    //         var counter = 0;
-    //         var numberOfPosts = 5;
-    //
-    //         var divRandomPosts = $("#random_posts");
-    //
-    //         divRandomPosts.append('<h2>other posts</h2><hr />');
-    //
-    //         while (counter < numberOfPosts)
-    //         {
-    //             var randomIndex = Math.floor(Math.random() * postsCount);
-    //
-    //             if (randomIndexUsed.indexOf(randomIndex) == "-1")
-    //             {
-    //                 var postHREF = posts[randomIndex].href;
-    //                 var postTitle = posts[randomIndex].title;
-    //
-    //                 if (counter == (numberOfPosts - 1))
-    //                 {
-    //                     divRandomPosts.append('<p><a href="' + postHREF + '">' + postTitle + '</a></p>');
-    //                 }
-    //                 else
-    //                 {
-    //                     divRandomPosts.append('<p><a href="' + postHREF + '">' + postTitle + '</a></p><hr />');
-    //                 }
-    //
-    //                 randomIndexUsed.push(randomIndex);
-    //
-    //                 counter++;
-    //             }
-    //         }
-    //     });
-    // }
-
-    $(document).ready(function() {
-        generateQuotes();
-    });
-
-</script>
     <!-- END INITIALIZATION-->
 
     <!-- BEGIN Google Analytics -->

@@ -7,7 +7,7 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml " | prepend: site.baseurl | prepend: site.url }}" />
 
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -16,18 +16,19 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
   <!-- BEGIN CORE CSS -->
   <!-- <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}"> -->
-  <link rel="stylesheet" href="{{ "/css/admin1.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/css/elements.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ " /css/admin1.css " | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ " /css/elements.css " | prepend: site.baseurl }}">
   <!-- END CORE CSS -->
 
   <!-- BEGIN PLUGINS CSS -->
-  <link rel="stylesheet" href="{{ "/plugins/rickshaw/rickshaw.min.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/plugins/bxslider/jquery.bxslider.css" | prepend: site.baseurl }}">
+  <!-- <link rel="stylesheet" href="{{ "/plugins/rickshaw/rickshaw.min.css" | prepend: site.baseurl }}"> -->
+  <link rel="stylesheet" href="{{ " /plugins/bxslider/jquery.bxslider.css " | prepend: site.baseurl }}">
 
-  <link rel="stylesheet" href="{{ "/css/plugins.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ " /css/plugins.css " | prepend: site.baseurl }}">
   <!-- END PLUGINS CSS -->
 
   <!-- BEGIN SHORTCUT AND TOUCH ICONS -->
@@ -38,63 +39,454 @@
   <!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
 <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script> -->
 
-  <script src="{{ "/plugins/modernizr/modernizr.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ " /plugins/modernizr/modernizr.min.js " | prepend: site.baseurl }}"></script>
 
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
   <script type="text/javascript">
+    $(function() {
+      $.xhrPool = [];
+      $.xhrPool.abortAll = function() {
+        $(this).each(function(i, jqXHR) { //  cycle through list of recorded connection
+          jqXHR.abort(); //  aborts connection
+          $.xhrPool.splice(i, 1); //  removes from list by index
+        });
+      }
+      $.ajaxSetup({
+        beforeSend: function(jqXHR) {
+          $.xhrPool.push(jqXHR);
+        }, //  annd connection to list
+        complete: function(jqXHR) {
+          var i = $.xhrPool.indexOf(jqXHR); //  get index for current connection completed
+          if (i > -1) $.xhrPool.splice(i, 1); //  removes from list by index
+        }
+      });
+    })
+  </script>
 
-      function generateQuotes()
-      {
-  console.log("tests...");
+  <script type="text/javascript">
+    function GetURLParameter(sParam) {
+      var sPageURL = window.location.search.substring(1);
+      var sURLVariables = sPageURL.split('&');
+      for (var i = 0; i < sURLVariables.length; i++) {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) {
+          return sParameterName[1];
+        }
+      }
+    }
+
+    function asyncLoop(iterations, func, callback) {
+      var index = 0;
+      var done = false;
+      var loop = {
+        next: function() {
+          if (done) {
+            return;
+          }
+
+          if (index < iterations) {
+            index++;
+            func(loop);
+
+          } else {
+            done = true;
+            callback();
+          }
+        },
+
+        iteration: function() {
+          return index - 1;
+        },
+
+        break: function() {
+          done = true;
+          callback();
+        }
+      };
+      loop.next();
+      return loop;
+    }
+
+
+    function generateQuotes() {
+
       $.getJSON("{{ '/GameQuotes.json' | prepend: site.baseurl }}", function(data) {
-          console.log("Getting Quotes...");
 
-    var tiles = "";
-    if (data.posts_count >8)
-      var arraylength = 8;
-    else
-      var arraylength = data.posts_count;
-    for (var i = arraylength - 1; i >= 0; i--) {
-      tiles = "";
-      var post = data.post_stream.posts[i];
 
-      var quote = $(post.cooked).find("blockquote").text();
-      var quser = $(post.cooked).find(".title").text();
-      quser = quser.slice(0,-1);
-      var avatarURL = $(post.cooked).find(".title").find("img").attr("src");
-      var imageURL = $(post.cooked).find("img").attr("src");
-      var postLink = post.link_counts[0].url;
-      var postTitle = post.link_counts[0].title;
+        var tiles = "";
+        if (data.posts_count > 8)
+          var arraylength = 8;
+        else
+          var arraylength = data.posts_count;
+        for (var i = arraylength - 1; i >= 0; i--) {
+          tiles = "";
+          var post = data.post_stream.posts[i];
 
-      if (!post.link_counts[0].internal)
-      {
-          postLink = post.link_counts[1].url;
-          postTitle = post.link_counts[1].title;
-      }
+          var quote = $(post.cooked).find("blockquote").text();
+          var quser = $(post.cooked).find(".title").text();
+          quser = quser.slice(0, -1);
+          var avatarURL = $(post.cooked).find(".title").find("img").attr("src");
+          var imageURL = $(post.cooked).find("img").attr("src");
+          var postLink = post.link_counts[0].url;
+          var postTitle = post.link_counts[0].title;
 
-      // tiles += "<li>";
-       if(post.image_url !== null){
-              tiles += "<div class='card tile card-quote card-black bg-image bg-opaque5' style='background: url(" + imageURL + ") center/cover'>";
-      } else {
-        tiles += "<div class='card card-quote card-black bg-image bg-opaque5' style='background-image: url(//polygonalweave.com/Images/Generic/POLY08s.jpg)'>";
-      }
-        // tiles += "<a class='tile-hover' href=" + postLink + ">";
-      // 		tiles += "<h2 class='tile-title'>" + postTitle + "</h2>";
+          if (!post.link_counts[0].internal) {
+            postLink = post.link_counts[1].url;
+            postTitle = post.link_counts[1].title;
+          }
+
+          // tiles += "<li>";
+          if (post.image_url !== null) {
+            tiles += "<div class='card tile card-quote card-black bg-image bg-opaque5' style='background: url(" + imageURL + ") center/cover'>";
+          } else {
+            tiles += "<div class='card card-quote card-black bg-image bg-opaque5' style='background-image: url(//polygonalweave.com/Images/Generic/POLY08s.jpg)'>";
+          }
+          // tiles += "<a class='tile-hover' href=" + postLink + ">";
+          // 		tiles += "<h2 class='tile-title'>" + postTitle + "</h2>";
           tiles += "<div class='card-body text-color-white'><div class='quote'><i class='fa fa-quote-left'></i> " + quote + "<i class='fa fa-quote-right'></i></div>";
           // tiles += "<div class='tile-info'>" + postTitle + "<br><div class='comment-btn'><img alt='' width='40' height='40' src='" + avatarURL + "' class='avatar'></div></div>"; //tile
 
-        tiles += "<a href='" + postLink + "' class='author'>" + quser + "</a>"; //tile-hover
-      tiles += "</div>"; //tile
-      $("#quotes"+i).html(tiles);
+          tiles += "<a href='" + postLink + "' class='author'>" + quser + "</a>"; //tile-hover
+          tiles += "</div>"; //tile
+          $("#quotes" + i).html(tiles);
+        }
+      });
     }
-  });
-}
 
-  $(document).ready(function() {
-    console.log("Doc Ready...");
+    function generateLinks() {
+
+      $.getJSON("{{ '/GameLinks.json' | prepend: site.baseurl }}", function(data) {
+
+        var tiles = "";
+        if (data.posts_count > 8)
+          var arraylength = 8;
+        else
+          var arraylength = data.posts_count;
+        for (var i = arraylength - 1; i >= 0; i--) {
+          tiles = "";
+          var post = data.post_stream.posts[i];
+
+          var url = $(post.cooked).find("blockquote").find("a").attr("href");
+
+          tiles += "<a href='" + url + "' class='embedly-card' data-card-controls='0' data-card-chrome='0' height='300'></a>";
+
+          $("#links" + i).html(tiles);
+        }
+      });
+    }
+
+    function generateTrailers() {
+
+      $.getJSON("{{ '/GameTrailers.json' | prepend: site.baseurl }}", function(data) {
+
+        var tiles = "";
+        if (data.posts_count > 8)
+          var arraylength = 8;
+        else
+          var arraylength = data.posts_count;
+        for (var i = arraylength - 1; i >= 0; i--) {
+          tiles = "";
+          var post = data.post_stream.posts[i];
+          var postTitle = post.link_counts[0].title;
+          // console.log(data);
+          var youtubeID = $(post.cooked).find(".lazyYT").attr("data-youtube-id");
+          var url = "http://www.youtube.com/watch?v=" + youtubeID;
+
+          tiles += "<div class='card-heading'>";
+          tiles += "<a href='" + url + "' class='embedly-card' data-card-controls='0' data-card-chrome='0'></a>";
+          // tiles += "<div class='embedly-card' data-card-controls='0' data-card-embed='" + url + "'></div>";
+          tiles += "</div><div class='card-body'><h4>" + postTitle + "</h4></div>";
+
+
+          $("#trailer" + i).html(tiles);
+        }
+      });
+    }
+
+    function generateGameID(gameurl, callback) {
+      $.getJSON(gameurl, function(data) {
+        var post = data.post_stream.posts[0];
+        console.log(data);
+        var sourceURL = $(post.cooked).find(".track-link").attr("href");
+        var gameID = sourceURL.slice(-6).slice(0, -1);
+        var url = "game.html?gameid=" + gameID;
+        callback(url);
+      });
+    }
+
+    function generateLatestGames(n, callback) {
+      $.getJSON("{{ '/LatestGames.json' | prepend: site.baseurl }}", function(data) {
+        var tiles = "";
+        var newgame = false;
+        // if (data.posts_count >8)
+        var arraylength = n;
+        // else
+        // var arraylength = data.posts_count;
+        // for (var i = 0; i < n; i++) {
+        tiles = "";
+        var topic = data.topic_list.topics[n];
+
+        var slug = topic.slug;
+        var id = topic.id;
+        var gameurl = "http://talk.polygonalweave.com/t/" + slug + "/" + id;
+
+
+        var topicTitle = topic.title;
+        var thumbnail = topic.image_url;
+        var user = topic.last_poster_username;
+        var d = new Date(topic.bumped_at);
+        // var s = date.fromNow() + (diff >= 1 && diff <= 7 ? date.format(" (ddd)") : "");
+        var relative = moment(d, "ddd MMMM DD YYYY hh:mm:ss").fromNow();
+
+        callback(gameurl, topicTitle, thumbnail, user, relative, id);
+      });
+    }
+
+    function generateNewGames(array) {
+      $.getJSON("{{ '/newgames.json' | prepend: site.baseurl }}", function(data) {
+        var winners = 0;
+        if (array.length == 4) {  //wait for array to populate
+          var dynamiclength = 4; //ability to keep looking if id matches
+          for (var i = 0; i < dynamiclength; i++) {
+            // console.log(array[i]);
+            var tiles = "";
+
+            var topic = data.topic_list.topics[i];
+            var slug = topic.slug;
+            var id = topic.id;
+            var gameurl = "http://talk.polygonalweave.com/t/" + slug + "/" + id;
+
+            var topicTitle = topic.title;
+            var thumbnail = topic.image_url;
+            var user = topic.last_poster_username;
+            var d = new Date(topic.bumped_at);
+            // var s = date.fromNow() + (diff >= 1 && diff <= 7 ? date.format(" (ddd)") : "");
+            var relative = moment(d, "ddd MMMM DD YYYY hh:mm:ss").fromNow();
+
+            for (var n = 0; n < 4; n++) { //cycle through latest games
+              // console.log(id, array[n]);
+              if (id != array[n]){
+                if (n == 3){
+                  // console.log("winners:", id);
+                  tiles +='<div class="card tile card-image card-black bg-image" style="background: url(' + thumbnail + ') center/cover">'
+                  tiles +='<div class="context ">'
+                  tiles +='<div class="tile-content">'
+                  tiles +='<span class="text-title">'+ topicTitle +'</span>'
+                  tiles +='<span class="text-subtitle">latest post - ' + user + '</span></div></div></div>'
+
+                  $("#newgames" + winners).html(tiles);
+                  winners++;
+                }
+              } else{
+                // console.log("match!");
+                dynamiclength++;
+                break;
+              }
+            }
+          }
+        }
+      });
+    }
+
+
+    function populateLatestGames() {
+      var latestarray = [];
+      asyncLoop(4, function(loop) {
+        generateLatestGames(loop.iteration(), function(gameurl, topicTitle, thumbnail, user, relative, id) {
+          var tiles = newtile = "";
+          latestarray.push(id);
+
+          generateNewGames(latestarray);
+
+          tiles += "<a href='' alt=''>";
+          tiles += "<div class='game-thumbnail' style='background: url(" + thumbnail + ") center/cover'>";
+          tiles += "</div></a>";
+          // tiles += "<div class='embedly-card' data-card-controls='0' data-card-embed='" + url + "'></div>";
+          tiles += "<div class='friend-content'><p class='title'>" + topicTitle + "</p><p><a href='user-profile.html'>updated by " + user + "</a></p>";
+          tiles += "<a class='btn btn-flat btn-primary btn-xs'>" + relative + "</a>";
+          tiles += "</div>";
+
+          // console.log(tiles);
+          $("#latestgames" + loop.iteration()).html(tiles);
+          loop.next();
+        });
+
+      });
+
+      asyncLoop(5, function(loop) {
+        generateLatestGames(loop.iteration(), function(gameurl, topicTitle, thumbnail, user, relative, newgame) {
+          var tiles = "";
+          generateGameID("{{ '/RocketLeague.json' | prepend: site.baseurl }}", function(url) {
+            // tiles += "<a href='" + url + "' alt=''>";
+            // console.log(loop.iteration());
+            $("#latestgames" + loop.iteration()).find("a").attr("href", url);
+            loop.next();
+          });
+        });
+      });
+    }
+
+    function generateLatestSearch() {
+
+      $.getJSON("{{ '/LatestGames.json' | prepend: site.baseurl }}", function(data) {
+
+        var result = "";
+        // if (data.posts_count >8)
+        var arraylength = 8;
+        // else
+        // var arraylength = data.posts_count;
+        for (var i = 1; i < arraylength; i++) {
+          result = "";
+          var topic = data.topic_list.topics[i];
+          var topicTitle = topic.title;
+          // console.log(topicTitle);
+          var thumbnail = topic.image_url;
+          var user = topic.last_poster_username;
+          var d = new Date(topic.bumped_at);
+          var relative = moment(d, "ddd MMMM DD YYYY hh:mm:ss").fromNow();
+          var url = "#";
+
+          result += '<div class="list-action-left">';
+          result += "<div class='game-thumbnail' style='background: url(" + thumbnail + ") center/cover'></div></div>";
+          result += '<div class="list-content">';
+          result += '<span class="title">' + topicTitle + '</span>';
+          result += '<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>';
+          result += '</div>'
+
+
+          $("#latestgamessearch" + i).html(result);
+        }
+      });
+    }
+
+
+    function gbgame(data) {
+      console.log(data);
+      // var result, gametitle, imageLarge, imageSmall, deck = "";
+      var tabs = characters = similar = "";
+      var post = data.results;
+
+
+      // console.log(post.characters);
+
+      if (post.deck) {
+        tabs += '<li class="active"><a href="#about_overview" data-toggle="tab">Overview</a></li>';
+      }
+      if (post.characters) {
+        tabs += '<li><a href="#about_characters" data-toggle="tab">Characters</a></li>';
+        for (var i = 0; i < post.characters.length; i++) {
+          characters += '<li>' + post.characters[i].name + '<li>';
+        }
+      }
+      if (post.similar_games) {
+        tabs += '<li><a href="#about_similar" data-toggle="tab">Similar Games</a></li>';
+        for (var i = 0; i < post.similar_games.length; i++) {
+          similar += '<li>' + post.similar_games[i].name + '<li>';
+        }
+      }
+
+      var imageLargeURL = post.image.super_url;
+      var imageSmallURL = post.image.small_url;
+      var title = post.name;
+
+      var gametitle = '<h1>' + post.name + '</h1>';
+      var imageLarge = "<div class='parallax-bg bg-opaque5' style='-webkit-filter: blur(2px); filter: blur(2px); background: rgba(0, 0, 0, 0.5) url(" + imageLargeURL +
+        ") 50% 50%; background-size: cover; width: 100%; opacity: .7; height: 100%; position: absolute; left: 0; top: 0;'>";
+      var imageSmall = '<img src="' + imageSmallURL + '" alt="">'
+      var deck = '<h3>' + post.deck + '</h3>';
+      var desc = '<p>' + post.description + '</p>';
+
+
+      $("#about_tabs").html(tabs);
+      $("#gametitle").html(gametitle);
+      $("#gamedeck").html(deck);
+      $("#gamedesc").html(desc);
+      $("#about_characters").html(characters);
+      $("#about_similar").html(similar);
+      $("#parallaxgame").prepend(imageLarge);
+      $(".profile-photo").prepend(imageSmall);
+    }
+
+    // function game(data) {
+    //   console.log(data);
+    //   var result = "",
+    //     titlediv = "",
+    //     imageLarge = "",
+    //     imageSmall = "";
+    //
+    //   var post = data.results;
+    //   var imageLargeURL = post.image.super_url;
+    //   var imageSmallURL = post.image.small_url;
+    //   var title = post.name;
+    //
+    //
+    //   titlediv += '<h1>' + title + '</h1>';
+    //   imageLarge += "<div class='parallax-bg bg-opaque5' style='-webkit-filter: blur(2px); filter: blur(2px); background: rgba(0, 0, 0, 0.5) url(" + imageLargeURL +
+    //     ") 50% 50%; background-size: cover; width: 100%; opacity: .7; height: 100%; position: absolute; left: 0; top: 0;'>";
+    //   imageSmall += '<img src="' + imageSmallURL + '" alt="">'
+    //   result += '<div class="list-content">';
+    //   result += '<span class="title">' + title + '</span>';
+    //   result += '<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>';
+    //   result += '</div>'
+    //
+    //   $("#gametitle").html(titlediv);
+    //   $("#parallaxgame").prepend(imageLarge);
+    //   $(".profile-photo").prepend(imageSmall);
+    // }
+
+    // function generatePostsMonthChart()
+    // {
+    //
+    // $.getJSON("{{ '/PostsThisMonth.json' | prepend: site.baseurl }}", function(data) {
+    //     console.log("Getting Posts...");
+    //
+    //     var chartjsData = [];
+    //     var labelsData = [];
+    // for (var i = 0; i < 28; i++) {
+    //     chartjsData.push(data.report.data[i].y);
+    //     labelsData.push(data.report.data[i].x);
+    // }
+    //
+    // var barChartData = {
+    //             labels :["test", "test", "test"],datasets : [
+    //                 {
+    //                     fillColor : "rgba(220,280,220,0.5)",
+    //                     strokeColor : "rgba(220,220,220,1)",
+    //                     data : chartjsData
+    //
+    //                 }
+    //             ]
+    //         };
+    //     var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData);
+    //
+    //   });
+    //   }
+
+    $(document).ready(function() {
+      var gameID = GetURLParameter('gameid');
+
+      if (gameID) {
+        $.ajax({
+          url: "http://www.giantbomb.com/api/game/3030-" + gameID + "/",
+          type: "get",
+          data: {
+            api_key: "1f2fbb08dde5a07ceb29f21e581301f3105598e8",
+            // field_list: "name,image,deck,description,developers,images,original_release_date,people,platforms,publishers,similar_games,site_detail_url,videos",
+            format: "jsonp",
+            json_callback: "gbgame"
+          },
+          dataType: "jsonp"
+        });
+      }
+
       generateQuotes();
-  });
-
+      generateLinks();
+      generateTrailers();
+      populateLatestGames();
+      generateLatestSearch();
+      // generateGameData();
+      // generatePostsMonthChart();
+    });
   </script>
 </head>

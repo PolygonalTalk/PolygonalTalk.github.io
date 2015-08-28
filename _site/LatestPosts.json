@@ -1,0 +1,3526 @@
+{
+  "latest_posts": [
+    {
+      "id": 2341,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-25T01:21:25.405Z",
+      "cooked": "<aside class=\"quote\" data-post=\"25\" data-topic=\"120\" data-full=\"true\"><div class=\"title\">\n<div class=\"quote-controls\"></div>\n<img alt=\"\" width=\"20\" height=\"20\" src=\"//talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/mrbimble/40/29_1.png\" class=\"avatar\">MrBimble:</div>\n<blockquote>\n<aside class=\"onebox whitelistedgeneric\">\n  <header class=\"source\">\n    <a href=\"http://www.polygon.com/2015/8/24/9197735/rock-band-4-instrument-compatibility-last-gen-xbox-one-adapter-ps4?utm_campaign=polygon&amp;utm_content=chorus&amp;utm_medium=social&amp;utm_source=twitter\">\n      www.polygon.com\n    </a>\n  </header>\n  <article class=\"onebox-body\">\n    <img src=\"https://cdn2.vox-cdn.com/thumbor/jQY3n3Q7pL6Ir1o6is6c9C6kHJ8=/0x0:1920x1080/1280x720/cdn0.vox-cdn.com/uploads/chorus_image/image/47019004/rock-band-4-guitar-screenshot_1920.0.0.jpg\" class=\"thumbnail\" width=\"111\" height=\"63\">\n\n<h3><a href=\"http://www.polygon.com/2015/8/24/9197735/rock-band-4-instrument-compatibility-last-gen-xbox-one-adapter-ps4?utm_campaign=polygon&amp;utm_content=chorus&amp;utm_medium=social&amp;utm_source=twitter\">Rock Band 4 requires $20 adapter to use last-gen instruments on Xbox One, but not PS4</a></h3>\n\n<p>Rock Band 4 players on PlayStation 4 and Xbox One will be able to play the music game with their closetfuls of old PlayStation 3 or Xbox 360 instruments, respectively. But Xbox gamers will have to...</p>\n\n  </article>\n  <div style=\"clear: both\"></div>\n</aside>\n</blockquote></aside>\n\n<p>quote time</p>",
+      "post_number": 3,
+      "post_type": 1,
+      "updated_at": "2015-08-25T01:21:25.405Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 1,
+      "score": 0.2,
+      "yours": true,
+      "topic_id": 365,
+      "topic_slug": "game-links",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "[quote=\"MrBimble, post:25, topic:120, full:true\"]\nhttp://www.polygon.com/2015/8/24/9197735/rock-band-4-instrument-compatibility-last-gen-xbox-one-adapter-ps4?utm_campaign=polygon&utm_content=chorus&utm_medium=social&utm_source=twitter\n[/quote]\n\nquote time",
+      "actions_summary": [
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2340,
+      "name": "",
+      "username": "Jango",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/jango/{size}/149_1.png",
+      "uploaded_avatar_id": 149,
+      "created_at": "2015-08-24T22:50:18.569Z",
+      "cooked": "<p>I have no such email.</p>",
+      "post_number": 15,
+      "post_type": 1,
+      "updated_at": "2015-08-24T22:50:18.569Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 2,
+      "score": 0.4,
+      "yours": false,
+      "topic_id": 303,
+      "topic_slug": "nfl-survivor-pool-2015",
+      "display_username": "",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "I have no such email.",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 7,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 1,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2339,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-24T18:55:08.101Z",
+      "cooked": "<aside class=\"quote\" data-post=\"29\" data-topic=\"166\"><div class=\"title\">\n<div class=\"quote-controls\"></div>\n<img alt=\"\" width=\"20\" height=\"20\" src=\"//talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/darthsmurfx/40/73_1.png\" class=\"avatar\">DarthSmurfX:</div>\n<blockquote><p><a href=\"http://www.pushsquare.com/news/2015/08/first_impressions_eyes-on_with_ps4s_virtual_reality_headset_project_morpheus\" class=\"onebox\" target=\"_blank\">http://www.pushsquare.com/news/2015/08/first_impressions_eyes-on_with_ps4s_virtual_reality_headset_project_morpheus</a></p></blockquote></aside>\n\n<p>testing</p>",
+      "post_number": 2,
+      "post_type": 1,
+      "updated_at": "2015-08-24T18:55:08.101Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 1,
+      "score": 0.2,
+      "yours": true,
+      "topic_id": 365,
+      "topic_slug": "game-links",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "[quote=\"DarthSmurfX, post:29, topic:166\"]\nhttp://www.pushsquare.com/news/2015/08/first_impressions_eyes-on_with_ps4s_virtual_reality_headset_project_morpheus\n[/quote]\ntesting",
+      "actions_summary": [
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2338,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-24T18:36:51.386Z",
+      "cooked": "<p>Continuing the discussion from <a href=\"//talk.polygonalweave.com/t/ps-instant-game-collection/103/24\">PS+: Instant Game Collection</a>:</p>\n\n<aside class=\"quote\" data-post=\"24\" data-topic=\"103\" data-full=\"true\"><div class=\"title\">\n<div class=\"quote-controls\"></div>\n<img alt=\"\" width=\"20\" height=\"20\" src=\"//talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/darthsmurfx/40/73_1.png\" class=\"avatar\">DarthSmurfX:</div>\n<blockquote>\n<p><strong>Grow Home, Super Time Force Ultra</strong> for PS4.<br><strong>Twisted Metal</strong> and <strong>Teslagrad</strong> (PS4 Crossbuy) for PS3.<br><strong>La Mulana EX</strong> and <strong>Xeodrifter</strong> (PS4 Crossbuy) for Vita.</p>\n<aside class=\"onebox whitelistedgeneric\">\n  <header class=\"source\">\n    <a href=\"http://blog.us.playstation.com/2015/08/24/ps-plus-free-games-for-september-2015/\">\n      blog.us.playstation.com\n    </a>\n  </header>\n  <article class=\"onebox-body\">\n    <img src=\"http://static.blog.playstation.com/wp-content/uploads/2015/08/20518815465_d4fed9f884_h1.jpg\" class=\"thumbnail\" width=\"115\" height=\"65\">\n\n<h3><a href=\"http://blog.us.playstation.com/2015/08/24/ps-plus-free-games-for-september-2015/\">PS Plus: Free Games for September 2015</a></h3>\n\n<p></p>\n\n  </article>\n  <div style=\"clear: both\"></div>\n</aside>\n\n</blockquote></aside>",
+      "post_number": 1,
+      "post_type": 1,
+      "updated_at": "2015-08-24T18:36:51.386Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 1,
+      "score": 0.2,
+      "yours": true,
+      "topic_id": 365,
+      "topic_slug": "game-links",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": false,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "Continuing the discussion from [PS+: Instant Game Collection](http://talk.polygonalweave.com/t/ps-instant-game-collection/103/24):\n\n[quote=\"DarthSmurfX, post:24, topic:103, full:true\"]\n**Grow Home, Super Time Force Ultra** for PS4.\n**Twisted Metal** and **Teslagrad** (PS4 Crossbuy) for PS3.\n**La Mulana EX** and **Xeodrifter** (PS4 Crossbuy) for Vita.\n\nhttp://blog.us.playstation.com/2015/08/24/ps-plus-free-games-for-september-2015/\n[/quote]",
+      "actions_summary": [
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2337,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-24T18:35:38.653Z",
+      "cooked": "<p>[Replace this first paragraph with a short description of your new category. This guidance will appear in the category selection area, so try to keep it below 200 characters. Until you edit this text or create topics, this category won't appear on the categories page.]</p>\n\n<p>Use the following paragraphs for a longer description, as well as to establish any category guidelines or rules.</p>\n\n<p>Some things to consider in any discussion replies below:</p>\n\n<ul>\n<li><p>What is this category for? Why should people select this category for their topic?</p></li>\n<li><p>How is this different than the other categories we already have?</p></li>\n<li><p>Do we need this category?</p></li>\n<li><p>Should we merge this with another category, or split it into more categories?</p></li>\n</ul>",
+      "post_number": 1,
+      "post_type": 1,
+      "updated_at": "2015-08-24T18:35:38.653Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 1,
+      "score": 0.2,
+      "yours": true,
+      "topic_id": 364,
+      "topic_slug": "about-the-links-category",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": false,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "[Replace this first paragraph with a short description of your new category. This guidance will appear in the category selection area, so try to keep it below 200 characters. Until you edit this text or create topics, this category won't appear on the categories page.]\n\nUse the following paragraphs for a longer description, as well as to establish any category guidelines or rules.\n\nSome things to consider in any discussion replies below:\n\n- What is this category for? Why should people select this category for their topic?\n\n- How is this different than the other categories we already have?\n\n- Do we need this category?\n\n- Should we merge this with another category, or split it into more categories?\n",
+      "actions_summary": [
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2336,
+      "name": "Shane",
+      "username": "DarthSmurfX",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/darthsmurfx/{size}/73_1.png",
+      "uploaded_avatar_id": 73,
+      "created_at": "2015-08-24T18:20:20.078Z",
+      "cooked": "<p>So... Sony/GameStop are countering the XB1 Madden bundle with a \"Buy a PS4, Get Madden for Free\" deal. Which, depending on the PS4 you get, might have a game already bundled with it. The Holiday deals/wars have begun!</p>\n\n<a href=\"http://i.imgur.com/SHrpzFM.jpg\" target=\"_blank\"><img src=\"http://i.imgur.com/SHrpzFM.jpg\" width=\"281\" height=\"500\"></a>",
+      "post_number": 31,
+      "post_type": 1,
+      "updated_at": "2015-08-24T18:20:20.078Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 3,
+      "score": 0.6,
+      "yours": false,
+      "topic_id": 100,
+      "topic_slug": "playstation-weekly-sales",
+      "display_username": "Shane",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "NeoGAF Traveling All-Star",
+      "raw": "So... Sony/GameStop are countering the XB1 Madden bundle with a \"Buy a PS4, Get Madden for Free\" deal. Which, depending on the PS4 you get, might have a game already bundled with it. The Holiday deals/wars have begun!\n\nhttp://i.imgur.com/SHrpzFM.jpg",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 13,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2335,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-24T18:19:29.893Z",
+      "cooked": "<p>Continuing the discussion from <a href=\"//talk.polygonalweave.com/t/the-shattering/361\">The Shattering</a>:</p>\n\n<aside class=\"quote\" data-post=\"1\" data-topic=\"361\" data-full=\"true\"><div class=\"title\">\n<div class=\"quote-controls\"></div>\n<img alt=\"\" width=\"20\" height=\"20\" src=\"//talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/mrbimble/40/29_1.png\" class=\"avatar\">MrBimble:</div>\n<blockquote>\n\n\n                                <img src=\"http://static.giantbomb.com/uploads/scale_small/8/82063/2654720-rcjm76j2.jpeg\" style=\"float:left; max-width:690px; max-height:500pc; max-width:100%;\">\n                <div class=\"onebox-result\" style=\"background:white; border-radius:7px;\">\n                <div class=\"source\">\n\n                </div>\n                <div class=\"onebox-result-body\">\n                <div class=\"gbimage\" style=\"float:left; max-width:690px; max-height: 500px; max-width:100%;\">\n                </div>\n                <div class=\"info\" style=\"display:inline-block;width: 100%;padding: 10px;\">\n                <h4>The Shattering</h4>\n                A Free to Play sci-fi arena shooter from Cliff Bleszinski's new studio, Boss Key Productions in collaboration with Nexon.\n                <h4>Expected Release</h4> TBA\n                <h4>Platforms</h4>\n                PC\n                <h4>Developers</h4>\n                Boss Key Productions\n                <h4>Genres</h4>\n                First-Person Shooter\n                </div>\n                <br>\n                <br>\n                <a href=\"http://www.giantbomb.com/the-shattering/3030-46941/\" class=\"track-link\" target=\"_blank\">\n                Find out more at Giant Bomb\n                </a>\n                </div>\n                <div class=\"clearfix\"></div>\n                </div>\n                \n<p>Looks like we get some teasers for future teasers this week. More reveals on Tuesday and Wednesday.</p>\n<p><a href=\"http://theshattering.nexon.net/\" class=\"onebox\" target=\"_blank\">http://theshattering.nexon.net/</a></p>\n<div class=\"lazyYT\" data-youtube-id=\"Wnpf91UZ-T4\" data-youtube-title=\"After The Shattering...\" data-width=\"480\" data-height=\"270\" data-parameters=\"feature=oembed&amp;wmode=opaque\"></div>\n</blockquote></aside>",
+      "post_number": 1,
+      "post_type": 1,
+      "updated_at": "2015-08-24T18:19:29.893Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 2,
+      "score": 0.4,
+      "yours": true,
+      "topic_id": 363,
+      "topic_slug": "trailers",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": false,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "Continuing the discussion from [The Shattering](http://talk.polygonalweave.com/t/the-shattering/361):\n\n[quote=\"MrBimble, post:1, topic:361, full:true\"]\nhttp://www.giantbomb.com/the-shattering/3030-46941/\n\nLooks like we get some teasers for future teasers this week. More reveals on Tuesday and Wednesday.\n\nhttp://theshattering.nexon.net/\n\nhttps://youtu.be/Wnpf91UZ-T4\n[/quote]",
+      "actions_summary": [
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2334,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-24T18:18:00.848Z",
+      "cooked": "<p>[Replace this first paragraph with a short description of your new category. This guidance will appear in the category selection area, so try to keep it below 200 characters. Until you edit this text or create topics, this category won't appear on the categories page.]</p>\n\n<p>Use the following paragraphs for a longer description, as well as to establish any category guidelines or rules.</p>\n\n<p>Some things to consider in any discussion replies below:</p>\n\n<ul>\n<li><p>What is this category for? Why should people select this category for their topic?</p></li>\n<li><p>How is this different than the other categories we already have?</p></li>\n<li><p>Do we need this category?</p></li>\n<li><p>Should we merge this with another category, or split it into more categories?</p></li>\n</ul>",
+      "post_number": 1,
+      "post_type": 1,
+      "updated_at": "2015-08-24T18:18:00.848Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 1,
+      "score": 0.2,
+      "yours": true,
+      "topic_id": 362,
+      "topic_slug": "about-the-videos-category",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": false,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "[Replace this first paragraph with a short description of your new category. This guidance will appear in the category selection area, so try to keep it below 200 characters. Until you edit this text or create topics, this category won't appear on the categories page.]\n\nUse the following paragraphs for a longer description, as well as to establish any category guidelines or rules.\n\nSome things to consider in any discussion replies below:\n\n- What is this category for? Why should people select this category for their topic?\n\n- How is this different than the other categories we already have?\n\n- Do we need this category?\n\n- Should we merge this with another category, or split it into more categories?\n",
+      "actions_summary": [
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2333,
+      "name": "",
+      "username": "MrBimble",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/mrbimble/{size}/29_1.png",
+      "uploaded_avatar_id": 29,
+      "created_at": "2015-08-24T18:03:20.491Z",
+      "cooked": "<aside class=\"onebox whitelistedgeneric\">\n  <header class=\"source\">\n    <a href=\"http://www.polygon.com/2015/8/24/9197735/rock-band-4-instrument-compatibility-last-gen-xbox-one-adapter-ps4?utm_campaign=polygon&amp;utm_content=chorus&amp;utm_medium=social&amp;utm_source=twitter\">\n      www.polygon.com\n    </a>\n  </header>\n  <article class=\"onebox-body\">\n    <img src=\"https://cdn2.vox-cdn.com/thumbor/jQY3n3Q7pL6Ir1o6is6c9C6kHJ8=/0x0:1920x1080/1280x720/cdn0.vox-cdn.com/uploads/chorus_image/image/47019004/rock-band-4-guitar-screenshot_1920.0.0.jpg\" class=\"thumbnail\" width=\"109\" height=\"62\">\n\n<h3><a href=\"http://www.polygon.com/2015/8/24/9197735/rock-band-4-instrument-compatibility-last-gen-xbox-one-adapter-ps4?utm_campaign=polygon&amp;utm_content=chorus&amp;utm_medium=social&amp;utm_source=twitter\">Rock Band 4 requires $20 adapter to use last-gen instruments on Xbox One, but not PS4</a></h3>\n\n<p>Rock Band 4 players on PlayStation 4 and Xbox One will be able to play the music game with their closetfuls of old PlayStation 3 or Xbox 360 instruments, respectively. But Xbox gamers will have to...</p>\n\n  </article>\n  <div style=\"clear: both\"></div>\n</aside>\n",
+      "post_number": 25,
+      "post_type": 1,
+      "updated_at": "2015-08-24T18:03:20.491Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 3,
+      "score": 0.6,
+      "yours": false,
+      "topic_id": 120,
+      "topic_slug": "rock-band-4",
+      "display_username": "",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "Rocket League Traveling All-Star",
+      "raw": "http://www.polygon.com/2015/8/24/9197735/rock-band-4-instrument-compatibility-last-gen-xbox-one-adapter-ps4?utm_campaign=polygon&utm_content=chorus&utm_medium=social&utm_source=twitter",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 2,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 2,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2332,
+      "name": "",
+      "username": "MrBimble",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/mrbimble/{size}/29_1.png",
+      "uploaded_avatar_id": 29,
+      "created_at": "2015-08-24T17:40:44.626Z",
+      "cooked": "\n\n                                <div class=\"lightbox-wrapper\"><a href=\"http://static.giantbomb.com/uploads/scale_small/8/82063/2654720-rcjm76j2.jpeg\" class=\"lightbox\" title=\"2654720-rcjm76j2.jpeg\"><img src=\"http://static.giantbomb.com/uploads/scale_small/8/82063/2654720-rcjm76j2.jpeg\" style=\"float:left; max-width:690px; max-height:500pc; max-width:100%;\" width=\"500\" height=\"500\"><div class=\"meta\">\n<span class=\"filename\">2654720-rcjm76j2.jpeg</span><span class=\"informations\">640x640</span><span class=\"expand\"></span>\n</div></a></div>\n                <div class=\"onebox-result\" style=\"background:white; border-radius:7px;\">\n                <div class=\"source\">\n\n                </div>\n                <div class=\"onebox-result-body\">\n                <div class=\"gbimage\" style=\"float:left; max-width:690px; max-height: 500px; max-width:100%;\">\n                </div>\n                <div class=\"info\" style=\"display:inline-block;width: 100%;padding: 10px;\">\n                <h4>The Shattering</h4>\n                A Free to Play sci-fi arena shooter from Cliff Bleszinski's new studio, Boss Key Productions in collaboration with Nexon.\n                <h4>Expected Release</h4> TBA\n                <h4>Platforms</h4>\n                PC\n                <h4>Developers</h4>\n                Boss Key Productions\n                <h4>Genres</h4>\n                First-Person Shooter\n                </div>\n                <br>\n                <br>\n                <a href=\"http://www.giantbomb.com/the-shattering/3030-46941/\" class=\"track-link\" target=\"_blank\">\n                Find out more at Giant Bomb\n                </a>\n                </div>\n                <div class=\"clearfix\"></div>\n                </div>\n                \n\n<p>Looks like we get some teasers for future teasers this week. More reveals on Tuesday and Wednesday.</p>\n\n<p><a href=\"http://theshattering.nexon.net/\" class=\"onebox\" target=\"_blank\">http://theshattering.nexon.net/</a></p>\n\n<div class=\"lazyYT\" data-youtube-id=\"Wnpf91UZ-T4\" data-youtube-title=\"After The Shattering...\" data-width=\"480\" data-height=\"270\" data-parameters=\"feature=oembed&amp;wmode=opaque\"></div>",
+      "post_number": 1,
+      "post_type": 1,
+      "updated_at": "2015-08-24T17:40:44.626Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 4,
+      "score": 0.8,
+      "yours": false,
+      "topic_id": 361,
+      "topic_slug": "the-shattering",
+      "display_username": "",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": false,
+      "can_recover": true,
+      "user_title": "Rocket League Traveling All-Star",
+      "raw": "http://www.giantbomb.com/the-shattering/3030-46941/\n\nLooks like we get some teasers for future teasers this week. More reveals on Tuesday and Wednesday.\n\nhttp://theshattering.nexon.net/\n\nhttps://youtu.be/Wnpf91UZ-T4",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 2,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 2,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2331,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-24T17:36:13.559Z",
+      "cooked": "<p>Continuing the discussion from <a href=\"//talk.polygonalweave.com/t/everybodys-gone-to-the-rapture/196/13\">Everybody's Gone to the Rapture</a>:</p>\n\n<aside class=\"quote\" data-post=\"13\" data-topic=\"196\" data-full=\"true\"><div class=\"title\">\n<div class=\"quote-controls\"></div>\n<img alt=\"\" width=\"20\" height=\"20\" src=\"//talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/darthsmurfx/40/73_1.png\" class=\"avatar\">DarthSmurfX:</div>\n<blockquote>\n<p><em>Full Review:</em></p>\n<p>I've never played a \"walking simulator\" before this, but I'm glad I did. This is the Bizarro-Destiny of games, where it is ALL story and no gameplay. And it works. REALLY well.</p>\n<p>I'll try not to repeat myself from above, but just know that none of that stuff changed. Slightly creepy, immensely lonely, R2 to run... all that is still in the latter half of the game.</p>\n<p><strong>Graphics.</strong><br>This game is gorgeous. From the very first scene where you are looking out over a valley at a sunrise, to the final moments (I won't spoil that scene) I was thoroughly impressed with what the CryEngine 3 can do. From the time shifts, to the weather changes to the sparks falling from the light balls that zip around the town, I was in awe at everything. And you get to really take it all in due to the slow pace you'll be walking at. I really should have hitten the \"Share\" button once or twice, but I was so into everything going on around me that it never popped into my head to do so. I will definitely take advantage of that during my next Trophy hunting playthroughs. My only complaint is the framerate. It really, REALLY struggles at times, especially noticeable in the shadows. I'm hoping they fix this via patch as it was jarring enough to take me out of the moment several times. <a href=\"http://www.eurogamer.net/articles/digitalfoundry-2015-vs-everybodys-gone-to-the-rapture\">You can read more about that here.</a></p>\n<a href=\"http://images.eurogamer.net/2013/articles/1/7/7/4/0/1/3/everybodys-gone-to-the-rapture-review-143928049295.jpg\" target=\"_blank\"><img src=\"http://images.eurogamer.net/2013/articles/1/7/7/4/0/1/3/everybodys-gone-to-the-rapture-review-143928049295.jpg\"></a>\n<p><strong>Sound:</strong><br>The music. Wow. It is subtle at times and others it sent chills down my spine at just the right moment. Certain actions trigger more intense music and when nothing is going on, sometimes the background sound effects fill the atmosphere with a sense of life, yet utter loneliness. I'm talking gibberish. <a href=\"http://www.theguardian.com/technology/2015/jul/30/everybodys-gone-to-the-rapture-video-game-sound-music\">Here is a great article that explains it way better than I can.</a> </p>\n<p><strong>Gameplay:</strong><br>Well... hmm... this is an interactive story—with much less emphasis on \"interactive\" than on \"story.\" There isn't much here. You wander around, with the light trails gently nudging you in the correct directions, you press X a few times and tip your controller in one direction or another at certain points. And, yet... it was fun. </p>\n<p>This game DOES NOT hand-hold. If you are looking for a Batman Arkham Knight game that puts a dot on a map with a trail of arrows pointing you in the right direction and constant button prompts, this is not that game. I didn't even figure out that I could hop certain fences until later in the game. This made me miss out on some story elements. But then again, I don't think you're supposed to catch everything the first time. And you get so used to NOT interacting with things, that you miss some Trophy opportunities.</p>\n<a href=\"http://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/6/19/1434715708491/7e7cbf63-e4c4-409d-8d4b-cfd1205319ab-620x372.jpeg?w=620&amp;q=85&amp;auto=format&amp;sharp=10&amp;s=1aebff12c03382ac460344505d6e698e\" target=\"_blank\"><img src=\"http://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/6/19/1434715708491/7e7cbf63-e4c4-409d-8d4b-cfd1205319ab-620x372.jpeg?w=620&amp;q=85&amp;auto=format&amp;sharp=10&amp;s=1aebff12c03382ac460344505d6e698e\"></a>\n<p><strong>Story:</strong><br>What can I say? The whole game is story and it's a good one. You \"meet\" various characters, and you follow them through the events that led to their disappearance. You get to see their personalities, good or bad, their struggles, their fears at what was going on... and in some cases, these stories nearly made my eyes water. Ok, maybe a little bit. Especially, the one that ends at a <span class=\"spoiler\">train station.</span> Even though you... hmm... I guess I have to leave that sentence unfinished.</p>\n<p>The ending. Let's just say that my prediction in a previous post was... partially... correct. I think. See, the ending doesn't hold your hand either, but hopefully you've uncovered enough of the pieces leading up to it to grasp the meaning. I actually can't wait until more of you have played through it so we can discuss our interpretations of it.</p>\n<a href=\"http://i.imgur.com/FQw0Fhl.gif\" target=\"_blank\"><img src=\"http://i.imgur.com/FQw0Fhl.gif\"></a>\n<p><strong>Nitpicks/Misc:</strong><br>The Trophies. By the way, DO NOT read them before playing through the first time. One is kinda spoilery... kind of. But mostly, you'll be focused on finding these things than what's going on around you and you'll miss the immersion which is why I think most of these trophies are things that won't pop during a normal playthrough. They'd be distracting. Most of them require you to find something or somewhere and... do nothing. For minutes at a time. Others are finding everything of a certain type... very challenging. And then the final 2, well... that Platinum will be worth it. After I completed the game last night, I instantly began a new one because I missed an entire area early on. I got some more story there, one key piece I wish I had found the first time, and started the trophy hunt. I'll need to play the entire story at least twice more to get them all. Whatever. It's a great game that didn't take a lot of time to complete—I'll gladly play this game again and again.</p>\n<p>Actually, the only downsides are the framerate, the slow pace (which you can speed up slightly if you have to backtrack) and the fan... oh, yeah... the PS4 fan. I've read that the menu screens in this game do not have a capped framerate. So if you spend enough time looking at one, the framerate will skyrocket and your PS4's fan will kick in and it will not stop until you quit the game. I had it running in the background and went to Netflix and the fan was out-of-control until I went back to the game and force quit it. That can be patched. Hopefully.</p>\n<p>Overall, I highly recommend this game as a nice change of pace to Destiny, Rocket League or some other action-packed title. If you want a quality story, with a beautiful environment, engaging dialogue, nifty music and have a few hours—this is the game. I recommend playing with headphones to get all the ambience and locking away family members, so you have no distractions. Also, finish it in 2 or 3 sessions, max, close together so you don't forget character's names or voices.</p>\n<p><strong>9 out of 10</strong></p>\n<p>EDIT: I'd love, love, love to see this as a Morpheus title one day.</p>\n<p>    </p>\n</blockquote></aside>",
+      "post_number": 1,
+      "post_type": 1,
+      "updated_at": "2015-08-24T17:36:13.559Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 2,
+      "score": 0.4,
+      "yours": true,
+      "topic_id": 360,
+      "topic_slug": "everybodys-gone-to-rapture",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": false,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "Continuing the discussion from [Everybody&#x27;s Gone to the Rapture](http://talk.polygonalweave.com/t/everybodys-gone-to-the-rapture/196/13):\n\n[quote=\"DarthSmurfX, post:13, topic:196, full:true\"]\n*Full Review:*\n\nI've never played a \"walking simulator\" before this, but I'm glad I did. This is the Bizarro-Destiny of games, where it is ALL story and no gameplay. And it works. REALLY well.\n\nI'll try not to repeat myself from above, but just know that none of that stuff changed. Slightly creepy, immensely lonely, R2 to run... all that is still in the latter half of the game.\n\n**Graphics.**\nThis game is gorgeous. From the very first scene where you are looking out over a valley at a sunrise, to the final moments (I won't spoil that scene) I was thoroughly impressed with what the CryEngine 3 can do. From the time shifts, to the weather changes to the sparks falling from the light balls that zip around the town, I was in awe at everything. And you get to really take it all in due to the slow pace you'll be walking at. I really should have hitten the \"Share\" button once or twice, but I was so into everything going on around me that it never popped into my head to do so. I will definitely take advantage of that during my next Trophy hunting playthroughs. My only complaint is the framerate. It really, REALLY struggles at times, especially noticeable in the shadows. I'm hoping they fix this via patch as it was jarring enough to take me out of the moment several times. [You can read more about that here.][1]\n\nhttp://images.eurogamer.net/2013/articles/1/7/7/4/0/1/3/everybodys-gone-to-the-rapture-review-143928049295.jpg\n\n**Sound:**\nThe music. Wow. It is subtle at times and others it sent chills down my spine at just the right moment. Certain actions trigger more intense music and when nothing is going on, sometimes the background sound effects fill the atmosphere with a sense of life, yet utter loneliness. I'm talking gibberish. [Here is a great article that explains it way better than I can.][2] \n\n**Gameplay:**\nWell... hmm... this is an interactive story—with much less emphasis on \"interactive\" than on \"story.\" There isn't much here. You wander around, with the light trails gently nudging you in the correct directions, you press X a few times and tip your controller in one direction or another at certain points. And, yet... it was fun. \n\nThis game DOES NOT hand-hold. If you are looking for a Batman Arkham Knight game that puts a dot on a map with a trail of arrows pointing you in the right direction and constant button prompts, this is not that game. I didn't even figure out that I could hop certain fences until later in the game. This made me miss out on some story elements. But then again, I don't think you're supposed to catch everything the first time. And you get so used to NOT interacting with things, that you miss some Trophy opportunities.\n\nhttp://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/6/19/1434715708491/7e7cbf63-e4c4-409d-8d4b-cfd1205319ab-620x372.jpeg?w=620&q=85&auto=format&sharp=10&s=1aebff12c03382ac460344505d6e698e\n\n**Story:**\nWhat can I say? The whole game is story and it's a good one. You \"meet\" various characters, and you follow them through the events that led to their disappearance. You get to see their personalities, good or bad, their struggles, their fears at what was going on... and in some cases, these stories nearly made my eyes water. Ok, maybe a little bit. Especially, the one that ends at a [spoiler]train station.[/spoiler] Even though you... hmm... I guess I have to leave that sentence unfinished.\n\nThe ending. Let's just say that my prediction in a previous post was... partially... correct. I think. See, the ending doesn't hold your hand either, but hopefully you've uncovered enough of the pieces leading up to it to grasp the meaning. I actually can't wait until more of you have played through it so we can discuss our interpretations of it.\n\nhttp://i.imgur.com/FQw0Fhl.gif\n\n**Nitpicks/Misc:**\nThe Trophies. By the way, DO NOT read them before playing through the first time. One is kinda spoilery... kind of. But mostly, you'll be focused on finding these things than what's going on around you and you'll miss the immersion which is why I think most of these trophies are things that won't pop during a normal playthrough. They'd be distracting. Most of them require you to find something or somewhere and... do nothing. For minutes at a time. Others are finding everything of a certain type... very challenging. And then the final 2, well... that Platinum will be worth it. After I completed the game last night, I instantly began a new one because I missed an entire area early on. I got some more story there, one key piece I wish I had found the first time, and started the trophy hunt. I'll need to play the entire story at least twice more to get them all. Whatever. It's a great game that didn't take a lot of time to complete—I'll gladly play this game again and again.\n\nActually, the only downsides are the framerate, the slow pace (which you can speed up slightly if you have to backtrack) and the fan... oh, yeah... the PS4 fan. I've read that the menu screens in this game do not have a capped framerate. So if you spend enough time looking at one, the framerate will skyrocket and your PS4's fan will kick in and it will not stop until you quit the game. I had it running in the background and went to Netflix and the fan was out-of-control until I went back to the game and force quit it. That can be patched. Hopefully.\n\nOverall, I highly recommend this game as a nice change of pace to Destiny, Rocket League or some other action-packed title. If you want a quality story, with a beautiful environment, engaging dialogue, nifty music and have a few hours—this is the game. I recommend playing with headphones to get all the ambience and locking away family members, so you have no distractions. Also, finish it in 2 or 3 sessions, max, close together so you don't forget character's names or voices.\n\n**9 out of 10**\n\nEDIT: I'd love, love, love to see this as a Morpheus title one day.\n\n  [1]: http://www.eurogamer.net/articles/digitalfoundry-2015-vs-everybodys-gone-to-the-rapture\n  [2]: http://www.theguardian.com/technology/2015/jul/30/everybodys-gone-to-the-rapture-video-game-sound-music\n[/quote]",
+      "actions_summary": [
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2330,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-24T17:29:35.646Z",
+      "cooked": "<p>[Replace this first paragraph with a short description of your new category. This guidance will appear in the category selection area, so try to keep it below 200 characters. Until you edit this text or create topics, this category won't appear on the categories page.]</p>\n\n<p>Use the following paragraphs for a longer description, as well as to establish any category guidelines or rules.</p>\n\n<p>Some things to consider in any discussion replies below:</p>\n\n<ul>\n<li><p>What is this category for? Why should people select this category for their topic?</p></li>\n<li><p>How is this different than the other categories we already have?</p></li>\n<li><p>Do we need this category?</p></li>\n<li><p>Should we merge this with another category, or split it into more categories?</p></li>\n</ul>",
+      "post_number": 1,
+      "post_type": 1,
+      "updated_at": "2015-08-24T17:29:35.646Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 1,
+      "score": 0.2,
+      "yours": true,
+      "topic_id": 359,
+      "topic_slug": "about-the-reviews-category",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": false,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "[Replace this first paragraph with a short description of your new category. This guidance will appear in the category selection area, so try to keep it below 200 characters. Until you edit this text or create topics, this category won't appear on the categories page.]\n\nUse the following paragraphs for a longer description, as well as to establish any category guidelines or rules.\n\nSome things to consider in any discussion replies below:\n\n- What is this category for? Why should people select this category for their topic?\n\n- How is this different than the other categories we already have?\n\n- Do we need this category?\n\n- Should we merge this with another category, or split it into more categories?\n",
+      "actions_summary": [
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2329,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-24T17:18:57.178Z",
+      "cooked": "<p>Mostly mediocre reviews, but some really high marks out there.  Anybody planning on checking this out?</p>",
+      "post_number": 2,
+      "post_type": 1,
+      "updated_at": "2015-08-24T17:18:57.178Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 3,
+      "score": 0.6,
+      "yours": true,
+      "topic_id": 194,
+      "topic_slug": "until-dawn",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "Mostly mediocre reviews, but some really high marks out there.  Anybody planning on checking this out?",
+      "actions_summary": [
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2328,
+      "name": "Shane",
+      "username": "DarthSmurfX",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/darthsmurfx/{size}/73_1.png",
+      "uploaded_avatar_id": 73,
+      "created_at": "2015-08-24T16:49:51.673Z",
+      "cooked": "<p><strong>Grow Home, Super Time Force Ultra</strong> for PS4.<br><strong>Twisted Metal</strong> and <strong>Teslagrad</strong> (PS4 Crossbuy) for PS3.<br><strong>La Mulana EX</strong> and <strong>Xeodrifter</strong> (PS4 Crossbuy) for Vita.</p>\n\n<aside class=\"onebox whitelistedgeneric\">\n  <header class=\"source\">\n    <a href=\"http://blog.us.playstation.com/2015/08/24/ps-plus-free-games-for-september-2015/\">\n      blog.us.playstation.com\n    </a>\n  </header>\n  <article class=\"onebox-body\">\n    <img src=\"http://static.blog.playstation.com/wp-content/uploads/2015/08/20518815465_d4fed9f884_h1.jpg\" class=\"thumbnail\" width=\"690\" height=\"388\">\n\n<h3><a href=\"http://blog.us.playstation.com/2015/08/24/ps-plus-free-games-for-september-2015/\">PS Plus: Free Games for September 2015</a></h3>\n\n<p></p>\n\n  </article>\n  <div style=\"clear: both\"></div>\n</aside>\n",
+      "post_number": 24,
+      "post_type": 1,
+      "updated_at": "2015-08-24T16:50:05.543Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 3,
+      "score": 0.6,
+      "yours": false,
+      "topic_id": 103,
+      "topic_slug": "ps-instant-game-collection",
+      "display_username": "Shane",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "NeoGAF Traveling All-Star",
+      "raw": "**Grow Home, Super Time Force Ultra** for PS4.\n**Twisted Metal** and **Teslagrad** (PS4 Crossbuy) for PS3.\n**La Mulana EX** and **Xeodrifter** (PS4 Crossbuy) for Vita.\n\nhttp://blog.us.playstation.com/2015/08/24/ps-plus-free-games-for-september-2015/",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 13,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2327,
+      "name": "Shane",
+      "username": "DarthSmurfX",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/darthsmurfx/{size}/73_1.png",
+      "uploaded_avatar_id": 73,
+      "created_at": "2015-08-24T15:51:05.548Z",
+      "cooked": "<p>I played for the first time this weekend. And I really liked it. I had no idea what I was doing, what the story was supposed to be or anything, but the graphics were amazing, and the cooperative part was done so well... I bet it was super cool to be the first gamers playing and having no idea that you were with other players until the end. </p>\n\n<p>I don't even know how to describe this game. They designed the coop part in such a way that it is impossible to be a jerk to someone else. No chat, no PSN ID, no dialogue... so you can either ignore the other person and go lone wolf, or help them. There is no third \"grief them until they quit\" option. It's really quite ingenious. </p>\n\n<p>[possible spoilers]<br>I played from start to finish in one session, I highly recommend doing this the first time, and then restarted the second half a day later. Basically, I did the entire final chapter by myself the first time. My \"partner\" sat down and never moved after a certain point, so I just though that's the way it was supposed to be played—solo. But then I realized there were trophies associated with completing it as a duo, and boy does that make a difference in the narrative. I really felt a connection to the other player even though I had no idea who they were, if they were male or female, where they lived or anything. And then, when we finished, they sent me a message over PSN thanking me for the Journey. It really is a game like no other in this respect—making friends with complete strangers, without saying a single word.<br>[/possible spoilers]</p>\n\n<p>Very cool.</p>\n\n<p>This is another game I'd highly recommend everyone playing at least once.</p>",
+      "post_number": 7,
+      "post_type": 1,
+      "updated_at": "2015-08-24T15:51:05.548Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 3,
+      "score": 0.6,
+      "yours": false,
+      "topic_id": 95,
+      "topic_slug": "journey",
+      "display_username": "Shane",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "NeoGAF Traveling All-Star",
+      "raw": "I played for the first time this weekend. And I really liked it. I had no idea what I was doing, what the story was supposed to be or anything, but the graphics were amazing, and the cooperative part was done so well... I bet it was super cool to be the first gamers playing and having no idea that you were with other players until the end. \n\nI don't even know how to describe this game. They designed the coop part in such a way that it is impossible to be a jerk to someone else. No chat, no PSN ID, no dialogue... so you can either ignore the other person and go lone wolf, or help them. There is no third \"grief them until they quit\" option. It's really quite ingenious. \n\n[possible spoilers]\nI played from start to finish in one session, I highly recommend doing this the first time, and then restarted the second half a day later. Basically, I did the entire final chapter by myself the first time. My \"partner\" sat down and never moved after a certain point, so I just though that's the way it was supposed to be played—solo. But then I realized there were trophies associated with completing it as a duo, and boy does that make a difference in the narrative. I really felt a connection to the other player even though I had no idea who they were, if they were male or female, where they lived or anything. And then, when we finished, they sent me a message over PSN thanking me for the Journey. It really is a game like no other in this respect—making friends with complete strangers, without saying a single word.\n[/possible spoilers]\n\nVery cool.\n\nThis is another game I'd highly recommend everyone playing at least once.",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 13,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2326,
+      "name": "Shane",
+      "username": "DarthSmurfX",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/darthsmurfx/{size}/73_1.png",
+      "uploaded_avatar_id": 73,
+      "created_at": "2015-08-24T15:33:15.312Z",
+      "cooked": "<p>insertcoin.com - I cannot believe that is available.<br>dlc.com - Downloadable Comments, or something \"clever\" like that.<br>pushstart.com</p>\n\n<p>I also like Jango's iGotNext.com</p>",
+      "post_number": 10,
+      "post_type": 1,
+      "updated_at": "2015-08-24T15:33:15.312Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 3,
+      "score": 0.6,
+      "yours": false,
+      "topic_id": 310,
+      "topic_slug": "we-need-a-name",
+      "display_username": "Shane",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "NeoGAF Traveling All-Star",
+      "raw": "insertcoin.com - I cannot believe that is available.\ndlc.com - Downloadable Comments, or something \"clever\" like that.\npushstart.com\n\nI also like Jango's iGotNext.com",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 13,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2325,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-24T14:23:48.929Z",
+      "cooked": "\n\n                                <div class=\"lightbox-wrapper\"><a href=\"http://static.giantbomb.com/uploads/scale_small/8/82063/2731604-mgsvclean.jpg\" class=\"lightbox\" title=\"2731604-mgsvclean.jpg\"><img src=\"http://static.giantbomb.com/uploads/scale_small/8/82063/2731604-mgsvclean.jpg\" style=\"float:left; max-width:690px; max-height:500pc; max-width:100%;\" width=\"473\" height=\"500\"><div class=\"meta\">\n<span class=\"filename\">2731604-mgsvclean.jpg</span><span class=\"informations\">606x640</span><span class=\"expand\"></span>\n</div></a></div>\n                <div class=\"onebox-result\" style=\"background:white; border-radius:7px;\">\n                <div class=\"source\">\n\n                </div>\n                <div class=\"onebox-result-body\">\n                <div class=\"gbimage\" style=\"float:left; max-width:690px; max-height: 500px; max-width:100%;\">\n                </div>\n                <div class=\"info\" style=\"display:inline-block;width: 100%;padding: 10px;\">\n                <h4>Metal Gear Solid V: The Phantom Pain</h4>\n                The fifth main entry in the series recounts the further adventures of Big Boss, as he wakes up from a nine-year coma in 1984 to investigate a mysterious organization called XOF.\n                <h4>Expected Release</h4> September 1, 2015\n                <h4>Platforms</h4>\n                Xbox 360, PlayStation 3, Xbox 360 Games Store, PlayStation Network (PS3), PC, Xbox One, PlayStation 4\n                <h4>Developers</h4>\n                Kojima Productions, Kojima Productions Los Angeles \n                <h4>Genres</h4>\n                Action-Adventure\n                </div>\n                <br>\n                <br>\n                <a href=\"http://www.giantbomb.com/metal-gear-solid-v-the-phantom-pain/3030-40796/\" class=\"track-link\" target=\"_blank\">\n                Find out more at Giant Bomb\n                </a>\n                </div>\n                <div class=\"clearfix\"></div>\n                </div>\n                \n\n<p>A little surprised this topic hasn't been created yet, but I guess most of you guys are 360 converts so I'll let it slide.</p>\n\n<p>I was secretly hoping this would suck so I wouldn't be tempted to buy another game that I'll never finish (like the rest of the Metal Gear series), but it looks like I may be out of luck:</p>\n\n<p><strong>Gamespot 10/10</strong><br><aside class=\"onebox whitelistedgeneric\">\n  <header class=\"source\">\n    <a href=\"http://www.gamespot.com/reviews/metal-gear-solid-v-the-phantom-pain-review/1900-6416224/\">\n      www.gamespot.com\n    </a>\n  </header>\n  <article class=\"onebox-body\">\n    <img src=\"http://static1.gamespot.com/uploads/screen_kubrick/1365/13658182/2927051-mgsphantompain_review_upt2015_20150823_nologo.jpg\" class=\"thumbnail\" width=\"\" height=\"\">\n\n<h3><a href=\"http://www.gamespot.com/reviews/metal-gear-solid-v-the-phantom-pain-review/1900-6416224/\">Metal Gear Solid V: The Phantom Pain Review</a></h3>\n\n<p>Kojima's open-world opus succeeds in delivering incredible gameplay and captivating storytelling.</p>\n\n  </article>\n  <div style=\"clear: both\"></div>\n</aside>\n</p>\n\n<p><strong>IGN 10/10</strong><br><aside class=\"onebox whitelistedgeneric\">\n  <header class=\"source\">\n    <a href=\"http://www.ign.com/articles/2015/08/24/metal-gear-solid-5-the-phantom-pain-review?utm_source=IGN%20hub%20page&amp;utm_medium=IGN%20(front%20page)&amp;utm_content=2&amp;utm_campaign=Coverstory\">\n      www.ign.com\n    </a>\n  </header>\n  <article class=\"onebox-body\">\n    <img src=\"http://assets2.ignimgs.com/2015/07/16/mgs-5-us-esrb-day1-ps4jpg-306bde.jpg\" class=\"thumbnail\" width=\"397\" height=\"500\">\n\n<h3><a href=\"http://www.ign.com/articles/2015/08/24/metal-gear-solid-5-the-phantom-pain-review?utm_source=IGN%20hub%20page&amp;utm_medium=IGN%20(front%20page)&amp;utm_content=2&amp;utm_campaign=Coverstory\">Metal Gear Solid 5: The Phantom Pain Review - IGN</a></h3>\n\n<p>Tactical espionage excellence.</p>\n\n  </article>\n  <div style=\"clear: both\"></div>\n</aside>\n</p>\n\n<p><strong>Game Informer 9.25/10</strong></p>\n\n<aside class=\"onebox whitelistedgeneric\">\n  <header class=\"source\">\n    <a href=\"http://www.gameinformer.com/games/metal_gear_solid_v_the_phantom_pain/b/playstation4/archive/2015/08/23/metal-gear-solid-v-the-phantom-pain-review-game-informer.aspx\">\n      www.gameinformer.com\n    </a>\n  </header>\n  <article class=\"onebox-body\">\n    <img src=\"http://media1.gameinformer.com/filestorage/CommunityServer.Components.SiteFiles/imagefeed/featured/konami/metalgearsolid5/review/mgsvreview200.jpg\" class=\"thumbnail\" width=\"200\" height=\"179\">\n\n<h3><a href=\"http://www.gameinformer.com/games/metal_gear_solid_v_the_phantom_pain/b/playstation4/archive/2015/08/23/metal-gear-solid-v-the-phantom-pain-review-game-informer.aspx\">MGS V: The Phantom Pain Review – A Legend Worth Waiting For</a></h3>\n\n<p>The Phantom Pain puts the saga of Big Boss and his sons in the background, emphasizing dynamic gameplay and a player-directed approach to progression.</p>\n\n  </article>\n  <div style=\"clear: both\"></div>\n</aside>\n\n\n<p><strong>Destructoid 9/10</strong><br><aside class=\"onebox whitelistedgeneric\">\n  <header class=\"source\">\n    <a href=\"http://www.destructoid.com/review-metal-gear-solid-v-the-phantom-pain-305699.phtml\">\n      www.destructoid.com\n    </a>\n  </header>\n  <article class=\"onebox-body\">\n    <img src=\"http://cdn.destructoid.com//ul/305699-FFA4.jpg\" class=\"thumbnail\" width=\"\" height=\"\">\n\n<h3><a href=\"http://www.destructoid.com/review-metal-gear-solid-v-the-phantom-pain-305699.phtml\">Review: Metal Gear Solid V: The Phantom Pain</a></h3>\n\n<p>Happy trails, Kojima, Metal Gear V review. Despite the fact that most of the spinoff Metal Gear games are good in their own right, they just don't get me excited the same wa...</p>\n\n  </article>\n  <div style=\"clear: both\"></div>\n</aside>\n</p>",
+      "post_number": 1,
+      "post_type": 1,
+      "updated_at": "2015-08-24T14:25:03.068Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 3,
+      "score": 0.6,
+      "yours": true,
+      "topic_id": 358,
+      "topic_slug": "metal-gear-solid-v-the-phantom-pain",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": false,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "http://www.giantbomb.com/metal-gear-solid-v-the-phantom-pain/3030-40796/\n\nA little surprised this topic hasn't been created yet, but I guess most of you guys are 360 converts so I'll let it slide.\n\nI was secretly hoping this would suck so I wouldn't be tempted to buy another game that I'll never finish (like the rest of the Metal Gear series), but it looks like I may be out of luck:\n\n\n##**Gamespot 10/10**\nhttp://www.gamespot.com/reviews/metal-gear-solid-v-the-phantom-pain-review/1900-6416224/\n\n##**IGN 10/10**\nhttp://www.ign.com/articles/2015/08/24/metal-gear-solid-5-the-phantom-pain-review?utm_source=IGN%20hub%20page&utm_medium=IGN%20(front%20page)&utm_content=2&utm_campaign=Coverstory\n\n##**Game Informer 9.25/10**\n\nhttp://www.gameinformer.com/games/metal_gear_solid_v_the_phantom_pain/b/playstation4/archive/2015/08/23/metal-gear-solid-v-the-phantom-pain-review-game-informer.aspx\n\n##**Destructoid 9/10**\nhttp://www.destructoid.com/review-metal-gear-solid-v-the-phantom-pain-305699.phtml",
+      "actions_summary": [
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2324,
+      "name": "Joe S",
+      "username": "CrazyThang01",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/crazythang01/{size}/126_1.png",
+      "uploaded_avatar_id": 126,
+      "created_at": "2015-08-24T14:15:34.883Z",
+      "cooked": "<p>It looks like a pretty cool game, but I'd way rather play it on a higher graphic platform.</p>",
+      "post_number": 2,
+      "post_type": 1,
+      "updated_at": "2015-08-24T14:15:34.883Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 4,
+      "score": 0.8,
+      "yours": false,
+      "topic_id": 357,
+      "topic_slug": "star-fox-zero",
+      "display_username": "Joe S",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "It looks like a pretty cool game, but I'd way rather play it on a higher graphic platform.",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 37,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 2,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2323,
+      "name": "",
+      "username": "MrBimble",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/mrbimble/{size}/29_1.png",
+      "uploaded_avatar_id": 29,
+      "created_at": "2015-08-24T13:53:02.351Z",
+      "cooked": "\n\n                                <div class=\"lightbox-wrapper\"><a href=\"http://static.giantbomb.com/uploads/scale_small/8/82063/2760808-sf0.jpg\" class=\"lightbox\" title=\"2760808-sf0.jpg\"><img src=\"http://static.giantbomb.com/uploads/scale_small/8/82063/2760808-sf0.jpg\" style=\"float:left; max-width:690px; max-height:500pc; max-width:100%;\" width=\"403\" height=\"500\"><div class=\"meta\">\n<span class=\"filename\">2760808-sf0.jpg</span><span class=\"informations\">516x640</span><span class=\"expand\"></span>\n</div></a></div>\n                <div class=\"onebox-result\" style=\"background:white; border-radius:7px;\">\n                <div class=\"source\">\n\n                </div>\n                <div class=\"onebox-result-body\">\n                <div class=\"gbimage\" style=\"float:left; max-width:690px; max-height: 500px; max-width:100%;\">\n                </div>\n                <div class=\"info\" style=\"display:inline-block;width: 100%;padding: 10px;\">\n                <h4>Star Fox Zero</h4>\n                A new Star Fox is in development for Wii U. Set for a release in Holiday 2015.\n                <h4>Expected Release</h4> November 20, 2015\n                <h4>Platforms</h4>\n                Wii U\n                <h4>Developers</h4>\n                Nintendo EAD, PlatinumGames\n                <h4>Genres</h4>\n                Action, Shooter\n                </div>\n                <br>\n                <br>\n                <a href=\"http://www.giantbomb.com/star-fox-zero/3030-46584/\" class=\"track-link\" target=\"_blank\">\n                Find out more at Giant Bomb\n                </a>\n                </div>\n                <div class=\"clearfix\"></div>\n                </div>\n                \n\n<p>Any Wii U owners excited for this?</p>",
+      "post_number": 1,
+      "post_type": 1,
+      "updated_at": "2015-08-24T13:53:02.351Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 4,
+      "score": 0.8,
+      "yours": false,
+      "topic_id": 357,
+      "topic_slug": "star-fox-zero",
+      "display_username": "",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": false,
+      "can_recover": true,
+      "user_title": "Rocket League Traveling All-Star",
+      "raw": "http://www.giantbomb.com/star-fox-zero/3030-46584/\n\nAny Wii U owners excited for this?",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 2,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 2,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2322,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-24T13:09:30.799Z",
+      "cooked": "<p>Looks like they are extending this one:</p>\n\n<aside class=\"onebox twitterstatus\">\n  <header class=\"source\">\n    <a href=\"https://twitter.com/Treyarch/status/635545775620100096\">\n      twitter.com\n    </a>\n  </header>\n  <article class=\"onebox-body\">\n    <img src=\"https://pbs.twimg.com/profile_images/585628526965092355/BOeVQHtT_normal.jpg\" class=\"thumbnail\" width=\"48\" height=\"48\">\n<h4>\n  <a href=\"https://twitter.com/Treyarch/status/635545775620100096\">\n    Treyarch\n  </a>\n</h4>\n\n<p>For those that have been asking, we agree...let's keep the PS4 <a href=\"https://twitter.com/search?q=%23BO3Beta\" target=\"_blank\">#BO3Beta</a> rolling. We'll end it Monday at 10pm/PST. Let's go!!!</p>\n\n<div class=\"date\">\n  <a href=\"https://twitter.com/Treyarch/status/635545775620100096\" target=\"_blank\"> 1:14 PM - 23 Aug 2015</a>\n</div>\n\n  </article>\n  <div style=\"clear: both\"></div>\n</aside>\n\n\n<p>I'm feeling generous too.  Your due date for the review has been extended as well.  Tuesday at 0001 CST sharp is the new deadline.  You are welcome.</p>",
+      "post_number": 15,
+      "post_type": 1,
+      "updated_at": "2015-08-24T13:09:30.799Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 3,
+      "score": 0.6,
+      "yours": true,
+      "topic_id": 74,
+      "topic_slug": "call-of-duty-black-ops-iii",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "Looks like they are extending this one:\n\nhttps://twitter.com/Treyarch/status/635545775620100096\n\nI'm feeling generous too.  Your due date for the review has been extended as well.  Tuesday at 0001 CST sharp is the new deadline.  You are welcome.",
+      "actions_summary": [
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2321,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-24T02:38:30.281Z",
+      "cooked": "<p>I sent you the email.  You haven't opened it yet though.  What gives?</p>",
+      "post_number": 14,
+      "post_type": 1,
+      "updated_at": "2015-08-24T02:38:30.281Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": null,
+      "incoming_link_count": 0,
+      "reads": 3,
+      "score": 0.6,
+      "yours": true,
+      "topic_id": 303,
+      "topic_slug": "nfl-survivor-pool-2015",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "I sent you the email.  You haven't opened it yet though.  What gives?",
+      "actions_summary": [
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2320,
+      "name": "Joe S",
+      "username": "CrazyThang01",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/crazythang01/{size}/126_1.png",
+      "uploaded_avatar_id": 126,
+      "created_at": "2015-08-24T02:06:36.920Z",
+      "cooked": "<p>Say since this is already about the website and naming, but what if we connected forums and the main website together? I think that would be more efficient for the new \"update\" supposedly. <br>Also what about gamingforfun.com? Just an idea and it would catch my eye.</p>",
+      "post_number": 9,
+      "post_type": 1,
+      "updated_at": "2015-08-24T02:06:36.920Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 39,
+      "incoming_link_count": 0,
+      "reads": 4,
+      "score": 2.75,
+      "yours": false,
+      "topic_id": 310,
+      "topic_slug": "we-need-a-name",
+      "display_username": "Joe S",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "Say since this is already about the website and naming, but what if we connected forums and the main website together? I think that would be more efficient for the new \"update\" supposedly. \nAlso what about gamingforfun.com? Just an idea and it would catch my eye.",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 37,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 2,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2319,
+      "name": "Joe S",
+      "username": "CrazyThang01",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/crazythang01/{size}/126_1.png",
+      "uploaded_avatar_id": 126,
+      "created_at": "2015-08-24T01:49:46.244Z",
+      "cooked": "<p>Hey Jonathan and I were talking tonight, we thought you should setup a doubles tournament on RL. I'm sure we'd all like that!</p>",
+      "post_number": 10,
+      "post_type": 1,
+      "updated_at": "2015-08-24T01:49:46.244Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 13,
+      "incoming_link_count": 0,
+      "reads": 2,
+      "score": 1.05,
+      "yours": false,
+      "topic_id": 255,
+      "topic_slug": "hello",
+      "display_username": "Joe S",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "Hey Jonathan and I were talking tonight, we thought you should setup a doubles tournament on RL. I'm sure we'd all like that!",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 37,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 2,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2318,
+      "name": "",
+      "username": "Jango",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/jango/{size}/149_1.png",
+      "uploaded_avatar_id": 149,
+      "created_at": "2015-08-23T20:25:07.525Z",
+      "cooked": "<p>Sooooooooooooooooo.....</p>",
+      "post_number": 13,
+      "post_type": 1,
+      "updated_at": "2015-08-23T20:25:07.525Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 23,
+      "incoming_link_count": 0,
+      "reads": 3,
+      "score": 1.75,
+      "yours": false,
+      "topic_id": 303,
+      "topic_slug": "nfl-survivor-pool-2015",
+      "display_username": "",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "Sooooooooooooooooo.....",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 7,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 1,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2317,
+      "name": "Joe S",
+      "username": "CrazyThang01",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/crazythang01/{size}/126_1.png",
+      "uploaded_avatar_id": 126,
+      "created_at": "2015-08-23T15:04:35.696Z",
+      "cooked": "<p>Up for anything tonight?</p>",
+      "post_number": 9,
+      "post_type": 1,
+      "updated_at": "2015-08-23T15:04:35.696Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 19,
+      "incoming_link_count": 0,
+      "reads": 2,
+      "score": 1.35,
+      "yours": false,
+      "topic_id": 255,
+      "topic_slug": "hello",
+      "display_username": "Joe S",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "Up for anything tonight?",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 37,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 2,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2316,
+      "name": "Shane",
+      "username": "DarthSmurfX",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/darthsmurfx/{size}/73_1.png",
+      "uploaded_avatar_id": 73,
+      "created_at": "2015-08-22T02:04:36.391Z",
+      "cooked": "<p>This is a good read: <a href=\"http://www.pushsquare.com/news/2015/08/first_impressions_eyes-on_with_ps4s_virtual_reality_headset_project_morpheus\">http://www.pushsquare.com/news/2015/08/first_impressions_eyes-on_with_ps4s_virtual_reality_headset_project_morpheus</a></p>",
+      "post_number": 29,
+      "post_type": 1,
+      "updated_at": "2015-08-22T02:04:36.391Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 65,
+      "incoming_link_count": 1,
+      "reads": 5,
+      "score": 6.05,
+      "yours": false,
+      "topic_id": 166,
+      "topic_slug": "project-morpheus",
+      "display_username": "Shane",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "NeoGAF Traveling All-Star",
+      "raw": "This is a good read: http://www.pushsquare.com/news/2015/08/first_impressions_eyes-on_with_ps4s_virtual_reality_headset_project_morpheus",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 13,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2315,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-21T19:51:21.503Z",
+      "cooked": "<aside class=\"onebox whitelistedgeneric\">\n  <header class=\"source\">\n    <a href=\"http://www.polygon.com/2015/8/21/9188437/call-of-duty-black-ops-3-beta-ps4-updates\">\n      www.polygon.com\n    </a>\n  </header>\n  <article class=\"onebox-body\">\n    <img src=\"https://cdn2.vox-cdn.com/thumbor/LcCPkXLaJ1T4l2l-gQ59M6AM75Y=/0x0:3840x2160/1280x720/cdn0.vox-cdn.com/uploads/chorus_image/image/47006268/Black_Ops_3_Stronghold_Broken_Arrow_WM.0.0.jpg\" class=\"thumbnail\" width=\"104\" height=\"59\">\n\n<h3><a href=\"http://www.polygon.com/2015/8/21/9188437/call-of-duty-black-ops-3-beta-ps4-updates\">Black Ops 3 PS4 beta gets higher level cap, new map and more</a></h3>\n\n<p>Call of Duty: Black Ops 3 developer Treyarch is currently running a multiplayer beta of the shooter on PlayStation 4, and the studio expanded the beta today with some new ways to play it, the company...</p>\n\n  </article>\n  <div style=\"clear: both\"></div>\n</aside>\n\n\n<p><a class=\"mention\" href=\"/users/mrbimble\">@MrBimble</a> I expect your full review of the beta on my desk on Monday by 0730.</p>",
+      "post_number": 14,
+      "post_type": 1,
+      "updated_at": "2015-08-21T19:51:21.503Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 7,
+      "incoming_link_count": 0,
+      "reads": 5,
+      "score": 1.35,
+      "yours": true,
+      "topic_id": 74,
+      "topic_slug": "call-of-duty-black-ops-iii",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "http://www.polygon.com/2015/8/21/9188437/call-of-duty-black-ops-3-beta-ps4-updates\n\n@MrBimble I expect your full review of the beta on my desk on Monday by 0730.",
+      "actions_summary": [
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2314,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-21T19:16:53.381Z",
+      "cooked": "<p>Ok, I know I'm double posting the video, but for those of you who didn't watch it all the way to the end, you have to at the very least see how it ended:</p>\n\n<div class=\"lazyYT\" data-youtube-id=\"ZwGFZk9NLaU\" data-youtube-title=\"Cosmic Aftershock vs Kings of Urban - Grand Finals (Rocket League - August 20th 2015)\" data-width=\"480\" data-height=\"270\" data-parameters=\"feature=oembed&amp;wmode=opaque&amp;start=1352\"></div>",
+      "post_number": 97,
+      "post_type": 1,
+      "updated_at": "2015-08-21T19:16:53.381Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 57,
+      "incoming_link_count": 0,
+      "reads": 4,
+      "score": 17.9,
+      "yours": true,
+      "topic_id": 180,
+      "topic_slug": "rocket-league",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "Ok, I know I'm double posting the video, but for those of you who didn't watch it all the way to the end, you have to at the very least see how it ended:\n\nhttps://youtu.be/ZwGFZk9NLaU?t=1352",
+      "actions_summary": [
+        {
+          "id": 2,
+          "count": 1
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2313,
+      "name": "",
+      "username": "MrBimble",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/mrbimble/{size}/29_1.png",
+      "uploaded_avatar_id": 29,
+      "created_at": "2015-08-21T16:36:02.213Z",
+      "cooked": "<p>Wow.  The saves, the aerials, the patience....those guys are good.</p>",
+      "post_number": 96,
+      "post_type": 1,
+      "updated_at": "2015-08-21T16:36:02.213Z",
+      "reply_count": 0,
+      "reply_to_post_number": 95,
+      "quote_count": 0,
+      "avg_time": 101,
+      "incoming_link_count": 0,
+      "reads": 4,
+      "score": 5.9,
+      "yours": false,
+      "topic_id": 180,
+      "topic_slug": "rocket-league",
+      "display_username": "",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "Rocket League Traveling All-Star",
+      "reply_to_user": {
+        "username": "DarthSmurfX",
+        "avatar_template": "/user_avatar/talk.polygonalweave.com/darthsmurfx/{size}/73_1.png",
+        "uploaded_avatar_id": 73
+      },
+      "raw": "Wow.  The saves, the aerials, the patience....those guys are good.",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 2,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 2,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2312,
+      "name": "Shane",
+      "username": "DarthSmurfX",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/darthsmurfx/{size}/73_1.png",
+      "uploaded_avatar_id": 73,
+      "created_at": "2015-08-21T16:14:03.704Z",
+      "cooked": "<p>First RL MLG Tournament:<br></p><div class=\"lazyYT\" data-youtube-id=\"ZwGFZk9NLaU\" data-youtube-title=\"Cosmic Aftershock vs Kings of Urban - Grand Finals (Rocket League - August 20th 2015)\" data-width=\"480\" data-height=\"270\" data-parameters=\"feature=oembed&amp;wmode=opaque\"></div>",
+      "post_number": 95,
+      "post_type": 1,
+      "updated_at": "2015-08-21T16:14:03.704Z",
+      "reply_count": 1,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 161,
+      "incoming_link_count": 0,
+      "reads": 4,
+      "score": 66.25,
+      "yours": false,
+      "topic_id": 180,
+      "topic_slug": "rocket-league",
+      "display_username": "Shane",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "NeoGAF Traveling All-Star",
+      "raw": "First RL MLG Tournament:\nhttps://youtu.be/ZwGFZk9NLaU",
+      "actions_summary": [
+        {
+          "id": 2,
+          "count": 1,
+          "acted": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 13,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2311,
+      "name": "Shane",
+      "username": "DarthSmurfX",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/darthsmurfx/{size}/73_1.png",
+      "uploaded_avatar_id": 73,
+      "created_at": "2015-08-21T15:52:43.876Z",
+      "cooked": "<div class=\"lazyYT\" data-youtube-id=\"Jpi-uWDF_Z8\" data-youtube-title=\"Official Destiny: The Taken King VIP Rewards\" data-width=\"480\" data-height=\"270\" data-parameters=\"feature=oembed&amp;wmode=opaque\"></div>",
+      "post_number": 190,
+      "post_type": 1,
+      "updated_at": "2015-08-21T15:52:43.876Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 15,
+      "incoming_link_count": 0,
+      "reads": 5,
+      "score": 1.8,
+      "yours": false,
+      "topic_id": 23,
+      "topic_slug": "destiny",
+      "display_username": "Shane",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "NeoGAF Traveling All-Star",
+      "raw": "https://www.youtube.com/watch?feature=player_embedded&v=Jpi-uWDF_Z8",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 13,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2310,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-21T13:25:52.439Z",
+      "cooked": "<aside class=\"quote\" data-post=\"188\" data-topic=\"23\"><div class=\"title\">\n<div class=\"quote-controls\"></div>\n<img alt=\"\" width=\"20\" height=\"20\" src=\"//talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/mrbimble/40/29_1.png\" class=\"avatar\">MrBimble:</div>\n<blockquote><p>A little lack luster after last week.</p></blockquote></aside>\n\n<p>Well, duh.  How can you followup Jake Gyllenhorn?</p>",
+      "post_number": 189,
+      "post_type": 1,
+      "updated_at": "2015-08-21T13:25:52.439Z",
+      "reply_count": 0,
+      "reply_to_post_number": 188,
+      "quote_count": 1,
+      "avg_time": 41,
+      "incoming_link_count": 0,
+      "reads": 5,
+      "score": 3.8,
+      "yours": true,
+      "topic_id": 23,
+      "topic_slug": "destiny",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "[quote=\"MrBimble, post:188, topic:23\"]\nA little lack luster after last week.\n[/quote]\n\nWell, duh.  How can you followup Jake Gyllenhorn?",
+      "actions_summary": [
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2309,
+      "name": "",
+      "username": "MrBimble",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/mrbimble/{size}/29_1.png",
+      "uploaded_avatar_id": 29,
+      "created_at": "2015-08-21T13:16:49.372Z",
+      "cooked": "<p>A little lack luster after last week.  I have the Thunderlord, but hardly use it.  </p>\n\n<p>I think I'd hold off until the expansion unless Xur is selling something you really want.  Only a limited number of Exotics will be available to update after the Taken King comes out.</p>",
+      "post_number": 188,
+      "post_type": 1,
+      "updated_at": "2015-08-21T13:16:49.372Z",
+      "reply_count": 1,
+      "reply_to_post_number": 187,
+      "quote_count": 0,
+      "avg_time": 47,
+      "incoming_link_count": 0,
+      "reads": 5,
+      "score": 8.95,
+      "yours": false,
+      "topic_id": 23,
+      "topic_slug": "destiny",
+      "display_username": "",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "Rocket League Traveling All-Star",
+      "reply_to_user": {
+        "username": "Rewfus",
+        "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+        "uploaded_avatar_id": 69
+      },
+      "raw": "A little lack luster after last week.  I have the Thunderlord, but hardly use it.  \n\nI think I'd hold off until the expansion unless Xur is selling something you really want.  Only a limited number of Exotics will be available to update after the Taken King comes out.",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 2,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 2,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2308,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-21T13:12:39.175Z",
+      "cooked": "<p>Xur's Inventory for the weekend includes:</p>\n\n<ul>\n<li><a href=\"http://www.destinydb.com/items/1611580929-eternal-warrior\">Eternal Warrior</a></li>\n<li><a href=\"http://www.destinydb.com/items/144553853-mask-of-the-third-man\">Mask of the Third Man</a></li>\n<li><a href=\"http://www.destinydb.com/items/287395896-starfire-protocol\">Starfire Protocol</a></li>\n<li><a href=\"http://www.destinydb.com/items/3191797831-thunderlord\">Thunderlord</a></li>\n<li><span>Exotic Chest Engram</span></li>\n</ul>\n\n<p>Thunderlord any good?  Probably not really worth buying anything until the expansion, heh?  I won't lie, i can't even pretend to follow all of the changes in The Taken King, so I really have no idea.</p>",
+      "post_number": 187,
+      "post_type": 1,
+      "updated_at": "2015-08-21T13:13:54.858Z",
+      "reply_count": 1,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 43,
+      "incoming_link_count": 0,
+      "reads": 5,
+      "score": 8.5,
+      "yours": true,
+      "topic_id": 23,
+      "topic_slug": "destiny",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "Xur's Inventory for the weekend includes:\n\n*   [Eternal Warrior](http://www.destinydb.com/items/1611580929-eternal-warrior)\n*   [Mask of the Third Man](http://www.destinydb.com/items/144553853-mask-of-the-third-man)\n*   [Starfire Protocol](http://www.destinydb.com/items/287395896-starfire-protocol)\n*   [Thunderlord](http://www.destinydb.com/items/3191797831-thunderlord)\n*   <span>Exotic Chest Engram</span>\n\nThunderlord any good?  Probably not really worth buying anything until the expansion, heh?  I won't lie, i can't even pretend to follow all of the changes in The Taken King, so I really have no idea.",
+      "actions_summary": [
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2307,
+      "name": "",
+      "username": "MrBimble",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/mrbimble/{size}/29_1.png",
+      "uploaded_avatar_id": 29,
+      "created_at": "2015-08-20T18:36:16.791Z",
+      "cooked": "<p>Thanks for the write up Smurf!</p>",
+      "post_number": 15,
+      "post_type": 1,
+      "updated_at": "2015-08-20T18:36:16.791Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 41,
+      "incoming_link_count": 0,
+      "reads": 3,
+      "score": 2.15,
+      "yours": false,
+      "topic_id": 196,
+      "topic_slug": "everybodys-gone-to-the-rapture",
+      "display_username": "",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "Rocket League Traveling All-Star",
+      "raw": "Thanks for the write up Smurf!",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 2,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 2,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2306,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-20T17:51:09.343Z",
+      "cooked": "<p>It does sound like a perfect Morpheus game based off your review.  Slow moving, immersive environment, narrative driven, it seems to hit all of the key points.  Now that you said that, it has me wanting to wait to see if it might ever happen.  I'm worried that might happen more and more once Morpheus gets closer.</p>",
+      "post_number": 14,
+      "post_type": 1,
+      "updated_at": "2015-08-20T17:51:09.343Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 39,
+      "incoming_link_count": 0,
+      "reads": 4,
+      "score": 2.75,
+      "yours": true,
+      "topic_id": 196,
+      "topic_slug": "everybodys-gone-to-the-rapture",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "It does sound like a perfect Morpheus game based off your review.  Slow moving, immersive environment, narrative driven, it seems to hit all of the key points.  Now that you said that, it has me wanting to wait to see if it might ever happen.  I'm worried that might happen more and more once Morpheus gets closer.",
+      "actions_summary": [
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2305,
+      "name": "Shane",
+      "username": "DarthSmurfX",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/darthsmurfx/{size}/73_1.png",
+      "uploaded_avatar_id": 73,
+      "created_at": "2015-08-20T17:22:00.258Z",
+      "cooked": "<p><em>Full Review:</em></p>\n\n<p>I've never played a \"walking simulator\" before this, but I'm glad I did. This is the Bizarro-Destiny of games, where it is ALL story and no gameplay. And it works. REALLY well.</p>\n\n<p>I'll try not to repeat myself from above, but just know that none of that stuff changed. Slightly creepy, immensely lonely, R2 to run... all that is still in the latter half of the game.</p>\n\n<p><strong>Graphics.</strong><br>This game is gorgeous. From the very first scene where you are looking out over a valley at a sunrise, to the final moments (I won't spoil that scene) I was thoroughly impressed with what the CryEngine 3 can do. From the time shifts, to the weather changes to the sparks falling from the light balls that zip around the town, I was in awe at everything. And you get to really take it all in due to the slow pace you'll be walking at. I really should have hitten the \"Share\" button once or twice, but I was so into everything going on around me that it never popped into my head to do so. I will definitely take advantage of that during my next Trophy hunting playthroughs. My only complaint is the framerate. It really, REALLY struggles at times, especially noticeable in the shadows. I'm hoping they fix this via patch as it was jarring enough to take me out of the moment several times. <a href=\"http://www.eurogamer.net/articles/digitalfoundry-2015-vs-everybodys-gone-to-the-rapture\">You can read more about that here.</a></p>\n\n<a href=\"http://images.eurogamer.net/2013/articles/1/7/7/4/0/1/3/everybodys-gone-to-the-rapture-review-143928049295.jpg\" target=\"_blank\"><img src=\"http://images.eurogamer.net/2013/articles/1/7/7/4/0/1/3/everybodys-gone-to-the-rapture-review-143928049295.jpg\" width=\"690\" height=\"388\"></a>\n\n<p><strong>Sound:</strong><br>The music. Wow. It is subtle at times and others it sent chills down my spine at just the right moment. Certain actions trigger more intense music and when nothing is going on, sometimes the background sound effects fill the atmosphere with a sense of life, yet utter loneliness. I'm talking gibberish. <a href=\"http://www.theguardian.com/technology/2015/jul/30/everybodys-gone-to-the-rapture-video-game-sound-music\">Here is a great article that explains it way better than I can.</a> </p>\n\n<p><strong>Gameplay:</strong><br>Well... hmm... this is an interactive story—with much less emphasis on \"interactive\" than on \"story.\" There isn't much here. You wander around, with the light trails gently nudging you in the correct directions, you press X a few times and tip your controller in one direction or another at certain points. And, yet... it was fun. </p>\n\n<p>This game DOES NOT hand-hold. If you are looking for a Batman Arkham Knight game that puts a dot on a map with a trail of arrows pointing you in the right direction and constant button prompts, this is not that game. I didn't even figure out that I could hop certain fences until later in the game. This made me miss out on some story elements. But then again, I don't think you're supposed to catch everything the first time. And you get so used to NOT interacting with things, that you miss some Trophy opportunities.</p>\n\n<a href=\"http://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/6/19/1434715708491/7e7cbf63-e4c4-409d-8d4b-cfd1205319ab-620x372.jpeg?w=620&amp;q=85&amp;auto=format&amp;sharp=10&amp;s=1aebff12c03382ac460344505d6e698e\" target=\"_blank\"><img src=\"http://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/6/19/1434715708491/7e7cbf63-e4c4-409d-8d4b-cfd1205319ab-620x372.jpeg?w=620&amp;q=85&amp;auto=format&amp;sharp=10&amp;s=1aebff12c03382ac460344505d6e698e\" width=\"620\" height=\"372\"></a>\n\n<p><strong>Story:</strong><br>What can I say? The whole game is story and it's a good one. You \"meet\" various characters, and you follow them through the events that led to their disappearance. You get to see their personalities, good or bad, their struggles, their fears at what was going on... and in some cases, these stories nearly made my eyes water. Ok, maybe a little bit. Especially, the one that ends at a <span class=\"spoiler\">train station.</span> Even though you... hmm... I guess I have to leave that sentence unfinished.</p>\n\n<p>The ending. Let's just say that my prediction in a previous post was... partially... correct. I think. See, the ending doesn't hold your hand either, but hopefully you've uncovered enough of the pieces leading up to it to grasp the meaning. I actually can't wait until more of you have played through it so we can discuss our interpretations of it.</p>\n\n<a href=\"http://i.imgur.com/FQw0Fhl.gif\" target=\"_blank\"><img src=\"http://i.imgur.com/FQw0Fhl.gif\" width=\"600\" height=\"338\"></a>\n\n<p><strong>Nitpicks/Misc:</strong><br>The Trophies. By the way, DO NOT read them before playing through the first time. One is kinda spoilery... kind of. But mostly, you'll be focused on finding these things than what's going on around you and you'll miss the immersion which is why I think most of these trophies are things that won't pop during a normal playthrough. They'd be distracting. Most of them require you to find something or somewhere and... do nothing. For minutes at a time. Others are finding everything of a certain type... very challenging. And then the final 2, well... that Platinum will be worth it. After I completed the game last night, I instantly began a new one because I missed an entire area early on. I got some more story there, one key piece I wish I had found the first time, and started the trophy hunt. I'll need to play the entire story at least twice more to get them all. Whatever. It's a great game that didn't take a lot of time to complete—I'll gladly play this game again and again.</p>\n\n<p>Actually, the only downsides are the framerate, the slow pace (which you can speed up slightly if you have to backtrack) and the fan... oh, yeah... the PS4 fan. I've read that the menu screens in this game do not have a capped framerate. So if you spend enough time looking at one, the framerate will skyrocket and your PS4's fan will kick in and it will not stop until you quit the game. I had it running in the background and went to Netflix and the fan was out-of-control until I went back to the game and force quit it. That can be patched. Hopefully.</p>\n\n<p>Overall, I highly recommend this game as a nice change of pace to Destiny, Rocket League or some other action-packed title. If you want a quality story, with a beautiful environment, engaging dialogue, nifty music and have a few hours—this is the game. I recommend playing with headphones to get all the ambience and locking away family members, so you have no distractions. Also, finish it in 2 or 3 sessions, max, close together so you don't forget character's names or voices.</p>\n\n<p><strong>9 out of 10</strong></p>\n\n<p>EDIT: I'd love, love, love to see this as a Morpheus title one day.</p>",
+      "post_number": 13,
+      "post_type": 1,
+      "updated_at": "2015-08-20T18:22:16.423Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 64,
+      "incoming_link_count": 5,
+      "reads": 4,
+      "score": 113.8,
+      "yours": false,
+      "topic_id": 196,
+      "topic_slug": "everybodys-gone-to-the-rapture",
+      "display_username": "Shane",
+      "primary_group_name": null,
+      "version": 3,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "NeoGAF Traveling All-Star",
+      "raw": "*Full Review:*\n\nI've never played a \"walking simulator\" before this, but I'm glad I did. This is the Bizarro-Destiny of games, where it is ALL story and no gameplay. And it works. REALLY well.\n\nI'll try not to repeat myself from above, but just know that none of that stuff changed. Slightly creepy, immensely lonely, R2 to run... all that is still in the latter half of the game.\n\n**Graphics.**\nThis game is gorgeous. From the very first scene where you are looking out over a valley at a sunrise, to the final moments (I won't spoil that scene) I was thoroughly impressed with what the CryEngine 3 can do. From the time shifts, to the weather changes to the sparks falling from the light balls that zip around the town, I was in awe at everything. And you get to really take it all in due to the slow pace you'll be walking at. I really should have hitten the \"Share\" button once or twice, but I was so into everything going on around me that it never popped into my head to do so. I will definitely take advantage of that during my next Trophy hunting playthroughs. My only complaint is the framerate. It really, REALLY struggles at times, especially noticeable in the shadows. I'm hoping they fix this via patch as it was jarring enough to take me out of the moment several times. [You can read more about that here.][1]\n\nhttp://images.eurogamer.net/2013/articles/1/7/7/4/0/1/3/everybodys-gone-to-the-rapture-review-143928049295.jpg\n\n**Sound:**\nThe music. Wow. It is subtle at times and others it sent chills down my spine at just the right moment. Certain actions trigger more intense music and when nothing is going on, sometimes the background sound effects fill the atmosphere with a sense of life, yet utter loneliness. I'm talking gibberish. [Here is a great article that explains it way better than I can.][2] \n\n**Gameplay:**\nWell... hmm... this is an interactive story—with much less emphasis on \"interactive\" than on \"story.\" There isn't much here. You wander around, with the light trails gently nudging you in the correct directions, you press X a few times and tip your controller in one direction or another at certain points. And, yet... it was fun. \n\nThis game DOES NOT hand-hold. If you are looking for a Batman Arkham Knight game that puts a dot on a map with a trail of arrows pointing you in the right direction and constant button prompts, this is not that game. I didn't even figure out that I could hop certain fences until later in the game. This made me miss out on some story elements. But then again, I don't think you're supposed to catch everything the first time. And you get so used to NOT interacting with things, that you miss some Trophy opportunities.\n\nhttp://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/6/19/1434715708491/7e7cbf63-e4c4-409d-8d4b-cfd1205319ab-620x372.jpeg?w=620&q=85&auto=format&sharp=10&s=1aebff12c03382ac460344505d6e698e\n\n**Story:**\nWhat can I say? The whole game is story and it's a good one. You \"meet\" various characters, and you follow them through the events that led to their disappearance. You get to see their personalities, good or bad, their struggles, their fears at what was going on... and in some cases, these stories nearly made my eyes water. Ok, maybe a little bit. Especially, the one that ends at a [spoiler]train station.[/spoiler] Even though you... hmm... I guess I have to leave that sentence unfinished.\n\nThe ending. Let's just say that my prediction in a previous post was... partially... correct. I think. See, the ending doesn't hold your hand either, but hopefully you've uncovered enough of the pieces leading up to it to grasp the meaning. I actually can't wait until more of you have played through it so we can discuss our interpretations of it.\n\nhttp://i.imgur.com/FQw0Fhl.gif\n\n**Nitpicks/Misc:**\nThe Trophies. By the way, DO NOT read them before playing through the first time. One is kinda spoilery... kind of. But mostly, you'll be focused on finding these things than what's going on around you and you'll miss the immersion which is why I think most of these trophies are things that won't pop during a normal playthrough. They'd be distracting. Most of them require you to find something or somewhere and... do nothing. For minutes at a time. Others are finding everything of a certain type... very challenging. And then the final 2, well... that Platinum will be worth it. After I completed the game last night, I instantly began a new one because I missed an entire area early on. I got some more story there, one key piece I wish I had found the first time, and started the trophy hunt. I'll need to play the entire story at least twice more to get them all. Whatever. It's a great game that didn't take a lot of time to complete—I'll gladly play this game again and again.\n\nActually, the only downsides are the framerate, the slow pace (which you can speed up slightly if you have to backtrack) and the fan... oh, yeah... the PS4 fan. I've read that the menu screens in this game do not have a capped framerate. So if you spend enough time looking at one, the framerate will skyrocket and your PS4's fan will kick in and it will not stop until you quit the game. I had it running in the background and went to Netflix and the fan was out-of-control until I went back to the game and force quit it. That can be patched. Hopefully.\n\nOverall, I highly recommend this game as a nice change of pace to Destiny, Rocket League or some other action-packed title. If you want a quality story, with a beautiful environment, engaging dialogue, nifty music and have a few hours—this is the game. I recommend playing with headphones to get all the ambience and locking away family members, so you have no distractions. Also, finish it in 2 or 3 sessions, max, close together so you don't forget character's names or voices.\n\n**9 out of 10**\n\nEDIT: I'd love, love, love to see this as a Morpheus title one day.\n\n  [1]: http://www.eurogamer.net/articles/digitalfoundry-2015-vs-everybodys-gone-to-the-rapture\n  [2]: http://www.theguardian.com/technology/2015/jul/30/everybodys-gone-to-the-rapture-video-game-sound-music",
+      "actions_summary": [
+        {
+          "id": 2,
+          "count": 2,
+          "acted": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 13,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2304,
+      "name": "Christopher Hare",
+      "username": "ChristopheLeFou",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/christophelefou/{size}/76_1.png",
+      "uploaded_avatar_id": 76,
+      "created_at": "2015-08-20T17:21:46.565Z",
+      "cooked": "<p>I love stop motion, but can't say the trailer did a ton for me. First I've heard of this, though, and I'll keep my eye on it.</p>",
+      "post_number": 2,
+      "post_type": 1,
+      "updated_at": "2015-08-20T17:21:46.565Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 6,
+      "incoming_link_count": 0,
+      "reads": 3,
+      "score": 0.9,
+      "yours": false,
+      "topic_id": 327,
+      "topic_slug": "hell-back",
+      "display_username": "Christopher Hare",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "I love stop motion, but can't say the trailer did a ton for me. First I've heard of this, though, and I'll keep my eye on it.",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 17,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 2,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2303,
+      "name": "",
+      "username": "MrBimble",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/mrbimble/{size}/29_1.png",
+      "uploaded_avatar_id": 29,
+      "created_at": "2015-08-20T16:16:56.791Z",
+      "cooked": "<p>And don't forget...</p>\n\n<a href=\"https://s-media-cache-ak0.pinimg.com/236x/07/4c/99/074c99589afdaebed5fa942d8837a635.jpg\" target=\"_blank\"><img src=\"https://s-media-cache-ak0.pinimg.com/236x/07/4c/99/074c99589afdaebed5fa942d8837a635.jpg\" width=\"160\" height=\"186\"></a>",
+      "post_number": 5,
+      "post_type": 1,
+      "updated_at": "2015-08-20T16:16:56.791Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 56,
+      "incoming_link_count": 0,
+      "reads": 3,
+      "score": 3.4,
+      "yours": false,
+      "topic_id": 356,
+      "topic_slug": "how-do-we-get-more-smurfs",
+      "display_username": "",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "Rocket League Traveling All-Star",
+      "raw": "And don't forget...\n\nhttps://s-media-cache-ak0.pinimg.com/236x/07/4c/99/074c99589afdaebed5fa942d8837a635.jpg",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 2,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 2,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2302,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-20T15:56:11.799Z",
+      "cooked": "<p>I actually would like to get more serious about this game.  I have been very close to pulling that $20 trigger a few times now, but Rocket League keeps pulling me back in.  I would at the very least be up for some challenges, maybe even challenging some of the SG team?  There is nobody there that likes racing games...right?</p>",
+      "post_number": 26,
+      "post_type": 1,
+      "updated_at": "2015-08-20T15:56:11.799Z",
+      "reply_count": 0,
+      "reply_to_post_number": 25,
+      "quote_count": 0,
+      "avg_time": 12,
+      "incoming_link_count": 0,
+      "reads": 4,
+      "score": 1.4,
+      "yours": true,
+      "topic_id": 82,
+      "topic_slug": "driveclub",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "reply_to_user": {
+        "username": "DarthSmurfX",
+        "avatar_template": "/user_avatar/talk.polygonalweave.com/darthsmurfx/{size}/73_1.png",
+        "uploaded_avatar_id": 73
+      },
+      "raw": "I actually would like to get more serious about this game.  I have been very close to pulling that $20 trigger a few times now, but Rocket League keeps pulling me back in.  I would at the very least be up for some challenges, maybe even challenging some of the SG team?  There is nobody there that likes racing games...right?",
+      "actions_summary": [
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2301,
+      "name": "Shane",
+      "username": "DarthSmurfX",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/darthsmurfx/{size}/73_1.png",
+      "uploaded_avatar_id": 73,
+      "created_at": "2015-08-20T15:45:31.086Z",
+      "cooked": "<aside class=\"onebox whitelistedgeneric\">\n  <header class=\"source\">\n    <a href=\"http://www.ign.com/articles/2015/08/19/driveclub-patch-121-adds-new-mode-free-car-and-more\">\n      www.ign.com\n    </a>\n  </header>\n  <article class=\"onebox-body\">\n    <img src=\"http://assets2.ignimgs.com/2015/07/20/driveclub-horsepower-1280jpg-f9d2b3_1280w.jpg\" class=\"thumbnail\" width=\"690\" height=\"388\">\n\n<h3><a href=\"http://www.ign.com/articles/2015/08/19/driveclub-patch-121-adds-new-mode-free-car-and-more\">Driveclub Patch 1.21 Adds New Mode, Free Car and More - IGN</a></h3>\n\n<p>Hot on the heels of speeding pass 2 million sales, Driveclub continues to get bigger and better.</p>\n\n  </article>\n  <div style=\"clear: both\"></div>\n</aside>\n\n\n<blockquote>\n<ul>\n<li>12 new ‘SPRINT’ variations of DRIVECLUB tracks for Time Trial &amp; Challenges: Cayoosh Point, Putre, Munnar, Goshodaira, Holmastad &amp; The Kyle (including unique Sprints for the standard and reverse track versions)</li>\n<li>10 more ELITE Driver Levels from 66 to 75. All levels have a new reward</li>\n<li>The Rimac Automobili Concept_One and VUHL 05 are better! We’ve modified the vehicle performance and handling for these 2 cars based on further collaboration with manufacturers and community feedback</li>\n<li>Adds support for the Thrustmaster TH8PA manual gear shifter (including sequential shifting and clutch support)</li>\n<li>Car statistics are now detailed on the vehicle select screen: Drivetrain, Engine Position, Kerb Weight and more</li>\n<li>New default order of cars in the garage/vehicle select</li>\n<li>Rebalanced the frequency of wet weather and night time events in Random Event</li>\n<li>Added Club leaderboards to all Tour events in addition to the standard solo leaderboards</li>\n<li>New option when sending a challenge to filter your Friends list to show DRIVECLUB players</li>\n<li>Includes general improvements for game performance, stability and usability</li>\n</ul>\n<p>Next week will apparently see the Ferrari 488 GTB added to the title, while private lobbies and the long-gestating companion patch are also on the way.</p>\n</blockquote>\n\n<p>I'm hoping to get more into this game now that Batman is behind me. Who's up for some challenges?</p>\n\n<p>Also...</p>\n\n<blockquote><p>To thank everyone for playing the game and for staying with us, <strong>we are running Double XP for everybody on all of the 15 cars available in Driveclub PS Plus Edition. It starts today and runs through to Monday, August 24th!</strong> That’s Double XP wherever and whenever you play with the 15 cars featured in this amazing #PS4share photo album.</p></blockquote>",
+      "post_number": 25,
+      "post_type": 1,
+      "updated_at": "2015-08-20T15:47:06.609Z",
+      "reply_count": 1,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 23,
+      "incoming_link_count": 0,
+      "reads": 4,
+      "score": 51.95,
+      "yours": false,
+      "topic_id": 82,
+      "topic_slug": "driveclub",
+      "display_username": "Shane",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "NeoGAF Traveling All-Star",
+      "raw": "http://www.ign.com/articles/2015/08/19/driveclub-patch-121-adds-new-mode-free-car-and-more\n\n> - 12 new ‘SPRINT’ variations of DRIVECLUB tracks for Time Trial & Challenges: Cayoosh Point, Putre, Munnar, Goshodaira, Holmastad & The Kyle (including unique Sprints for the standard and reverse track versions)\n> - 10 more ELITE Driver Levels from 66 to 75. All levels have a new reward\n> - The Rimac Automobili Concept_One and VUHL 05 are better! We’ve modified the vehicle performance and handling for these 2 cars based on further collaboration with manufacturers and community feedback\n> - Adds support for the Thrustmaster TH8PA manual gear shifter (including sequential shifting and clutch support)\n> - Car statistics are now detailed on the vehicle select screen: Drivetrain, Engine Position, Kerb Weight and more\n> - New default order of cars in the garage/vehicle select\n> - Rebalanced the frequency of wet weather and night time events in Random Event\n> - Added Club leaderboards to all Tour events in addition to the standard solo leaderboards\n> - New option when sending a challenge to filter your Friends list to show DRIVECLUB players\n> - Includes general improvements for game performance, stability and usability\n\n> Next week will apparently see the Ferrari 488 GTB added to the title, while private lobbies and the long-gestating companion patch are also on the way.\n\nI'm hoping to get more into this game now that Batman is behind me. Who's up for some challenges?\n\nAlso...\n\n> To thank everyone for playing the game and for staying with us, **we are running Double XP for everybody on all of the 15 cars available in Driveclub PS Plus Edition. It starts today and runs through to Monday, August 24th!** That’s Double XP wherever and whenever you play with the 15 cars featured in this amazing #PS4share photo album.",
+      "actions_summary": [
+        {
+          "id": 2,
+          "count": 1,
+          "acted": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 13,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2300,
+      "name": "Shane",
+      "username": "DarthSmurfX",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/darthsmurfx/{size}/73_1.png",
+      "uploaded_avatar_id": 73,
+      "created_at": "2015-08-20T15:42:27.508Z",
+      "cooked": "<p>I'm not going anywhere. My workload is virtually non-existent in the summer months, so I truly have nothing better to do until October/November. But even then... I'll make time.</p>",
+      "post_number": 4,
+      "post_type": 1,
+      "updated_at": "2015-08-20T15:42:27.508Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 161,
+      "incoming_link_count": 0,
+      "reads": 3,
+      "score": 8.65,
+      "yours": false,
+      "topic_id": 356,
+      "topic_slug": "how-do-we-get-more-smurfs",
+      "display_username": "Shane",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "NeoGAF Traveling All-Star",
+      "raw": "I'm not going anywhere. My workload is virtually non-existent in the summer months, so I truly have nothing better to do until October/November. But even then... I'll make time.",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 13,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2299,
+      "name": "Shane",
+      "username": "DarthSmurfX",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/darthsmurfx/{size}/73_1.png",
+      "uploaded_avatar_id": 73,
+      "created_at": "2015-08-20T15:39:13.132Z",
+      "cooked": "<p>I think all maps are going to be free, according to MS/343.</p>",
+      "post_number": 4,
+      "post_type": 1,
+      "updated_at": "2015-08-20T15:39:13.132Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 11,
+      "incoming_link_count": 0,
+      "reads": 4,
+      "score": 1.35,
+      "yours": false,
+      "topic_id": 243,
+      "topic_slug": "halo-5-guardians",
+      "display_username": "Shane",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "NeoGAF Traveling All-Star",
+      "raw": "I think all maps are going to be free, according to MS/343.",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 13,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2298,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-20T15:38:42.479Z",
+      "cooked": "<p>Immensely.</p>\n\n<aside class=\"quote\" data-post=\"2\" data-topic=\"356\"><div class=\"title\">\n<div class=\"quote-controls\"></div>\n<img alt=\"\" width=\"20\" height=\"20\" src=\"//talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/darthsmurfx/40/73_1.png\" class=\"avatar\">DarthSmurfX:</div>\n<blockquote><p>I like how easy it is to find new info on games here</p></blockquote></aside>\n\n<p>I really like hearing you say this.  That was my whole goal with keeping the topics to a single game and just updating that topic instead of having a dozen other ones scattered about.  My concern is how scalable this will be, but I'm hoping to eventually add functionality to somehow categorize the the post and eventually surface that somewhere on the topic list.</p>\n\n<aside class=\"quote\" data-post=\"2\" data-topic=\"356\"><div class=\"title\">\n<div class=\"quote-controls\"></div>\n<img alt=\"\" width=\"20\" height=\"20\" src=\"//talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/darthsmurfx/40/73_1.png\" class=\"avatar\">DarthSmurfX:</div>\n<blockquote><p>But the site is huge, so my comments get lost in the shuffle.</p></blockquote></aside>\n\n<p>This is a possible concern of mine with trying to make this site be more than just a small community message board.  I am hoping to counter this with features like the highlighted quotes/user reviews, etc.., but we'll have to see how that goes.  As of right now, this would be a problem I would happily welcome <img src=\"/images/emoji/emoji_one/smile.png?v=0\" title=\":smile:\" class=\"emoji\" alt=\"smile\"> </p>\n\n<aside class=\"quote\" data-post=\"2\" data-topic=\"356\"><div class=\"title\">\n<div class=\"quote-controls\"></div>\n<img alt=\"\" width=\"20\" height=\"20\" src=\"//talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/darthsmurfx/40/73_1.png\" class=\"avatar\">DarthSmurfX:</div>\n<blockquote><p>I used to go to GameFAQs, but traded that for NeoGAF. The mods are better at stopping trolling there</p></blockquote></aside>\n\n<p>I'm hoping that the tools built in to Discourse will really help with the trolling aspect.  They have some really sophisticated moderator abilities that I have hardly touched, because I haven't had to, but I think if it comes to that we can easily handle it.  It's funny you mention GameFAQs because Discourse also has a really nifty Accepted Answer plugin where you can pose a question, and then only the OP can mark a certain post as the acceptable answer, and it will structure everything accordingly.  I was thinking that could be really cool for eventually GameFAQs type functionality at some point, but would need many more people before that could serve any benefit.</p>\n\n<p>Anyways, thanks again for your feedback.  I'm really excited about the possibility we have here to create somehting that is more than just a message board, but it will take some time.  Hopefully you are in for the long haul!</p>",
+      "post_number": 3,
+      "post_type": 1,
+      "updated_at": "2015-08-20T15:38:42.479Z",
+      "reply_count": 0,
+      "reply_to_post_number": 2,
+      "quote_count": 1,
+      "avg_time": 191,
+      "incoming_link_count": 0,
+      "reads": 3,
+      "score": 10.15,
+      "yours": true,
+      "topic_id": 356,
+      "topic_slug": "how-do-we-get-more-smurfs",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "Immensely.\n\n[quote=\"DarthSmurfX, post:2, topic:356\"]\nI like how easy it is to find new info on games here\n[/quote]\n\nI really like hearing you say this.  That was my whole goal with keeping the topics to a single game and just updating that topic instead of having a dozen other ones scattered about.  My concern is how scalable this will be, but I'm hoping to eventually add functionality to somehow categorize the the post and eventually surface that somewhere on the topic list.\n\n[quote=\"DarthSmurfX, post:2, topic:356\"]\nBut the site is huge, so my comments get lost in the shuffle.\n[/quote]\n\nThis is a possible concern of mine with trying to make this site be more than just a small community message board.  I am hoping to counter this with features like the highlighted quotes/user reviews, etc.., but we'll have to see how that goes.  As of right now, this would be a problem I would happily welcome :smile: \n\n[quote=\"DarthSmurfX, post:2, topic:356\"]\nI used to go to GameFAQs, but traded that for NeoGAF. The mods are better at stopping trolling there\n[/quote]\n\nI'm hoping that the tools built in to Discourse will really help with the trolling aspect.  They have some really sophisticated moderator abilities that I have hardly touched, because I haven't had to, but I think if it comes to that we can easily handle it.  It's funny you mention GameFAQs because Discourse also has a really nifty Accepted Answer plugin where you can pose a question, and then only the OP can mark a certain post as the acceptable answer, and it will structure everything accordingly.  I was thinking that could be really cool for eventually GameFAQs type functionality at some point, but would need many more people before that could serve any benefit.\n\nAnyways, thanks again for your feedback.  I'm really excited about the possibility we have here to create somehting that is more than just a message board, but it will take some time.  Hopefully you are in for the long haul!",
+      "actions_summary": [
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2297,
+      "name": "",
+      "username": "MrBimble",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/mrbimble/{size}/29_1.png",
+      "uploaded_avatar_id": 29,
+      "created_at": "2015-08-20T15:38:11.766Z",
+      "cooked": "<p>Post launch meaning paid DLC, or a free update?</p>",
+      "post_number": 3,
+      "post_type": 1,
+      "updated_at": "2015-08-20T15:38:11.766Z",
+      "reply_count": 0,
+      "reply_to_post_number": 2,
+      "quote_count": 0,
+      "avg_time": 15,
+      "incoming_link_count": 0,
+      "reads": 4,
+      "score": 1.55,
+      "yours": false,
+      "topic_id": 243,
+      "topic_slug": "halo-5-guardians",
+      "display_username": "",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "Rocket League Traveling All-Star",
+      "reply_to_user": {
+        "username": "DarthSmurfX",
+        "avatar_template": "/user_avatar/talk.polygonalweave.com/darthsmurfx/{size}/73_1.png",
+        "uploaded_avatar_id": 73
+      },
+      "raw": "Post launch meaning paid DLC, or a free update?",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 2,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 2,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2296,
+      "name": "Shane",
+      "username": "DarthSmurfX",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/darthsmurfx/{size}/73_1.png",
+      "uploaded_avatar_id": 73,
+      "created_at": "2015-08-20T15:25:56.184Z",
+      "cooked": "<ol>\n<li><p>I like how easy it is to find new info on games here, if I'm not the one posting it, and get like-minded reviews on games I'm interested in. Everything is kept to one topic, for the most part, and everyone is pretty respectful here. Plus, with a community like this, we can fill our Friend's Lists with cool people for Rocket League and The Taken King. See #3 for more on this. </p></li>\n<li><p>I post about 5 comments a day on NeoGAF. That site is great for getting the latest news, insider rumors, and seeing Devs talk about their products with us common folk. But the site is huge, so my comments get lost in the shuffle. I feel quite insignificant there, so it's mostly for news/info and not for the community feel that I keep going back. And some people can be quite vile with what they type. It's not GameFAQs bad, but you really have to watch what you say there or else you'll have rabid fanboys sounding off on you.</p></li>\n<li><p>I used to go to GameFAQs, but traded that for NeoGAF. The mods are better at stopping trolling there, so people are 'slightly' better behaved. I stopped going to SG because... I didn't feel welcome there anymore. After siding with Sony this gen, I had several of my posts removed due to complaints from people there just for having the opposite opinion from someone else. But on the other side of the fence, they can complain about the PS4 and fill every PS4 thread with garbage, whining and insults as much as they want. I like this place, because it seems you can have a negative opinion, while still being respectful, and nobody seems to cry about it. That's what keeps me coming here. I also liked Pink Horse until something happened and it shut down unexpectedly one day. The community there was mostly former SGers that had the same opinion as I did, and we all got along. I guess, I'm hoping that if I can contribute a ton to this site, we can get most of those guys back and pick up where we left off, but also get some new blood in here. We need more folks for our Rocket League tournaments, right?</p></li>\n</ol>\n\n<p>tl;dr: NeoGAF is for the latest news, insider info and dev comments; PW is for the community.</p>\n\n<p>Did any of this help?</p>",
+      "post_number": 2,
+      "post_type": 1,
+      "updated_at": "2015-08-20T15:25:56.184Z",
+      "reply_count": 1,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 320,
+      "incoming_link_count": 0,
+      "reads": 3,
+      "score": 21.6,
+      "yours": false,
+      "topic_id": 356,
+      "topic_slug": "how-do-we-get-more-smurfs",
+      "display_username": "Shane",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "NeoGAF Traveling All-Star",
+      "raw": "1. I like how easy it is to find new info on games here, if I'm not the one posting it, and get like-minded reviews on games I'm interested in. Everything is kept to one topic, for the most part, and everyone is pretty respectful here. Plus, with a community like this, we can fill our Friend's Lists with cool people for Rocket League and The Taken King. See #3 for more on this. \n\n2. I post about 5 comments a day on NeoGAF. That site is great for getting the latest news, insider rumors, and seeing Devs talk about their products with us common folk. But the site is huge, so my comments get lost in the shuffle. I feel quite insignificant there, so it's mostly for news/info and not for the community feel that I keep going back. And some people can be quite vile with what they type. It's not GameFAQs bad, but you really have to watch what you say there or else you'll have rabid fanboys sounding off on you.\n\n3. I used to go to GameFAQs, but traded that for NeoGAF. The mods are better at stopping trolling there, so people are 'slightly' better behaved. I stopped going to SG because... I didn't feel welcome there anymore. After siding with Sony this gen, I had several of my posts removed due to complaints from people there just for having the opposite opinion from someone else. But on the other side of the fence, they can complain about the PS4 and fill every PS4 thread with garbage, whining and insults as much as they want. I like this place, because it seems you can have a negative opinion, while still being respectful, and nobody seems to cry about it. That's what keeps me coming here. I also liked Pink Horse until something happened and it shut down unexpectedly one day. The community there was mostly former SGers that had the same opinion as I did, and we all got along. I guess, I'm hoping that if I can contribute a ton to this site, we can get most of those guys back and pick up where we left off, but also get some new blood in here. We need more folks for our Rocket League tournaments, right?\n\ntl;dr: NeoGAF is for the latest news, insider info and dev comments; PW is for the community.\n\nDid any of this help?",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 13,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2295,
+      "name": "Shane",
+      "username": "DarthSmurfX",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/darthsmurfx/{size}/73_1.png",
+      "uploaded_avatar_id": 73,
+      "created_at": "2015-08-20T15:06:18.167Z",
+      "cooked": "<aside class=\"quote\" data-post=\"15\" data-topic=\"224\" data-full=\"true\"><div class=\"title\">\n<div class=\"quote-controls\"></div>\n<img alt=\"\" width=\"20\" height=\"20\" src=\"//talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/rewfus/40/69_1.png\" class=\"avatar\">Rewfus:</div>\n<blockquote><p>I expect a full review.  I'm toying around with ways to highlight reviews, we'll see how it goes.</p></blockquote></aside>\n\n<p>I can't wait to see what you come up with for this. Expect my full review of EGttR sometime today.</p>",
+      "post_number": 16,
+      "post_type": 1,
+      "updated_at": "2015-08-20T15:06:18.167Z",
+      "reply_count": 0,
+      "reply_to_post_number": 15,
+      "quote_count": 1,
+      "avg_time": 24,
+      "incoming_link_count": 0,
+      "reads": 5,
+      "score": 2.2,
+      "yours": false,
+      "topic_id": 224,
+      "topic_slug": "toy-soldiers-war-chest",
+      "display_username": "Shane",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "NeoGAF Traveling All-Star",
+      "raw": "[quote=\"Rewfus, post:15, topic:224, full:true\"]\nI expect a full review.  I'm toying around with ways to highlight reviews, we'll see how it goes.\n[/quote]\n\nI can't wait to see what you come up with for this. Expect my full review of EGttR sometime today.",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": false,
+      "staff": false,
+      "user_id": 13,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2294,
+      "name": "",
+      "username": "MrBimble",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/mrbimble/{size}/29_1.png",
+      "uploaded_avatar_id": 29,
+      "created_at": "2015-08-20T15:00:47.317Z",
+      "cooked": "<p>I played the SP of advanced warfare and maybe a handful of MP matches.  I'm sure it won't take long for people to exploit the system now that some form of super jumping is becoming common place in these games.</p>",
+      "post_number": 13,
+      "post_type": 1,
+      "updated_at": "2015-08-20T15:00:47.317Z",
+      "reply_count": 0,
+      "reply_to_post_number": 12,
+      "quote_count": 0,
+      "avg_time": 14,
+      "incoming_link_count": 1,
+      "reads": 5,
+      "score": 6.7,
+      "yours": false,
+      "topic_id": 74,
+      "topic_slug": "call-of-duty-black-ops-iii",
+      "display_username": "",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "Rocket League Traveling All-Star",
+      "reply_to_user": {
+        "username": "Rewfus",
+        "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+        "uploaded_avatar_id": 69
+      },
+      "raw": "I played the SP of advanced warfare and maybe a handful of MP matches.  I'm sure it won't take long for people to exploit the system now that some form of super jumping is becoming common place in these games.",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 2,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 2,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2293,
+      "name": "Ryan",
+      "username": "Rewfus",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/rewfus/{size}/69_1.png",
+      "uploaded_avatar_id": 69,
+      "created_at": "2015-08-20T14:46:12.619Z",
+      "cooked": "<p>You didn't play Advanced Warfare MP much did you?  From my understanding it was a lot like Titanfall, most people started by not using those features but then quickly got smoked by those who did.  I'm kind of surprised more people aren't better at it since Advanced Warfare had it, but I know they are slightly different systems.</p>",
+      "post_number": 12,
+      "post_type": 1,
+      "updated_at": "2015-08-20T14:46:12.619Z",
+      "reply_count": 1,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 17,
+      "incoming_link_count": 0,
+      "reads": 5,
+      "score": 6.85,
+      "yours": true,
+      "topic_id": 74,
+      "topic_slug": "call-of-duty-black-ops-iii",
+      "display_username": "Ryan",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": null,
+      "raw": "You didn't play Advanced Warfare MP much did you?  From my understanding it was a lot like Titanfall, most people started by not using those features but then quickly got smoked by those who did.  I'm kind of surprised more people aren't better at it since Advanced Warfare had it, but I know they are slightly different systems.",
+      "actions_summary": [
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 1,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 3,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    },
+    {
+      "id": 2292,
+      "name": "",
+      "username": "MrBimble",
+      "avatar_template": "/user_avatar/talk.polygonalweave.com/mrbimble/{size}/29_1.png",
+      "uploaded_avatar_id": 29,
+      "created_at": "2015-08-20T14:30:20.642Z",
+      "cooked": "<p>I played a few games of the beta and so far I'm actually having fun.  I took a break from the series over the last couple games, but I think I might be back with this one.</p>\n\n<p>The super jumps feel like an optional feature.  I've mostly played the 'old school' way and have done alright.  It's fun to shoot people out of the sky as they try to wall jump all over the place.  This will probably change as people start to really figure out how to use the jumping to their advantage, but for now, I'm digging it.</p>",
+      "post_number": 11,
+      "post_type": 1,
+      "updated_at": "2015-08-20T14:30:20.642Z",
+      "reply_count": 0,
+      "reply_to_post_number": null,
+      "quote_count": 0,
+      "avg_time": 19,
+      "incoming_link_count": 0,
+      "reads": 5,
+      "score": 1.95,
+      "yours": false,
+      "topic_id": 74,
+      "topic_slug": "call-of-duty-black-ops-iii",
+      "display_username": "",
+      "primary_group_name": null,
+      "version": 1,
+      "can_edit": true,
+      "can_delete": true,
+      "can_recover": true,
+      "user_title": "Rocket League Traveling All-Star",
+      "raw": "I played a few games of the beta and so far I'm actually having fun.  I took a break from the series over the last couple games, but I think I might be back with this one.\n\nThe super jumps feel like an optional feature.  I've mostly played the 'old school' way and have done alright.  It's fun to shoot people out of the sky as they try to wall jump all over the place.  This will probably change as people start to really figure out how to use the jumping to their advantage, but for now, I'm digging it.",
+      "actions_summary": [
+        {
+          "id": 2,
+          "can_act": true
+        },
+        {
+          "id": 3,
+          "can_act": true
+        },
+        {
+          "id": 4,
+          "can_act": true
+        },
+        {
+          "id": 5,
+          "hidden": true,
+          "can_act": true
+        },
+        {
+          "id": 6,
+          "can_act": true
+        },
+        {
+          "id": 7,
+          "can_act": true
+        },
+        {
+          "id": 8,
+          "can_act": true
+        }
+      ],
+      "moderator": false,
+      "admin": true,
+      "staff": true,
+      "user_id": 2,
+      "hidden": false,
+      "hidden_reason_id": null,
+      "trust_level": 2,
+      "deleted_at": null,
+      "user_deleted": false,
+      "edit_reason": null,
+      "can_view_edit_history": true,
+      "wiki": false
+    }
+  ]
+}
