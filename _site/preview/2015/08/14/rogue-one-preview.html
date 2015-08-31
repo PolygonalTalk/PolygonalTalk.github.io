@@ -220,8 +220,14 @@
         var post = data.post_stream.posts[0];
         // console.log(data);
         var sourceURL = $(post.cooked).find(".track-link").attr("href");
+        if(sourceURL){
         var gameID = sourceURL.slice(-6).slice(0, -1);
-        var url = "game.html?gameid=" + gameID + "&topicid=" + id;
+        var url = "game.html?gameid=" + gameID + "&topicid=" + id + "#tab_activity";
+        }
+        else{
+        var url = "#";
+        }
+
         callback(url);
       });
     }
