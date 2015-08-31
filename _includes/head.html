@@ -162,8 +162,9 @@
       $.getJSON("http://talk.polygonalweave.com/t/game-links/365.json", function(data) {
 
         var tiles = "";
-        if (data.posts_count > 8)
-          var arraylength = 8;
+        var n=0;
+        if (data.posts_count > 10)
+          var arraylength = 10;
         else
           var arraylength = data.posts_count;
         for (var i = arraylength - 1; i >= 0; i--) {
@@ -174,7 +175,8 @@
 
           tiles += "<a href='" + url + "' class='embedly-card' data-card-controls='0' data-card-chrome='0' height='300'></a>";
 
-          $("#links" + i).html(tiles);
+          $("#links" + n).html(tiles);
+          n++;
         }
       });
     }
@@ -184,6 +186,7 @@
       // $.getJSON("{{ '/GameTrailers.json' | prepend: site.baseurl }}", function(data) {
       $.getJSON("http://talk.polygonalweave.com/t/trailers/363.json", function(data) {
         var tiles = "";
+        var n = 0;
         if (data.posts_count > 8)
           var arraylength = 8;
         else
@@ -202,7 +205,8 @@
           tiles += "</div><div class='card-body'><h4>" + postTitle + "</h4></div>";
 
 
-          $("#trailer" + i).html(tiles);
+          $("#trailer" + n).html(tiles);
+          n++;
         }
       });
     }
@@ -289,7 +293,7 @@
                                     generateGameID(id, gameurl, function(url) {
 
                                       $("#newgames" + x).find("a").attr("href", url);
-                  
+
                                       x++;
                                     });
 
