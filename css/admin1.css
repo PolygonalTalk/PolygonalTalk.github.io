@@ -12534,7 +12534,7 @@ h6 {
   padding: 0 40px;
 }
 
-.content img{
+.content:note(#discourse-comments) img{
   width: 100%;
 }
 .page-header img{

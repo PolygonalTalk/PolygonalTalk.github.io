@@ -122,7 +122,7 @@
           var arraylength = data.posts_count;
         for (var i = arraylength - 1; i >= 0; i--) {
           tiles = "";
-          var post = data.post_stream.posts[n];
+          var post = data.post_stream.posts[i];
 
           var quote = $(post.cooked).find("blockquote").text();
           var quser = $(post.cooked).find(".title").text();
@@ -159,7 +159,7 @@
     function generateLinks() {
 
       // $.getJSON("{{ '/GameLinks.json' | prepend: site.baseurl }}", function(data) {
-      $.getJSON("http://talk.polygonalweave.com/t/game-links/365/.json", function(data) {
+      $.getJSON("http://talk.polygonalweave.com/t/game-links/365.json", function(data) {
 
         var tiles = "";
         if (data.posts_count > 8)
@@ -207,13 +207,14 @@
       });
     }
 
-    function generateGameID(gameurl, callback) {
+    function generateGameID(id, gameurl, callback) {
+      // console.log(gameurl);
       $.getJSON(gameurl, function(data) {
         var post = data.post_stream.posts[0];
-        console.log(data);
+        // console.log(data);
         var sourceURL = $(post.cooked).find(".track-link").attr("href");
         var gameID = sourceURL.slice(-6).slice(0, -1);
-        var url = "game.html?gameid=" + gameID;
+        var url = "game.html?gameid=" + gameID + "&topicid=" + id;
         callback(url);
       });
     }
@@ -233,6 +234,7 @@
 
         var slug = topic.slug;
         var id = topic.id;
+        // var gameurl = "\"http://talk.polygonalweave.com/t/" + slug + "/" + id + ".json\"";
         var gameurl = "http://talk.polygonalweave.com/t/" + slug + "/" + id + ".json";
 
 
@@ -243,7 +245,7 @@
         // var s = date.fromNow() + (diff >= 1 && diff <= 7 ? date.format(" (ddd)") : "");
         var relative = moment(d, "ddd MMMM DD YYYY hh:mm:ss").fromNow();
 
-        callback(gameurl, topicTitle, thumbnail, user, relative, id);
+        callback(id, gameurl, topicTitle, thumbnail, user, relative, id);
       });
     }
 
@@ -273,15 +275,27 @@
               // console.log(id, array[n]);
               if (id != array[n]){
                 if (n == 3){
-                  // console.log("winners:", id);
+
+                  tiles += "<a href='' alt=''>";
                   tiles +='<div class="card tile card-image card-black bg-image" style="background: url(' + thumbnail + ') center/cover">'
                   tiles +='<div class="context ">'
                   tiles +='<div class="tile-content">'
                   tiles +='<span class="text-title">'+ topicTitle +'</span>'
-                  tiles +='<span class="text-subtitle">latest post - ' + user + '</span></div></div></div>'
+                  tiles +='<span class="text-subtitle">latest post - ' + user + '</span></div></div></div></a>'
 
                   $("#newgames" + winners).html(tiles);
+
+                    var x=0;
+                                    generateGameID(id, gameurl, function(url) {
+
+                                      $("#newgames" + x).find("a").attr("href", url);
+                  
+                                      x++;
+                                    });
+
                   winners++;
+
+
                 }
               } else{
                 // console.log("match!");
@@ -298,13 +312,13 @@
     function populateLatestGames() {
       var latestarray = [];
       asyncLoop(4, function(loop) {
-        generateLatestGames((loop.iteration() + 1), function(gameurl, topicTitle, thumbnail, user, relative, id) {
+        generateLatestGames((loop.iteration() + 1), function(id, gameurl, topicTitle, thumbnail, user, relative, id) {
           var tiles = newtile = "";
           latestarray.push(id);
 
           generateNewGames(latestarray);
 
-          tiles += "<a href='' alt=''>";
+          tiles += "<a href='" + gameurl + "' alt=''>";
           tiles += "<div class='game-thumbnail' style='background: url(" + thumbnail + ") center/cover'>";
           tiles += "</div></a>";
           // tiles += "<div class='embedly-card' data-card-controls='0' data-card-embed='" + url + "'></div>";
@@ -320,19 +334,54 @@
       });
 
       asyncLoop(5, function(loop) {
-        generateLatestGames(loop.iteration(), function(gameurl, topicTitle, thumbnail, user, relative, newgame) {
+        generateLatestGames((loop.iteration()+1), function(id, gameurl, topicTitle, thumbnail, user, relative, newgame) {
           var tiles = "";
-          var urlstring = "' + gameurl + '"
-          console.log(urlstring);
-          // generateGameID("{{ '/RocketLeague.json' | prepend: site.baseurl }}", function(url) {
-          generateGameID("' + gameurl + '", function(url) {
-            // tiles += "<a href='" + url + "' alt=''>";
-            // console.log(loop.iteration());
+
+          generateGameID(id, gameurl, function(url) {
             $("#latestgames" + loop.iteration()).find("a").attr("href", url);
             loop.next();
           });
         });
       });
+    }
+
+    function populateComments(data) {
+      console.log(data);
+      var comments = "";
+
+      if (data.posts_count > 10)
+        var arraylength = 10;
+      else
+        var arraylength = data.posts_count;
+      for (var i = arraylength - 1; i >= 0; i--) {
+
+        var post = data.post_stream.posts[i];
+        var url = $(post.cooked).find("blockquote").find("a").attr("href");
+        var d = new Date(post.updated_at);
+        var relative = moment(d, "ddd MMMM DD YYYY hh:mm:ss").fromNow();
+        var user = post.username;
+        var avatarTemplate = post.avatar_template;
+
+        var avatarMedium = avatarTemplate.replace("{size}", "50");
+        var avatar = "http://talk.polygonalweave.com" + avatarMedium;
+        console.log(avatar);
+
+
+
+        comments += '<div class="comment">';
+        comments += '<div class="user-photo"><img src="' + avatar + '" alt=""></div>';
+        comments += '<div class="comment-body">';
+        comments += '<div class="user">';
+        comments += '<ul class="inline-list dot-seperator">';
+        comments += '<li><a href="#">' + user + '</a></li>';
+        comments += '<li class="small">' + relative + '</li></ul></div>';
+        comments += "<p>" + post.cooked + "</p></div></div>";
+
+      }
+      $("#discourse-comments").html(comments);
+
+
+
     }
 
     function generateLatestSearch() {
@@ -371,7 +420,7 @@
 
 
     function gbgame(data) {
-      console.log(data);
+      // console.log(data);
       // var result, gametitle, imageLarge, imageSmall, deck = "";
       var tabs = characters = similar = "";
       var post = data.results;
@@ -417,32 +466,32 @@
       $(".profile-photo").prepend(imageSmall);
     }
 
-    // function game(data) {
-    //   console.log(data);
-    //   var result = "",
-    //     titlediv = "",
-    //     imageLarge = "",
-    //     imageSmall = "";
-    //
-    //   var post = data.results;
-    //   var imageLargeURL = post.image.super_url;
-    //   var imageSmallURL = post.image.small_url;
-    //   var title = post.name;
-    //
-    //
-    //   titlediv += '<h1>' + title + '</h1>';
-    //   imageLarge += "<div class='parallax-bg bg-opaque5' style='-webkit-filter: blur(2px); filter: blur(2px); background: rgba(0, 0, 0, 0.5) url(" + imageLargeURL +
-    //     ") 50% 50%; background-size: cover; width: 100%; opacity: .7; height: 100%; position: absolute; left: 0; top: 0;'>";
-    //   imageSmall += '<img src="' + imageSmallURL + '" alt="">'
-    //   result += '<div class="list-content">';
-    //   result += '<span class="title">' + title + '</span>';
-    //   result += '<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>';
-    //   result += '</div>'
-    //
-    //   $("#gametitle").html(titlediv);
-    //   $("#parallaxgame").prepend(imageLarge);
-    //   $(".profile-photo").prepend(imageSmall);
-    // }
+    function ptgame(data) {
+      console.log(data);
+      var result = "",
+        titlediv = "",
+        imageLarge = "",
+        imageSmall = "";
+
+      var post = data.results;
+      var imageLargeURL = post.image.super_url;
+      var imageSmallURL = post.image.small_url;
+      var title = post.name;
+
+
+      titlediv += '<h1>' + title + '</h1>';
+      imageLarge += "<div class='parallax-bg bg-opaque5' style='-webkit-filter: blur(2px); filter: blur(2px); background: rgba(0, 0, 0, 0.5) url(" + imageLargeURL +
+        ") 50% 50%; background-size: cover; width: 100%; opacity: .7; height: 100%; position: absolute; left: 0; top: 0;'>";
+      imageSmall += '<img src="' + imageSmallURL + '" alt="">'
+      result += '<div class="list-content">';
+      result += '<span class="title">' + title + '</span>';
+      result += '<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>';
+      result += '</div>'
+
+      $("#gametitle").html(titlediv);
+      $("#parallaxgame").prepend(imageLarge);
+      $(".profile-photo").prepend(imageSmall);
+    }
 
     // function generatePostsMonthChart()
     // {
@@ -474,6 +523,7 @@
 
     $(document).ready(function() {
       var gameID = GetURLParameter('gameid');
+      var topicID = GetURLParameter('topicid');
 
       if (gameID) {
         $.ajax({
@@ -487,6 +537,12 @@
           },
           dataType: "jsonp"
         });
+      }
+
+      if (topicID) {
+      $.getJSON("http://talk.polygonalweave.com/t/" + topicID + ".json", function(data) {
+          populateComments(data);
+      });
       }
 
       generateQuotes();

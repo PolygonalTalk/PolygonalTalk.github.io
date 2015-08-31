@@ -126,7 +126,7 @@
           var arraylength = data.posts_count;
         for (var i = arraylength - 1; i >= 0; i--) {
           tiles = "";
-          var post = data.post_stream.posts[n];
+          var post = data.post_stream.posts[i];
 
           var quote = $(post.cooked).find("blockquote").text();
           var quser = $(post.cooked).find(".title").text();
@@ -163,7 +163,7 @@
     function generateLinks() {
 
       // $.getJSON("/GameLinks.json", function(data) {
-      $.getJSON("http://talk.polygonalweave.com/t/game-links/365/.json", function(data) {
+      $.getJSON("http://talk.polygonalweave.com/t/game-links/365.json", function(data) {
 
         var tiles = "";
         if (data.posts_count > 8)
@@ -211,13 +211,14 @@
       });
     }
 
-    function generateGameID(gameurl, callback) {
+    function generateGameID(id, gameurl, callback) {
+      // console.log(gameurl);
       $.getJSON(gameurl, function(data) {
         var post = data.post_stream.posts[0];
-        console.log(data);
+        // console.log(data);
         var sourceURL = $(post.cooked).find(".track-link").attr("href");
         var gameID = sourceURL.slice(-6).slice(0, -1);
-        var url = "game.html?gameid=" + gameID;
+        var url = "game.html?gameid=" + gameID + "&topicid=" + id;
         callback(url);
       });
     }
@@ -237,6 +238,7 @@
 
         var slug = topic.slug;
         var id = topic.id;
+        // var gameurl = "\"http://talk.polygonalweave.com/t/" + slug + "/" + id + ".json\"";
         var gameurl = "http://talk.polygonalweave.com/t/" + slug + "/" + id + ".json";
 
 
@@ -247,7 +249,7 @@
         // var s = date.fromNow() + (diff >= 1 && diff <= 7 ? date.format(" (ddd)") : "");
         var relative = moment(d, "ddd MMMM DD YYYY hh:mm:ss").fromNow();
 
-        callback(gameurl, topicTitle, thumbnail, user, relative, id);
+        callback(id, gameurl, topicTitle, thumbnail, user, relative, id);
       });
     }
 
@@ -277,15 +279,27 @@
               // console.log(id, array[n]);
               if (id != array[n]){
                 if (n == 3){
-                  // console.log("winners:", id);
+
+                  tiles += "<a href='' alt=''>";
                   tiles +='<div class="card tile card-image card-black bg-image" style="background: url(' + thumbnail + ') center/cover">'
                   tiles +='<div class="context ">'
                   tiles +='<div class="tile-content">'
                   tiles +='<span class="text-title">'+ topicTitle +'</span>'
-                  tiles +='<span class="text-subtitle">latest post - ' + user + '</span></div></div></div>'
+                  tiles +='<span class="text-subtitle">latest post - ' + user + '</span></div></div></div></a>'
 
                   $("#newgames" + winners).html(tiles);
+
+                    var x=0;
+                                    generateGameID(id, gameurl, function(url) {
+
+                                      $("#newgames" + x).find("a").attr("href", url);
+                  
+                                      x++;
+                                    });
+
                   winners++;
+
+
                 }
               } else{
                 // console.log("match!");
@@ -302,13 +316,13 @@
     function populateLatestGames() {
       var latestarray = [];
       asyncLoop(4, function(loop) {
-        generateLatestGames((loop.iteration() + 1), function(gameurl, topicTitle, thumbnail, user, relative, id) {
+        generateLatestGames((loop.iteration() + 1), function(id, gameurl, topicTitle, thumbnail, user, relative, id) {
           var tiles = newtile = "";
           latestarray.push(id);
 
           generateNewGames(latestarray);
 
-          tiles += "<a href='' alt=''>";
+          tiles += "<a href='" + gameurl + "' alt=''>";
           tiles += "<div class='game-thumbnail' style='background: url(" + thumbnail + ") center/cover'>";
           tiles += "</div></a>";
           // tiles += "<div class='embedly-card' data-card-controls='0' data-card-embed='" + url + "'></div>";
@@ -324,19 +338,54 @@
       });
 
       asyncLoop(5, function(loop) {
-        generateLatestGames(loop.iteration(), function(gameurl, topicTitle, thumbnail, user, relative, newgame) {
+        generateLatestGames((loop.iteration()+1), function(id, gameurl, topicTitle, thumbnail, user, relative, newgame) {
           var tiles = "";
-          var urlstring = "' + gameurl + '"
-          console.log(urlstring);
-          // generateGameID("/RocketLeague.json", function(url) {
-          generateGameID("' + gameurl + '", function(url) {
-            // tiles += "<a href='" + url + "' alt=''>";
-            // console.log(loop.iteration());
+
+          generateGameID(id, gameurl, function(url) {
             $("#latestgames" + loop.iteration()).find("a").attr("href", url);
             loop.next();
           });
         });
       });
+    }
+
+    function populateComments(data) {
+      console.log(data);
+      var comments = "";
+
+      if (data.posts_count > 10)
+        var arraylength = 10;
+      else
+        var arraylength = data.posts_count;
+      for (var i = arraylength - 1; i >= 0; i--) {
+
+        var post = data.post_stream.posts[i];
+        var url = $(post.cooked).find("blockquote").find("a").attr("href");
+        var d = new Date(post.updated_at);
+        var relative = moment(d, "ddd MMMM DD YYYY hh:mm:ss").fromNow();
+        var user = post.username;
+        var avatarTemplate = post.avatar_template;
+
+        var avatarMedium = avatarTemplate.replace("{size}", "50");
+        var avatar = "http://talk.polygonalweave.com" + avatarMedium;
+        console.log(avatar);
+
+
+
+        comments += '<div class="comment">';
+        comments += '<div class="user-photo"><img src="' + avatar + '" alt=""></div>';
+        comments += '<div class="comment-body">';
+        comments += '<div class="user">';
+        comments += '<ul class="inline-list dot-seperator">';
+        comments += '<li><a href="#">' + user + '</a></li>';
+        comments += '<li class="small">' + relative + '</li></ul></div>';
+        comments += "<p>" + post.cooked + "</p></div></div>";
+
+      }
+      $("#discourse-comments").html(comments);
+
+
+
     }
 
     function generateLatestSearch() {
@@ -375,7 +424,7 @@
 
 
     function gbgame(data) {
-      console.log(data);
+      // console.log(data);
       // var result, gametitle, imageLarge, imageSmall, deck = "";
       var tabs = characters = similar = "";
       var post = data.results;
@@ -421,32 +470,32 @@
       $(".profile-photo").prepend(imageSmall);
     }
 
-    // function game(data) {
-    //   console.log(data);
-    //   var result = "",
-    //     titlediv = "",
-    //     imageLarge = "",
-    //     imageSmall = "";
-    //
-    //   var post = data.results;
-    //   var imageLargeURL = post.image.super_url;
-    //   var imageSmallURL = post.image.small_url;
-    //   var title = post.name;
-    //
-    //
-    //   titlediv += '<h1>' + title + '</h1>';
-    //   imageLarge += "<div class='parallax-bg bg-opaque5' style='-webkit-filter: blur(2px); filter: blur(2px); background: rgba(0, 0, 0, 0.5) url(" + imageLargeURL +
-    //     ") 50% 50%; background-size: cover; width: 100%; opacity: .7; height: 100%; position: absolute; left: 0; top: 0;'>";
-    //   imageSmall += '<img src="' + imageSmallURL + '" alt="">'
-    //   result += '<div class="list-content">';
-    //   result += '<span class="title">' + title + '</span>';
-    //   result += '<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>';
-    //   result += '</div>'
-    //
-    //   $("#gametitle").html(titlediv);
-    //   $("#parallaxgame").prepend(imageLarge);
-    //   $(".profile-photo").prepend(imageSmall);
-    // }
+    function ptgame(data) {
+      console.log(data);
+      var result = "",
+        titlediv = "",
+        imageLarge = "",
+        imageSmall = "";
+
+      var post = data.results;
+      var imageLargeURL = post.image.super_url;
+      var imageSmallURL = post.image.small_url;
+      var title = post.name;
+
+
+      titlediv += '<h1>' + title + '</h1>';
+      imageLarge += "<div class='parallax-bg bg-opaque5' style='-webkit-filter: blur(2px); filter: blur(2px); background: rgba(0, 0, 0, 0.5) url(" + imageLargeURL +
+        ") 50% 50%; background-size: cover; width: 100%; opacity: .7; height: 100%; position: absolute; left: 0; top: 0;'>";
+      imageSmall += '<img src="' + imageSmallURL + '" alt="">'
+      result += '<div class="list-content">';
+      result += '<span class="title">' + title + '</span>';
+      result += '<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>';
+      result += '</div>'
+
+      $("#gametitle").html(titlediv);
+      $("#parallaxgame").prepend(imageLarge);
+      $(".profile-photo").prepend(imageSmall);
+    }
 
     // function generatePostsMonthChart()
     // {
@@ -478,6 +527,7 @@
 
     $(document).ready(function() {
       var gameID = GetURLParameter('gameid');
+      var topicID = GetURLParameter('topicid');
 
       if (gameID) {
         $.ajax({
@@ -491,6 +541,12 @@
           },
           dataType: "jsonp"
         });
+      }
+
+      if (topicID) {
+      $.getJSON("http://talk.polygonalweave.com/t/" + topicID + ".json", function(data) {
+          populateComments(data);
+      });
       }
 
       generateQuotes();
@@ -812,22 +868,22 @@ function gamer(data) {
 
       <div class="col-md-4 material-animate padding-right-40">
         <div class="card">
-        <h4 class="margin-bottom-1">Everybody's Gone to the Rapture</h4>
-        <h4><small>review by DarthSmurfX</small></h4>
-        <p class="text-grey"><p>I’ve never played a “walking simulator” before this, but I’m glad I did. This is the Bizarro-Destiny of games, where it is ALL story and no gameplay. And it works. REALLY well.</p>
+        <h4 class="margin-bottom-1">Toy Soldiers: War Chest</h4>
+        <h4><small>review by Jango</small></h4>
+        <p class="text-grey"><small><p>The premise is pretty cool. Imagine you are a kid and you are playing with your toys in a cross pollination kind of way. Army men are playing with pixies, Sci-Fi soldiers are fighting Knights or Ninjas. Now combine that with part RTS, part Tower Defense, and part 3rd Person Shooter and you get Toy Soldiers: War Chest.</p>
 
-</p>
+</small></p>
         <div class="card-footer">
   						<div class="btn-group btn-merged btn-group-sm pull-right">
-  							<button type="button" class="btn btn-green btn-flat btn-ripple"><a href="/review/2015/10/10/everyones-gone-to-the-rapture-review.html">Read More</a></button>
+  							<button type="button" class="btn btn-green btn-flat btn-ripple"><a href="/review/2015/08/29/toy-soldiers-review.html">Read More</a></button>
   						</div>
   					</div>
           </div>
       </div><!--.col-->
 
       <div class="col-md-8 material-animate">
-        <div class="hi-bg-image bg-opaque5"  style="background: url('http://images.eurogamer.net/2013/articles/1/7/7/4/0/1/3/everybodys-gone-to-the-rapture-review-143928049295.jpg') center/cover;" >
-            <!-- <a class="author text-color-white" href="#"><img src="http://talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/darthsmurfx/120/73_1.png">DarthSmurfX</a> -->
+        <div class="hi-bg-image bg-opaque5"  style="background: url('http://i.imgur.com/LGg1ejt.jpg') center/cover;" >
+            <!-- <a class="author text-color-white" href="#"><img src="http://talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/jango/120/149_1.png">Jango</a> -->
         </div>
       </div><!--.col-->
       <div class="col-md-8 material-animate">
@@ -839,6 +895,36 @@ function gamer(data) {
     
 
     <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet  mdl-cell--12-col-phone">
+      <div class="mdl-card__title"  style="background: url('http://images.eurogamer.net/2013/articles/1/7/7/4/0/1/3/everybodys-gone-to-the-rapture-review-143928049295.jpg') center/cover;" >
+        <h2 class="mdl-card__title-text">Everybody's Gone to the Rapture</h2>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <p>I’ve never played a “walking simulator” before this, but I’m glad I did. This is the Bizarro-Destiny of games, where it is ALL story and no gameplay. And it works. REALLY well.</p>
+
+
+      </div>
+      <button class="post-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" onclick="location.href='/review/2015/08/19/everyones-gone-to-the-rapture-review.html'">
+        <i class="material-icons">keyboard_arrow_right</i>
+      </button>
+      <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/review/2015/08/19/everyones-gone-to-the-rapture-review.html">
+          Aug 19, 2015
+        </a>
+      </div>
+      <div class="mdl-card__menu">
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="post-/review/2015/08/19/everyones-gone-to-the-rapture-review">
+          <i class="material-icons">share</i>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="post-/review/2015/08/19/everyones-gone-to-the-rapture-review">
+          <li><a href="https://www.facebook.com/dialog/share?app_id={app_id}&display=page&href=/review/2015/08/19/everyones-gone-to-the-rapture-review.html&redirect_uri=" class="mdl-menu__item">Facebook</a></li>
+          <li><a href="https://twitter.com/share?url=/review/2015/08/19/everyones-gone-to-the-rapture-review.html&text=Everybody's Gone to the Rapture&via=jekyllrb" class="mdl-menu__item">Twitter</a></li>
+          <li><a href="https://plus.google.com/share?url=/review/2015/08/19/everyones-gone-to-the-rapture-review.html" class="mdl-menu__item">Google+</a></li>
+        </ul>
+      </div>
+    </div>
+    
+
+    <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet  mdl-cell--12-col-phone">
       <div class="mdl-card__title"  style="background: url('http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/08/rogue-one-cast-photo-d23-1024x682.jpg') center/cover;" >
         <h2 class="mdl-card__title-text">Rogue One</h2>
       </div>
@@ -847,22 +933,22 @@ function gamer(data) {
 
 
       </div>
-      <button class="post-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" onclick="location.href='/preview/2015/10/09/rogue-one-preview.html'">
+      <button class="post-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" onclick="location.href='/preview/2015/08/14/rogue-one-preview.html'">
         <i class="material-icons">keyboard_arrow_right</i>
       </button>
       <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/preview/2015/10/09/rogue-one-preview.html">
-          Oct 9, 2015
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/preview/2015/08/14/rogue-one-preview.html">
+          Aug 14, 2015
         </a>
       </div>
       <div class="mdl-card__menu">
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="post-/preview/2015/10/09/rogue-one-preview">
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="post-/preview/2015/08/14/rogue-one-preview">
           <i class="material-icons">share</i>
         </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="post-/preview/2015/10/09/rogue-one-preview">
-          <li><a href="https://www.facebook.com/dialog/share?app_id={app_id}&display=page&href=/preview/2015/10/09/rogue-one-preview.html&redirect_uri=" class="mdl-menu__item">Facebook</a></li>
-          <li><a href="https://twitter.com/share?url=/preview/2015/10/09/rogue-one-preview.html&text=Rogue One&via=jekyllrb" class="mdl-menu__item">Twitter</a></li>
-          <li><a href="https://plus.google.com/share?url=/preview/2015/10/09/rogue-one-preview.html" class="mdl-menu__item">Google+</a></li>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="post-/preview/2015/08/14/rogue-one-preview">
+          <li><a href="https://www.facebook.com/dialog/share?app_id={app_id}&display=page&href=/preview/2015/08/14/rogue-one-preview.html&redirect_uri=" class="mdl-menu__item">Facebook</a></li>
+          <li><a href="https://twitter.com/share?url=/preview/2015/08/14/rogue-one-preview.html&text=Rogue One&via=jekyllrb" class="mdl-menu__item">Twitter</a></li>
+          <li><a href="https://plus.google.com/share?url=/preview/2015/08/14/rogue-one-preview.html" class="mdl-menu__item">Google+</a></li>
         </ul>
       </div>
     </div>

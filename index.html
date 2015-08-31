@@ -46,7 +46,7 @@ title: Home
 
     </div><!--.col-->
 <!-- <h2>Featured User Content</h2> -->
-{% for post in site.posts offset:1 %}
+{% for post in site.posts limit:1 offset:1 %}
     <div class="col-md-6">
       <div class="card tile card-news-more material-animate">
         <div class="card-heading bg-image bg-opaque5 toggle-card-news-more" {% if post.image %} style="background: url('{{ post.image }}') center/cover;" {% endif %}>
@@ -55,7 +55,7 @@ title: Home
 
             <h1 class="headline"><strong>{{ post.title }}</strong> <small>{{ post.categories }}</small></h1>
 
-            <button class="btn btn-floating btn-pink toggle-card-news-more"><i class="material-icons md-36">format_quote</i></button>
+            <button class="btn btn-floating btn-pink toggle-card-news-more"><i class="material-icons md-24">thumb_up</i></button>
           </div>
         </div><!--.card-heading-->
         <div class="card-body">

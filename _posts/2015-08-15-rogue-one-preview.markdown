@@ -1,7 +1,7 @@
 ---
 layout: review
 title:  "Rogue One"
-date:   2015-10-10 04:34:20
+date:   2015-08-15 04:34:20
 categories: Preview
 image: http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/08/rogue-one-cast-photo-d23-1024x682.jpg
 author: Jango

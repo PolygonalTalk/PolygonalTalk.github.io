@@ -5,7 +5,7 @@
         <div class="card">
         <h4 class="margin-bottom-1">{{ post.title }}</h4>
         <h4><small>{{ post.categories }} by {{ post.author }}</small></h4>
-        <p class="text-grey">{{ post.excerpt }}</p>
+        <p class="text-grey"><small>{{ post.excerpt }}</small></p>
         <div class="card-footer">
   						<div class="btn-group btn-merged btn-group-sm pull-right">
   							<button type="button" class="btn btn-green btn-flat btn-ripple"><a href="{{ post.url | prepend: site.baseurl }}">Read More</a></button>

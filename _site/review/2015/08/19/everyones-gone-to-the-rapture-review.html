@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 
-  <title>Rogue One</title>
-  <meta name="description" content="Some of you may be aware that this exists but if not then your in for a treat. As excited as I am for EP7 I may be more excited for this. This is the first i...">
+  <title>Everybody's Gone to the Rapture</title>
+  <meta name="description" content="I’ve never played a “walking simulator” before this, but I’m glad I did. This is the Bizarro-Destiny of games, where it is ALL story and no gameplay. And it ...">
 
-  <link rel="canonical" href="http://yourdomain.com/preview/2015/10/09/rogue-one-preview.html">
+  <link rel="canonical" href="http://yourdomain.com/review/2015/08/19/everyones-gone-to-the-rapture-review.html">
   <link rel="alternate" type="application/rss+xml" title="Polygonal Talk" href="http://yourdomain.com /feed.xml " />
 
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
@@ -125,7 +125,7 @@
           var arraylength = data.posts_count;
         for (var i = arraylength - 1; i >= 0; i--) {
           tiles = "";
-          var post = data.post_stream.posts[n];
+          var post = data.post_stream.posts[i];
 
           var quote = $(post.cooked).find("blockquote").text();
           var quser = $(post.cooked).find(".title").text();
@@ -162,7 +162,7 @@
     function generateLinks() {
 
       // $.getJSON("/GameLinks.json", function(data) {
-      $.getJSON("http://talk.polygonalweave.com/t/game-links/365/.json", function(data) {
+      $.getJSON("http://talk.polygonalweave.com/t/game-links/365.json", function(data) {
 
         var tiles = "";
         if (data.posts_count > 8)
@@ -210,13 +210,14 @@
       });
     }
 
-    function generateGameID(gameurl, callback) {
+    function generateGameID(id, gameurl, callback) {
+      // console.log(gameurl);
       $.getJSON(gameurl, function(data) {
         var post = data.post_stream.posts[0];
-        console.log(data);
+        // console.log(data);
         var sourceURL = $(post.cooked).find(".track-link").attr("href");
         var gameID = sourceURL.slice(-6).slice(0, -1);
-        var url = "game.html?gameid=" + gameID;
+        var url = "game.html?gameid=" + gameID + "&topicid=" + id;
         callback(url);
       });
     }
@@ -236,6 +237,7 @@
 
         var slug = topic.slug;
         var id = topic.id;
+        // var gameurl = "\"http://talk.polygonalweave.com/t/" + slug + "/" + id + ".json\"";
         var gameurl = "http://talk.polygonalweave.com/t/" + slug + "/" + id + ".json";
 
 
@@ -246,7 +248,7 @@
         // var s = date.fromNow() + (diff >= 1 && diff <= 7 ? date.format(" (ddd)") : "");
         var relative = moment(d, "ddd MMMM DD YYYY hh:mm:ss").fromNow();
 
-        callback(gameurl, topicTitle, thumbnail, user, relative, id);
+        callback(id, gameurl, topicTitle, thumbnail, user, relative, id);
       });
     }
 
@@ -276,15 +278,27 @@
               // console.log(id, array[n]);
               if (id != array[n]){
                 if (n == 3){
-                  // console.log("winners:", id);
+
+                  tiles += "<a href='' alt=''>";
                   tiles +='<div class="card tile card-image card-black bg-image" style="background: url(' + thumbnail + ') center/cover">'
                   tiles +='<div class="context ">'
                   tiles +='<div class="tile-content">'
                   tiles +='<span class="text-title">'+ topicTitle +'</span>'
-                  tiles +='<span class="text-subtitle">latest post - ' + user + '</span></div></div></div>'
+                  tiles +='<span class="text-subtitle">latest post - ' + user + '</span></div></div></div></a>'
 
                   $("#newgames" + winners).html(tiles);
+
+                    var x=0;
+                                    generateGameID(id, gameurl, function(url) {
+
+                                      $("#newgames" + x).find("a").attr("href", url);
+                  
+                                      x++;
+                                    });
+
                   winners++;
+
+
                 }
               } else{
                 // console.log("match!");
@@ -301,13 +315,13 @@
     function populateLatestGames() {
       var latestarray = [];
       asyncLoop(4, function(loop) {
-        generateLatestGames((loop.iteration() + 1), function(gameurl, topicTitle, thumbnail, user, relative, id) {
+        generateLatestGames((loop.iteration() + 1), function(id, gameurl, topicTitle, thumbnail, user, relative, id) {
           var tiles = newtile = "";
           latestarray.push(id);
 
           generateNewGames(latestarray);
 
-          tiles += "<a href='' alt=''>";
+          tiles += "<a href='" + gameurl + "' alt=''>";
           tiles += "<div class='game-thumbnail' style='background: url(" + thumbnail + ") center/cover'>";
           tiles += "</div></a>";
           // tiles += "<div class='embedly-card' data-card-controls='0' data-card-embed='" + url + "'></div>";
@@ -323,19 +337,54 @@
       });
 
       asyncLoop(5, function(loop) {
-        generateLatestGames(loop.iteration(), function(gameurl, topicTitle, thumbnail, user, relative, newgame) {
+        generateLatestGames((loop.iteration()+1), function(id, gameurl, topicTitle, thumbnail, user, relative, newgame) {
           var tiles = "";
-          var urlstring = "' + gameurl + '"
-          console.log(urlstring);
-          // generateGameID("/RocketLeague.json", function(url) {
-          generateGameID("' + gameurl + '", function(url) {
-            // tiles += "<a href='" + url + "' alt=''>";
-            // console.log(loop.iteration());
+
+          generateGameID(id, gameurl, function(url) {
             $("#latestgames" + loop.iteration()).find("a").attr("href", url);
             loop.next();
           });
         });
       });
+    }
+
+    function populateComments(data) {
+      console.log(data);
+      var comments = "";
+
+      if (data.posts_count > 10)
+        var arraylength = 10;
+      else
+        var arraylength = data.posts_count;
+      for (var i = arraylength - 1; i >= 0; i--) {
+
+        var post = data.post_stream.posts[i];
+        var url = $(post.cooked).find("blockquote").find("a").attr("href");
+        var d = new Date(post.updated_at);
+        var relative = moment(d, "ddd MMMM DD YYYY hh:mm:ss").fromNow();
+        var user = post.username;
+        var avatarTemplate = post.avatar_template;
+
+        var avatarMedium = avatarTemplate.replace("{size}", "50");
+        var avatar = "http://talk.polygonalweave.com" + avatarMedium;
+        console.log(avatar);
+
+
+
+        comments += '<div class="comment">';
+        comments += '<div class="user-photo"><img src="' + avatar + '" alt=""></div>';
+        comments += '<div class="comment-body">';
+        comments += '<div class="user">';
+        comments += '<ul class="inline-list dot-seperator">';
+        comments += '<li><a href="#">' + user + '</a></li>';
+        comments += '<li class="small">' + relative + '</li></ul></div>';
+        comments += "<p>" + post.cooked + "</p></div></div>";
+
+      }
+      $("#discourse-comments").html(comments);
+
+
+
     }
 
     function generateLatestSearch() {
@@ -374,7 +423,7 @@
 
 
     function gbgame(data) {
-      console.log(data);
+      // console.log(data);
       // var result, gametitle, imageLarge, imageSmall, deck = "";
       var tabs = characters = similar = "";
       var post = data.results;
@@ -420,32 +469,32 @@
       $(".profile-photo").prepend(imageSmall);
     }
 
-    // function game(data) {
-    //   console.log(data);
-    //   var result = "",
-    //     titlediv = "",
-    //     imageLarge = "",
-    //     imageSmall = "";
-    //
-    //   var post = data.results;
-    //   var imageLargeURL = post.image.super_url;
-    //   var imageSmallURL = post.image.small_url;
-    //   var title = post.name;
-    //
-    //
-    //   titlediv += '<h1>' + title + '</h1>';
-    //   imageLarge += "<div class='parallax-bg bg-opaque5' style='-webkit-filter: blur(2px); filter: blur(2px); background: rgba(0, 0, 0, 0.5) url(" + imageLargeURL +
-    //     ") 50% 50%; background-size: cover; width: 100%; opacity: .7; height: 100%; position: absolute; left: 0; top: 0;'>";
-    //   imageSmall += '<img src="' + imageSmallURL + '" alt="">'
-    //   result += '<div class="list-content">';
-    //   result += '<span class="title">' + title + '</span>';
-    //   result += '<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>';
-    //   result += '</div>'
-    //
-    //   $("#gametitle").html(titlediv);
-    //   $("#parallaxgame").prepend(imageLarge);
-    //   $(".profile-photo").prepend(imageSmall);
-    // }
+    function ptgame(data) {
+      console.log(data);
+      var result = "",
+        titlediv = "",
+        imageLarge = "",
+        imageSmall = "";
+
+      var post = data.results;
+      var imageLargeURL = post.image.super_url;
+      var imageSmallURL = post.image.small_url;
+      var title = post.name;
+
+
+      titlediv += '<h1>' + title + '</h1>';
+      imageLarge += "<div class='parallax-bg bg-opaque5' style='-webkit-filter: blur(2px); filter: blur(2px); background: rgba(0, 0, 0, 0.5) url(" + imageLargeURL +
+        ") 50% 50%; background-size: cover; width: 100%; opacity: .7; height: 100%; position: absolute; left: 0; top: 0;'>";
+      imageSmall += '<img src="' + imageSmallURL + '" alt="">'
+      result += '<div class="list-content">';
+      result += '<span class="title">' + title + '</span>';
+      result += '<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>';
+      result += '</div>'
+
+      $("#gametitle").html(titlediv);
+      $("#parallaxgame").prepend(imageLarge);
+      $(".profile-photo").prepend(imageSmall);
+    }
 
     // function generatePostsMonthChart()
     // {
@@ -477,6 +526,7 @@
 
     $(document).ready(function() {
       var gameID = GetURLParameter('gameid');
+      var topicID = GetURLParameter('topicid');
 
       if (gameID) {
         $.ajax({
@@ -490,6 +540,12 @@
           },
           dataType: "jsonp"
         });
+      }
+
+      if (topicID) {
+      $.getJSON("http://talk.polygonalweave.com/t/" + topicID + ".json", function(data) {
+          populateComments(data);
+      });
       }
 
       generateQuotes();
@@ -786,12 +842,12 @@ function gamer(data) {
 
     <div class="content">
         <div id="parallaxgame" class="page-header brown full-content parallax opacity-hero" style="height: 600px; overflow: hidden">
-  <div class="parallax-bg" style="background: url('http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/08/rogue-one-cast-photo-d23-1024x682.jpg') 50% 50%;">
+  <div class="parallax-bg" style="background: url('http://images.eurogamer.net/2013/articles/1/7/7/4/0/1/3/everybodys-gone-to-the-rapture-review-143928049295.jpg') center/cover;">
   </div>
 
   <div class="row">
     <div class="col-sm-6">
-      <h1>preview <small>by Jango</small></h1>
+      <h1>review <small>by DarthSmurfX</small></h1>
     </div><!--.col-->
     <div class="col-sm-6">
       <ol class="breadcrumb">
@@ -806,55 +862,49 @@ function gamer(data) {
 <div class="parallax-content">
 <div class="row">
   <div class="col-md-12">
-    <h1 class="text-center margin-bottom-40 text-color-white">Rogue One</h1>
+    <h1 class="text-center margin-bottom-40 text-color-white">Everybody's Gone to the Rapture</h1>
   </div><!--.col-->
 </div><!--.row-->
 
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
 
-<p><p>Some of you may be aware that this exists but if not then your in for a treat. As excited as I am for EP7 I may be more excited for this. This is the first in the Star Wars Anthology series which will be one off movies in the universe at various points in time. In short, we are having a new Star Wars movie every year through 2020.</p>
+<p><p>I’ve never played a “walking simulator” before this, but I’m glad I did. This is the Bizarro-Destiny of games, where it is ALL story and no gameplay. And it works. REALLY well.</p>
 
-<ul>
-  <li>2015 - EP7</li>
-  <li>2016 - Rogue One</li>
-  <li>2017 - EP8</li>
-  <li>2018 - Han Solo Anthology. Yes, it’s already been confirmed. It follow a Han - Solo on adventure in his 20s. So 10-15 years before A New Hope.</li>
-  <li>2019 - EP9</li>
-  <li>2020 - Boba Fett Anthology. Katleen Kennedy from Disney kinda sorta let this one slip a few days ago.</li>
-</ul>
+<p>I’ll try not to repeat myself from above, but just know that none of that stuff changed. Slightly creepy, immensely lonely, R2 to run… all that is still in the latter half of the game.</p>
 
-<p>Sahweet.</p>
+<h3 id="graphics">Graphics</h3>
 
-<p>Anyways, back to Rogue One.</p>
+<p>This game is gorgeous. From the very first scene where you are looking out over a valley at a sunrise, to the final moments (I won’t spoil that scene) I was thoroughly impressed with what the CryEngine 3 can do. From the time shifts, to the weather changes to the sparks falling from the light balls that zip around the town, I was in awe at everything. And you get to really take it all in due to the slow pace you’ll be walking at. I really should have hitten the “Share” button once or twice, but I was so into everything going on around me that it never popped into my head to do so. I will definitely take advantage of that during my next Trophy hunting playthroughs. My only complaint is the framerate. It really, REALLY struggles at times, especially noticeable in the shadows. I’m hoping they fix this via patch as it was jarring enough to take me out of the moment several times. <a href="http://www.eurogamer.net/articles/digitalfoundry-2015-vs-everybodys-gone-to-the-rapture">You can read more about that here.</a></p>
 
-<p><img src="http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/08/rogue-one-title-treatment-1024x357.jpg" alt="http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/08/rogue-one-title-treatment-1024x357.jpg" /></p>
+<h3 id="sound">Sound</h3>
+<p>The music. Wow. It is subtle at times and others it sent chills down my spine at just the right moment. Certain actions trigger more intense music and when nothing is going on, sometimes the background sound effects fill the atmosphere with a sense of life, yet utter loneliness. I’m talking gibberish. <a href="http://www.theguardian.com/technology/2015/jul/30/everybodys-gone-to-the-rapture-video-game-sound-music">Here is a great article that explains it way better than I can.</a></p>
 
-<p>Lucasfilm announced today that their first film in the new standalone Star Wars stories series, Rogue One, has begun principal photography. Gareth Edwards (Godzilla, Monsters) is directing Rogue One, which tells the story of resistance fighters who have united to steal plans to the dreaded Death Star. The film is produced by Kathleen Kennedy and is slated for a December 16, 2016 release.</p>
+<h3 id="gameplay">Gameplay</h3>
+<p>Well… hmm… this is an interactive story—with much less emphasis on “interactive” than on “story.” There isn’t much here. You wander around, with the light trails gently nudging you in the correct directions, you press X a few times and tip your controller in one direction or another at certain points. And, yet… it was fun.</p>
 
-<p><img src="http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/08/rogue-one-cast-photo-d23-1024x682.jpg" alt="http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/08/rogue-one-cast-photo-d23-1024x682.jpg" /></p>
+<p>This game DOES NOT hand-hold. If you are looking for a Batman Arkham Knight game that puts a dot on a map with a trail of arrows pointing you in the right direction and constant button prompts, this is not that game. I didn’t even figure out that I could hop certain fences until later in the game. This made me miss out on some story elements. But then again, I don’t think you’re supposed to catch everything the first time. And you get so used to NOT interacting with things, that you miss some Trophy opportunities.</p>
 
-<p>The filmmakers have assembled a stellar cast, including Felicity Jones, nominated for an Academy Award for her leading role in The Theory of Everything; Diego Luna, who was featured in 2008’s Oscar-winning Milk and the critically acclaimed Killing Them Softly; Ben Mendelsohn, recently nominated for an Emmy for his leading role in Bloodline and co-starring in the upcoming Mississippi Grind; Donnie Yen, Hong Kong action star and martial artist who starred in Ip Man and Blade II; Jiang Wen, who co-wrote, produced , directed and starred in the award-winning Let the Bullets Fly and Devils on the Doorstep; Forest Whitaker, recently featured in the critically-acclaimed Lee Daniels’ The Butler and winner of an Academy Award for his leading role in 2006’s The Last King of Scotland; Mads Mikkelsen, who starred in The Hunt and was the memorable villain from 2006’s Casino Royale; Alan Tudyk, who plays a performance-capture character in Rogue One, stars in the soon-to-be-released Con Man series and Trumbo, which releases this November; and Riz Ahmed, who was recently featured in Nightcrawler and starred in the BAFTA-winning film Four Lions.</p>
+<p><img src="http://i.ytimg.com/vi/aU4WT2LqpMA/maxresdefault.jpg" alt="http://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/6/19/1434715708491/7e7cbf63-e4c4-409d-8d4b-cfd1205319ab-620x372.jpeg?w=620&amp;q=85&amp;auto=format&amp;sharp=10&amp;s=1aebff12c03382ac460344505d6e698e" /></p>
 
-<p>“Rogue One takes place before the events of Star Wars: A New Hope and will be a departure from the saga films but have elements that are familiar to the Star Wars universe,” says Kathleen Kennedy. “It goes into new territory, exploring the galactic struggle from a ground-war perspective while maintaining that essential Star Wars feel that fans have come to know. Gareth is such an innovative director and I’m so excited to be working with him and the extraordinary ensemble cast he’s selected for ‘Rogue One.’”</p>
+<h3 id="story">Story</h3>
+<p>What can I say? The whole game is story and it’s a good one. You “meet” various characters, and you follow them through the events that led to their disappearance. You get to see their personalities, good or bad, their struggles, their fears at what was going on… and in some cases, these stories nearly made my eyes water. Ok, maybe a little bit. Especially, the one that ends at a [spoiler]train station.[/spoiler] Even though you… hmm… I guess I have to leave that sentence unfinished.</p>
 
-<p>Veteran ILM visual effects supervisor John Knoll, who shares a long history with the Star Wars movies, dating back to the mid-1990s, originated the idea for the movie. Allison Shearmur (The Hunger Games: Catching Fire, Cinderella), John Knoll, Simon Emanuel (The Dark Knight Rises, Fast &amp; Furious 6) and Jason McGatlin (Tintin, War of the Worlds) are executive producers. Kiri Hart and John Swartz (Star Wars: The Force Awakens) are co-producers.</p>
+<p>The ending. Let’s just say that my prediction in a previous post was… partially… correct. I think. See, the ending doesn’t hold your hand either, but hopefully you’ve uncovered enough of the pieces leading up to it to grasp the meaning. I actually can’t wait until more of you have played through it so we can discuss our interpretations of it.</p>
 
-<p>To create the lived-in, realistic feel of Rogue One, Edwards chose Greig Fraser (Zero Dark Thirty, Foxcatcher) to be his director of photography and Neil Corbould (Black Hawk Down, Gladiator, Saving Private Ryan) to be his special effects supervisor. Star Wars and Lucasfilm veteran Doug Chiang (Star Wars: Episodes I-II, Forrest Gump) and Neil Lamont (supervising art director for the Harry Potter series, Edge of Tomorrow) will be the production designers. Additional crew members will include stunt coordinator Rob Inch (World War Z, Marvel’s Captain America: The First Avenger), creature effects supervisor Neal Scanlan (Prometheus) and co-costume designers Dave Crossman (costume supervisor for the Harry Potter series, Saving Private Ryan) and Glyn Dillon (costume concept artist for Kingsman: The Secret Service, Jupiter Ascending).</p>
+<p><img src="http://i.imgur.com/FQw0Fhl.gif" alt="http://i.imgur.com/FQw0Fhl.gif" /></p>
 
-<p>Here’s some bonus photos from the set and some concept art.</p>
+<h3 id="nitpicksmisc">Nitpicks/Misc</h3>
+<p>The Trophies. By the way, DO NOT read them before playing through the first time. One is kinda spoilery… kind of. But mostly, you’ll be focused on finding these things than what’s going on around you and you’ll miss the immersion which is why I think most of these trophies are things that won’t pop during a normal playthrough. They’d be distracting. Most of them require you to find something or somewhere and… do nothing. For minutes at a time. Others are finding everything of a certain type… very challenging. And then the final 2, well… that Platinum will be worth it. After I completed the game last night, I instantly began a new one because I missed an entire area early on. I got some more story there, one key piece I wish I had found the first time, and started the trophy hunt. I’ll need to play the entire story at least twice more to get them all. Whatever. It’s a great game that didn’t take a lot of time to complete—I’ll gladly play this game again and again.</p>
 
-<p><img src="http://i.imgur.com/YuEPtyD.jpg" alt="http://i.imgur.com/YuEPtyD.jpg" /></p>
+<p>Actually, the only downsides are the framerate, the slow pace (which you can speed up slightly if you have to backtrack) and the fan… oh, yeah… the PS4 fan. I’ve read that the menu screens in this game do not have a capped framerate. So if you spend enough time looking at one, the framerate will skyrocket and your PS4’s fan will kick in and it will not stop until you quit the game. I had it running in the background and went to Netflix and the fan was out-of-control until I went back to the game and force quit it. That can be patched. Hopefully.</p>
 
-<p><img src="http://i3.mirror.co.uk/incoming/article6213284.ece/ALTERNATES/s615/PAY-Cast-of-the-new-Star-Wars-movie-Episode-7.jpg" alt="http://i3.mirror.co.uk/incoming/article6213284.ece/ALTERNATES/s615/PAY-Cast-of-the-new-Star-Wars-movie-Episode-7.jpg" /></p>
+<p>Overall, I highly recommend this game as a nice change of pace to Destiny, Rocket League or some other action-packed title. If you want a quality story, with a beautiful environment, engaging dialogue, nifty music and have a few hours—this is the game. I recommend playing with headphones to get all the ambience and locking away family members, so you have no distractions. Also, finish it in 2 or 3 sessions, max, close together so you don’t forget character’s names or voices.</p>
 
-<p><img src="http://i1.mirror.co.uk/incoming/article6213331.ece/ALTERNATES/s615/Cast-of-the-new-Star-Wars-movie-Episode-7.jpg" alt="http://i1.mirror.co.uk/incoming/article6213331.ece/ALTERNATES/s615/Cast-of-the-new-Star-Wars-movie-Episode-7.jpg" /></p>
+<p><strong>9 out of 10</strong></p>
 
-<p><img src="http://i1.mirror.co.uk/incoming/article6213332.ece/ALTERNATES/s615/PAY-Cast-of-the-new-Star-Wars-movie-Episode-7.jpg" alt="http://i1.mirror.co.uk/incoming/article6213332.ece/ALTERNATES/s615/PAY-Cast-of-the-new-Star-Wars-movie-Episode-7.jpg" /></p>
+<p>EDIT: I’d love, love, love to see this as a Morpheus title one day.</p>
 
-<p><img src="http://i2.mirror.co.uk/incoming/article6213283.ece/ALTERNATES/s615/PAY-Cast-of-the-new-Star-Wars-movie-Episode-7.jpg" alt="http://i2.mirror.co.uk/incoming/article6213283.ece/ALTERNATES/s615/PAY-Cast-of-the-new-Star-Wars-movie-Episode-7.jpg" /></p>
-
-<p>Can’t wait. great time to be a Star Wars fan.</p>
 </p>
 
   </div><!--.col-->
