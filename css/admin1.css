@@ -12534,11 +12534,11 @@ h6 {
   padding: 0 40px;
 }
 
-.content:not(#discourse-comments, .page-header) img{
-  width: 100%;
+.content:not(#discourse-comments) img{
+  max-width: 100%;
 }
 .page-header img{
-  width: auto;
+  width: auto !important;
   float: left;
   padding-right: 10px;
 }
