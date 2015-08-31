@@ -91,7 +91,7 @@
 
           } else {
             done = true;
-            callback();
+            // callback();
           }
         },
 
@@ -259,10 +259,11 @@
       });
     }
 
-    function generateNewGames(array) {
+    function generateNewGames(array, callback) {
       // $.getJSON("{{ '/newgames.json' | prepend: site.baseurl }}", function(data) {
       $.getJSON("http://talk.polygonalweave.com/c/games.json?order=created", function(data) {
         var winners = 0;
+        var winarray = [];
         if (array.length == 4) { //wait for array to populate
           var dynamiclength = 4; //ability to keep looking if id matches
           for (var i = 0; i < dynamiclength; i++) {
@@ -286,25 +287,7 @@
               if (id != array[n]) {
                 if (n == 3) {
 
-                  tiles += "<a href='' alt=''>";
-                  tiles += '<div class="card tile card-image card-black bg-image" style="background: url(' + thumbnail + ') center/cover">'
-                  tiles += '<div class="context ">'
-                  tiles += '<div class="tile-content">'
-                  tiles += '<span class="text-title">' + topicTitle + '</span>'
-                  tiles += '<span class="text-subtitle">latest post - ' + user + '</span></div></div></div></a>'
-
-                  $("#newgames" + winners).html(tiles);
-
-                  var x = 0;
-                  generateGameID(id, gameurl, function(url) {
-
-                    $("#newgames" + x).find("a").attr("href", url);
-
-                    x++;
-                  });
-
-                  winners++;
-
+                  winarray.push(topic);
 
                 }
               } else {
@@ -315,18 +298,43 @@
             }
           }
         }
+              callback(winarray);
       });
     }
 
 
     function populateLatestGames() {
-      var latestarray = [];
+      var latestarray = []; //array to compare against newly created games
       asyncLoop(4, function(loop) {
         generateLatestGames((loop.iteration() + 1), function(id, gameurl, topicTitle, thumbnail, user, relative, id) {
           var tiles = newtile = "";
           latestarray.push(id);
 
-          generateNewGames(latestarray);
+          asyncLoop(4, function(loop2) {
+            generateNewGames(latestarray, function(winarray){ //Generates the list of new games by comparing against latest games and returned array
+              if(winarray[loop2.iteration()]){
+                var tiles = ""; //clear tiles
+            tiles += "<a href='' alt=''>";
+            tiles += '<div class="card tile card-image card-black bg-image" style="background: url(' + winarray[loop2.iteration()].image_url + ') center/cover">'
+            tiles += '<div class="context ">'
+            tiles += '<div class="tile-content">'
+            tiles += '<span class="text-title">' + winarray[loop2.iteration()].title + '</span>'
+            tiles += '<span class="text-subtitle">latest post - ' + winarray[loop2.iteration()].last_poster_username + '</span></div></div></div></a>'
+
+            $("#newgames" + loop2.iteration()).html(tiles);
+
+            asyncLoop(4, function(loop3) { //loop through the new games and generate IDS to pass to the url to generate Game Profile
+              //create url so that we can grab the first link in the post and grab Giant Bomb ID
+              var newgameurl = "http://talk.polygonalweave.com/t/" + winarray[loop3.iteration()].slug + "/" + winarray[loop3.iteration()].id + ".json";
+              generateGameID(winarray[loop3.iteration()].id, newgameurl, function(url) {
+              $("#newgames" + loop3.iteration()).find("a").attr("href", url);
+              loop3.next();
+            });
+            });
+            loop2.next();
+          }
+          });
+        });
 
           tiles += "<a href='" + gameurl + "' alt=''>";
           tiles += "<div class='game-thumbnail' style='background: url(" + thumbnail + ") center/cover'>";
@@ -337,13 +345,13 @@
           tiles += "</div>";
 
           // console.log(tiles);
-          $("#latestgames" + loop.iteration()).html(tiles);
+          $("#latestgames" + loop.iteration()).html(tiles); //populate latest games
           loop.next();
         });
 
       });
 
-      asyncLoop(5, function(loop) {
+      asyncLoop(5, function(loop) { //run through latest games again in order to generate Giant Bomb IDs from first post
         generateLatestGames((loop.iteration() + 1), function(id, gameurl, topicTitle, thumbnail, user, relative, newgame) {
           var tiles = "";
 
