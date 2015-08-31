@@ -47,6 +47,10 @@ border-radius: 16px;
   margin-bottom: 0px;
 }
 
+.lightbox-wrapper{
+  display: none;
+}
+
 /* Chosen Select Plugin */
 /* icheck */
 .icheck .radio label,

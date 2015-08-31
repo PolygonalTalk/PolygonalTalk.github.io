@@ -165,7 +165,7 @@
       $.getJSON("http://talk.polygonalweave.com/t/game-links/365.json", function(data) {
 
         var tiles = "";
-        var n=0;
+        var n = 0;
         if (data.posts_count > 10)
           var arraylength = 10;
         else
@@ -260,7 +260,7 @@
       // $.getJSON("/newgames.json", function(data) {
       $.getJSON("http://talk.polygonalweave.com/c/games.json?order=created", function(data) {
         var winners = 0;
-        if (array.length == 4) {  //wait for array to populate
+        if (array.length == 4) { //wait for array to populate
           var dynamiclength = 4; //ability to keep looking if id matches
           for (var i = 0; i < dynamiclength; i++) {
             // console.log(array[i]);
@@ -280,31 +280,31 @@
 
             for (var n = 0; n < 4; n++) { //cycle through latest games
               // console.log(id, array[n]);
-              if (id != array[n]){
-                if (n == 3){
+              if (id != array[n]) {
+                if (n == 3) {
 
                   tiles += "<a href='' alt=''>";
-                  tiles +='<div class="card tile card-image card-black bg-image" style="background: url(' + thumbnail + ') center/cover">'
-                  tiles +='<div class="context ">'
-                  tiles +='<div class="tile-content">'
-                  tiles +='<span class="text-title">'+ topicTitle +'</span>'
-                  tiles +='<span class="text-subtitle">latest post - ' + user + '</span></div></div></div></a>'
+                  tiles += '<div class="card tile card-image card-black bg-image" style="background: url(' + thumbnail + ') center/cover">'
+                  tiles += '<div class="context ">'
+                  tiles += '<div class="tile-content">'
+                  tiles += '<span class="text-title">' + topicTitle + '</span>'
+                  tiles += '<span class="text-subtitle">latest post - ' + user + '</span></div></div></div></a>'
 
                   $("#newgames" + winners).html(tiles);
 
-                    var x=0;
-                                    generateGameID(id, gameurl, function(url) {
+                  var x = 0;
+                  generateGameID(id, gameurl, function(url) {
 
-                                      $("#newgames" + x).find("a").attr("href", url);
+                    $("#newgames" + x).find("a").attr("href", url);
 
-                                      x++;
-                                    });
+                    x++;
+                  });
 
                   winners++;
 
 
                 }
-              } else{
+              } else {
                 // console.log("match!");
                 dynamiclength++;
                 break;
@@ -341,7 +341,7 @@
       });
 
       asyncLoop(5, function(loop) {
-        generateLatestGames((loop.iteration()+1), function(id, gameurl, topicTitle, thumbnail, user, relative, newgame) {
+        generateLatestGames((loop.iteration() + 1), function(id, gameurl, topicTitle, thumbnail, user, relative, newgame) {
           var tiles = "";
 
           generateGameID(id, gameurl, function(url) {
@@ -353,14 +353,63 @@
     }
 
     function populateComments(data) {
-      console.log(data);
-      var comments = "";
+      // console.log(data);
+      var comments = content = "";
 
-      if (data.posts_count > 10)
+      if (data.posts_count > 20) {
+        var postlength = data.posts_count - 1;
+        var realend = postlength - 10;
         var arraylength = 10;
-      else
-        var arraylength = data.posts_count;
-      for (var i = arraylength - 1; i >= 0; i--) {
+        var end = arraylength - 10;
+
+
+        $.getJSON("http://talk.polygonalweave.com/t/" + data.id + "/" + realend + ".json", function(data) {
+
+          for (var i = 19; i >= 10; i--) {
+            // console.log(i);
+            var post = data.post_stream.posts[i];
+            var url = $(post.cooked).find("blockquote").find("a").attr("href");
+            var d = new Date(post.updated_at);
+            var relative = moment(d, "ddd MMMM DD YYYY hh:mm:ss").fromNow();
+            var user = post.username;
+            var avatarTemplate = post.avatar_template;
+            var avatarMedium = avatarTemplate.replace("{size}", "50");
+            var avatar = "http://talk.polygonalweave.com" + avatarMedium;
+
+
+            if (i == 0) {
+              (function($) {
+                $.strRemove = function(theTarget, theString) {
+                  return $("<div/>").append(
+                    $(theTarget, theString).remove().end()
+                  ).html();
+                };
+              })(jQuery);
+
+              // content = $(post.cooked).not("onebox-result").html;
+              content = $.strRemove("div", post.cooked);
+            } else {
+              content = post.cooked;
+            }
+
+            comments += '<div class="comment">';
+            comments += '<div class="user-photo"><img src="' + avatar + '" alt=""></div>';
+            comments += '<div class="comment-body">';
+            comments += '<div class="user">';
+            comments += '<ul class="inline-list dot-seperator">';
+            comments += '<li><a href="#">' + user + '</a></li>';
+            comments += '<li class="small">' + relative + '</li></ul></div>';
+            comments += '<div>' + content + '</div></div></div>';
+
+          }
+          $("#discourse-comments").html(comments);
+        });
+
+      } else {
+        var arraylength = data.posts_count - 1;
+        var end = 0;
+
+      for (var i = arraylength; i >= end; i--) {
 
         var post = data.post_stream.posts[i];
         var url = $(post.cooked).find("blockquote").find("a").attr("href");
@@ -368,12 +417,24 @@
         var relative = moment(d, "ddd MMMM DD YYYY hh:mm:ss").fromNow();
         var user = post.username;
         var avatarTemplate = post.avatar_template;
-
         var avatarMedium = avatarTemplate.replace("{size}", "50");
         var avatar = "http://talk.polygonalweave.com" + avatarMedium;
-        console.log(avatar);
 
 
+        if (i == 0) {
+          (function($) {
+            $.strRemove = function(theTarget, theString) {
+              return $("<div/>").append(
+                $(theTarget, theString).remove().end()
+              ).html();
+            };
+          })(jQuery);
+
+          // content = $(post.cooked).not("onebox-result").html;
+          content = $.strRemove("div", post.cooked);
+        } else {
+          content = post.cooked;
+        }
 
         comments += '<div class="comment">';
         comments += '<div class="user-photo"><img src="' + avatar + '" alt=""></div>';
@@ -382,19 +443,17 @@
         comments += '<ul class="inline-list dot-seperator">';
         comments += '<li><a href="#">' + user + '</a></li>';
         comments += '<li class="small">' + relative + '</li></ul></div>';
-        comments += "<p>" + post.cooked + "</p></div></div>";
+        comments += '<div>' + content + '</div></div></div>';
 
       }
       $("#discourse-comments").html(comments);
-
-
-
+}
     }
 
     function generateLatestSearch() {
 
       // $.getJSON("/LatestGames.json", function(data) {
-        $.getJSON("http://talk.polygonalweave.com/c/games/l/latest.json", function(data) {
+      $.getJSON("http://talk.polygonalweave.com/c/games/l/latest.json", function(data) {
 
         var result = "";
         // if (data.posts_count >8)
@@ -547,9 +606,9 @@
       }
 
       if (topicID) {
-      $.getJSON("http://talk.polygonalweave.com/t/" + topicID + ".json", function(data) {
+        $.getJSON("http://talk.polygonalweave.com/t/" + topicID + ".json", function(data) {
           populateComments(data);
-      });
+        });
       }
 
       generateQuotes();
