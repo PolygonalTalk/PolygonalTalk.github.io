@@ -123,7 +123,7 @@
           var arraylength = 8;
         else
           var arraylength = data.posts_count;
-        for (var i = arraylength - 1; i >= 0; i--) {
+        for (var i = data.posts_count - 1; i >= data.posts_count - arraylength; i--) {
           tiles = "";
           var post = data.post_stream.posts[i];
 
@@ -310,7 +310,7 @@
       var latestarray = []; //array to compare against newly created games
       asyncLoop(4, function(loop) {
         generateLatestGames((loop.iteration() + 1), function(id, gameurl, topicTitle, thumbnail, user, relative, id) {
-          var tiles = newtile = "";
+          var tiles = newtile = result = "";
           latestarray.push(id);
 
           asyncLoop(4, function(loop2) {
@@ -347,6 +347,17 @@
           tiles += "<a class='btn btn-flat btn-primary btn-xs'>" + relative + "</a>";
           tiles += "</div>";
 
+          result += "<a href='" + gameurl + "' alt=''>";
+          result += '<div class="list-action-left">';
+          result += "<div class='game-thumbnail' style='background: url(" + thumbnail + ") center/cover'></div></div>";
+          result += '<div class="list-content">';
+          result += '<span class="title">' + topicTitle + '</span>';
+          result += '<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>';
+          result += '</div>'
+
+
+          $("#latestgamessearch" + loop.iteration()).html(result);
+
           // console.log(tiles);
           $("#latestgames" + loop.iteration()).html(tiles); //populate latest games
           loop.next();
@@ -360,6 +371,7 @@
 
           generateGameID(id, gameurl, function(url) {
             $("#latestgames" + loop.iteration()).find("a").attr("href", url);
+            $("#latestgamessearch" + loop.iteration()).find("a").attr("href", url);
             loop.next();
           });
         });
@@ -464,39 +476,39 @@
 }
     }
 
-    function generateLatestSearch() {
-
-      // $.getJSON("/LatestGames.json", function(data) {
-      $.getJSON("http://talk.polygonalweave.com/c/games/l/latest.json", function(data) {
-
-        var result = "";
-        // if (data.posts_count >8)
-        var arraylength = 8;
-        // else
-        // var arraylength = data.posts_count;
-        for (var i = 1; i < arraylength; i++) {
-          result = "";
-          var topic = data.topic_list.topics[i];
-          var topicTitle = topic.title;
-          // console.log(topicTitle);
-          var thumbnail = topic.image_url;
-          var user = topic.last_poster_username;
-          var d = new Date(topic.bumped_at);
-          var relative = moment(d, "ddd MMMM DD YYYY hh:mm:ss").fromNow();
-          var url = "#";
-
-          result += '<div class="list-action-left">';
-          result += "<div class='game-thumbnail' style='background: url(" + thumbnail + ") center/cover'></div></div>";
-          result += '<div class="list-content">';
-          result += '<span class="title">' + topicTitle + '</span>';
-          result += '<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>';
-          result += '</div>'
-
-
-          $("#latestgamessearch" + i).html(result);
-        }
-      });
-    }
+    // function generateLatestSearch() {
+    //
+    //   // $.getJSON("/LatestGames.json", function(data) {
+    //   $.getJSON("http://talk.polygonalweave.com/c/games/l/latest.json", function(data) {
+    //
+    //     var result = "";
+    //     // if (data.posts_count >8)
+    //     var arraylength = 8;
+    //     // else
+    //     // var arraylength = data.posts_count;
+    //     for (var i = 1; i < arraylength; i++) {
+    //       result = "";
+    //       var topic = data.topic_list.topics[i];
+    //       var topicTitle = topic.title;
+    //       // console.log(topicTitle);
+    //       var thumbnail = topic.image_url;
+    //       var user = topic.last_poster_username;
+    //       var d = new Date(topic.bumped_at);
+    //       var relative = moment(d, "ddd MMMM DD YYYY hh:mm:ss").fromNow();
+    //       var url = "#";
+    //
+    //       result += '<div class="list-action-left">';
+    //       result += "<div class='game-thumbnail' style='background: url(" + thumbnail + ") center/cover'></div></div>";
+    //       result += '<div class="list-content">';
+    //       result += '<span class="title">' + topicTitle + '</span>';
+    //       result += '<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>';
+    //       result += '</div>'
+    //
+    //
+    //       $("#latestgamessearch" + i).html(result);
+    //     }
+    //   });
+    // }
 
 
     function gbgame(data) {
@@ -629,7 +641,7 @@
       generateLinks();
       generateTrailers();
       populateLatestGames();
-      generateLatestSearch();
+      // generateLatestSearch();
       // generateGameData();
       // generatePostsMonthChart();
     });
@@ -659,6 +671,11 @@
           <ul class="list-material">
             <li class="has-action-left">
               <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
+              <a href="#" id="latestgamessearch0" class="visible">
+              </a>
+            </li>
+            <li class="has-action-left">
+              <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
               <a href="#" id="latestgamessearch1" class="visible">
               </a>
             </li>
@@ -675,11 +692,6 @@
             <li class="has-action-left">
               <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
               <a href="#" id="latestgamessearch4" class="visible">
-              </a>
-            </li>
-            <li class="has-action-left">
-              <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
-              <a href="#" id="latestgamessearch5" class="visible">
               </a>
             </li>
           </ul>
@@ -740,7 +752,7 @@
               <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
               <a href="#" class="visible">
                 <div class="list-action-left">
-                  <img src="../../assets/globals/img/faces/1.jpg" class="face-radius" alt="">
+                  <!-- <img src="../../assets/globals/img/faces/1.jpg" class="face-radius" alt=""> -->
                 </div>
                 <div class="list-content">
                   <span class="title">Pari Subramanium</span>
@@ -752,7 +764,7 @@
               <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
               <a href="#" class="visible">
                 <div class="list-action-left">
-                  <img src="../../assets/globals/img/faces/10.jpg" class="face-radius" alt="">
+                  <!-- <img src="../../assets/globals/img/faces/10.jpg" class="face-radius" alt=""> -->
                 </div>
                 <div class="list-content">
                   <span class="title">Andrew Fox</span>
@@ -764,7 +776,7 @@
               <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
               <a href="#" class="visible">
                 <div class="list-action-left">
-                  <img src="../../assets/globals/img/faces/11.jpg" class="face-radius" alt="">
+                  <!-- <img src="../../assets/globals/img/faces/11.jpg" class="face-radius" alt=""> -->
                 </div>
                 <div class="list-content">
                   <span class="title">Lieke Vermeulen</span>

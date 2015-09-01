@@ -1,0 +1,39 @@
+{% assign post = site.posts.first %}
+    <div class="row">
+
+      <div class="col-md-6 material-animate" style="padding: 0px;">
+        <div class="hi-bg-image bg-opaque5" {% if post.image %} style="background: url('{{ post.image2 }}') center/cover;" {% endif %}>
+            <!-- <a class="author text-color-white" href="#"><img src="{{ post.avatar }}">{{ post.author }}</a> -->
+
+            <div class="col-md-4-offset-2 ">
+
+              <div class="panel-body">
+                <h4 class="margin-bottom-1 text-color-white"><strong>{{ post.title2 }}</strong></h4>
+                <h4 class="text-color-white"><small>{{ post.categories }}s</small></h4>
+                <canvas class="chartjs-polar2 chartjs-charts" width="320" height="280"></canvas>
+              </div><!--.panel-body-->
+            </div>
+        </div>
+      </div><!--.col-->
+
+
+      <div class="col-md-6 material-animate" style="padding: 0px;">
+        <div class="hi-bg-image bg-opaque5" {% if post.image %} style="background: url('{{ post.image }}') center/cover;" {% endif %}>
+            <!-- <a class="author text-color-white" href="#"><img src="{{ post.avatar }}">{{ post.author }}</a> -->
+
+            <div class="col-md-4-offset-2 ">
+
+              <div class="panel-body">
+                <h4 class="margin-bottom-1 text-color-white"><strong>{{ post.title }}</strong></h4>
+                <h4 class="text-color-white"><small>{{ post.categories }}s</small></h4>
+                <canvas class="chartjs-polar chartjs-charts" width="320" height="280"></canvas>
+              </div><!--.panel-body-->
+            </div>
+        </div>
+      </div><!--.col-->
+
+
+      <!-- <div class="col-md-8 material-animate"> -->
+
+
+    </div><!--.row-->

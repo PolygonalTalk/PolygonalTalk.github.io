@@ -124,7 +124,7 @@
           var arraylength = 8;
         else
           var arraylength = data.posts_count;
-        for (var i = arraylength - 1; i >= 0; i--) {
+        for (var i = data.posts_count - 1; i >= data.posts_count - arraylength; i--) {
           tiles = "";
           var post = data.post_stream.posts[i];
 
@@ -311,7 +311,7 @@
       var latestarray = []; //array to compare against newly created games
       asyncLoop(4, function(loop) {
         generateLatestGames((loop.iteration() + 1), function(id, gameurl, topicTitle, thumbnail, user, relative, id) {
-          var tiles = newtile = "";
+          var tiles = newtile = result = "";
           latestarray.push(id);
 
           asyncLoop(4, function(loop2) {
@@ -348,6 +348,17 @@
           tiles += "<a class='btn btn-flat btn-primary btn-xs'>" + relative + "</a>";
           tiles += "</div>";
 
+          result += "<a href='" + gameurl + "' alt=''>";
+          result += '<div class="list-action-left">';
+          result += "<div class='game-thumbnail' style='background: url(" + thumbnail + ") center/cover'></div></div>";
+          result += '<div class="list-content">';
+          result += '<span class="title">' + topicTitle + '</span>';
+          result += '<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>';
+          result += '</div>'
+
+
+          $("#latestgamessearch" + loop.iteration()).html(result);
+
           // console.log(tiles);
           $("#latestgames" + loop.iteration()).html(tiles); //populate latest games
           loop.next();
@@ -361,6 +372,7 @@
 
           generateGameID(id, gameurl, function(url) {
             $("#latestgames" + loop.iteration()).find("a").attr("href", url);
+            $("#latestgamessearch" + loop.iteration()).find("a").attr("href", url);
             loop.next();
           });
         });
@@ -465,39 +477,39 @@
 }
     }
 
-    function generateLatestSearch() {
-
-      // $.getJSON("/LatestGames.json", function(data) {
-      $.getJSON("http://talk.polygonalweave.com/c/games/l/latest.json", function(data) {
-
-        var result = "";
-        // if (data.posts_count >8)
-        var arraylength = 8;
-        // else
-        // var arraylength = data.posts_count;
-        for (var i = 1; i < arraylength; i++) {
-          result = "";
-          var topic = data.topic_list.topics[i];
-          var topicTitle = topic.title;
-          // console.log(topicTitle);
-          var thumbnail = topic.image_url;
-          var user = topic.last_poster_username;
-          var d = new Date(topic.bumped_at);
-          var relative = moment(d, "ddd MMMM DD YYYY hh:mm:ss").fromNow();
-          var url = "#";
-
-          result += '<div class="list-action-left">';
-          result += "<div class='game-thumbnail' style='background: url(" + thumbnail + ") center/cover'></div></div>";
-          result += '<div class="list-content">';
-          result += '<span class="title">' + topicTitle + '</span>';
-          result += '<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>';
-          result += '</div>'
-
-
-          $("#latestgamessearch" + i).html(result);
-        }
-      });
-    }
+    // function generateLatestSearch() {
+    //
+    //   // $.getJSON("/LatestGames.json", function(data) {
+    //   $.getJSON("http://talk.polygonalweave.com/c/games/l/latest.json", function(data) {
+    //
+    //     var result = "";
+    //     // if (data.posts_count >8)
+    //     var arraylength = 8;
+    //     // else
+    //     // var arraylength = data.posts_count;
+    //     for (var i = 1; i < arraylength; i++) {
+    //       result = "";
+    //       var topic = data.topic_list.topics[i];
+    //       var topicTitle = topic.title;
+    //       // console.log(topicTitle);
+    //       var thumbnail = topic.image_url;
+    //       var user = topic.last_poster_username;
+    //       var d = new Date(topic.bumped_at);
+    //       var relative = moment(d, "ddd MMMM DD YYYY hh:mm:ss").fromNow();
+    //       var url = "#";
+    //
+    //       result += '<div class="list-action-left">';
+    //       result += "<div class='game-thumbnail' style='background: url(" + thumbnail + ") center/cover'></div></div>";
+    //       result += '<div class="list-content">';
+    //       result += '<span class="title">' + topicTitle + '</span>';
+    //       result += '<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>';
+    //       result += '</div>'
+    //
+    //
+    //       $("#latestgamessearch" + i).html(result);
+    //     }
+    //   });
+    // }
 
 
     function gbgame(data) {
@@ -630,7 +642,7 @@
       generateLinks();
       generateTrailers();
       populateLatestGames();
-      generateLatestSearch();
+      // generateLatestSearch();
       // generateGameData();
       // generatePostsMonthChart();
     });
@@ -660,6 +672,11 @@
           <ul class="list-material">
             <li class="has-action-left">
               <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
+              <a href="#" id="latestgamessearch0" class="visible">
+              </a>
+            </li>
+            <li class="has-action-left">
+              <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
               <a href="#" id="latestgamessearch1" class="visible">
               </a>
             </li>
@@ -676,11 +693,6 @@
             <li class="has-action-left">
               <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
               <a href="#" id="latestgamessearch4" class="visible">
-              </a>
-            </li>
-            <li class="has-action-left">
-              <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
-              <a href="#" id="latestgamessearch5" class="visible">
               </a>
             </li>
           </ul>
@@ -741,7 +753,7 @@
               <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
               <a href="#" class="visible">
                 <div class="list-action-left">
-                  <img src="../../assets/globals/img/faces/1.jpg" class="face-radius" alt="">
+                  <!-- <img src="../../assets/globals/img/faces/1.jpg" class="face-radius" alt=""> -->
                 </div>
                 <div class="list-content">
                   <span class="title">Pari Subramanium</span>
@@ -753,7 +765,7 @@
               <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
               <a href="#" class="visible">
                 <div class="list-action-left">
-                  <img src="../../assets/globals/img/faces/10.jpg" class="face-radius" alt="">
+                  <!-- <img src="../../assets/globals/img/faces/10.jpg" class="face-radius" alt=""> -->
                 </div>
                 <div class="list-content">
                   <span class="title">Andrew Fox</span>
@@ -765,7 +777,7 @@
               <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
               <a href="#" class="visible">
                 <div class="list-action-left">
-                  <img src="../../assets/globals/img/faces/11.jpg" class="face-radius" alt="">
+                  <!-- <img src="../../assets/globals/img/faces/11.jpg" class="face-radius" alt=""> -->
                 </div>
                 <div class="list-content">
                   <span class="title">Lieke Vermeulen</span>
@@ -873,7 +885,7 @@ function gamer(data) {
   }
 }
 </script>
- 
+
     <!-- Start Layout -->
     <div class="nav-bar-container">
 
@@ -935,27 +947,39 @@ function gamer(data) {
 
     <div class="row">
 
-      <div class="col-md-4 material-animate padding-right-40">
-        <div class="card">
-        <h4 class="margin-bottom-1">Toy Soldiers: War Chest</h4>
-        <h4><small>review by Jango</small></h4>
-        <p class="text-grey"><small><p>The premise is pretty cool. Imagine you are a kid and you are playing with your toys in a cross pollination kind of way. Army men are playing with pixies, Sci-Fi soldiers are fighting Knights or Ninjas. Now combine that with part RTS, part Tower Defense, and part 3rd Person Shooter and you get Toy Soldiers: War Chest.</p>
+      <div class="col-md-6 material-animate" style="padding: 0px;">
+        <div class="hi-bg-image bg-opaque5"  style="background: url('http://winarticles.net/wp-content/uploads/2012/06/metal-gear-solid-5-snake-phantom-pain-motorcycle-screenshot1.jpg') center/cover;" >
+            <!-- <a class="author text-color-white" href="#"><img src=""></a> -->
 
-</small></p>
-        <div class="card-footer">
-  						<div class="btn-group btn-merged btn-group-sm pull-right">
-  							<button type="button" class="btn btn-green btn-flat btn-ripple"><a href="/review/2015/08/29/toy-soldiers-review.html">Read More</a></button>
-  						</div>
-  					</div>
-          </div>
-      </div><!--.col-->
+            <div class="col-md-4-offset-2 ">
 
-      <div class="col-md-8 material-animate">
-        <div class="hi-bg-image bg-opaque5"  style="background: url('http://i.imgur.com/LGg1ejt.jpg') center/cover;" >
-            <!-- <a class="author text-color-white" href="#"><img src="http://talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/jango/120/149_1.png">Jango</a> -->
+              <div class="panel-body">
+                <h4 class="margin-bottom-1 text-color-white"><strong>Metal Gear Solid V: The Phantom Pain</strong></h4>
+                <h4 class="text-color-white"><small>reviews</small></h4>
+                <canvas class="chartjs-polar2 chartjs-charts" width="320" height="280"></canvas>
+              </div><!--.panel-body-->
+            </div>
         </div>
       </div><!--.col-->
-      <div class="col-md-8 material-animate">
+
+
+      <div class="col-md-6 material-animate" style="padding: 0px;">
+        <div class="hi-bg-image bg-opaque5"  style="background: url('https://heavyeditorial.files.wordpress.com/2015/04/gameplay-screenshot-1.jpg?quality=65&strip=all&w=780&strip=all') center/cover;" >
+            <!-- <a class="author text-color-white" href="#"><img src=""></a> -->
+
+            <div class="col-md-4-offset-2 ">
+
+              <div class="panel-body">
+                <h4 class="margin-bottom-1 text-color-white"><strong>Mad Max</strong></h4>
+                <h4 class="text-color-white"><small>reviews</small></h4>
+                <canvas class="chartjs-polar chartjs-charts" width="320" height="280"></canvas>
+              </div><!--.panel-body-->
+            </div>
+        </div>
+      </div><!--.col-->
+
+
+      <!-- <div class="col-md-8 material-animate"> -->
 
 
     </div><!--.row-->
@@ -1002,25 +1026,25 @@ function gamer(data) {
 
     <div class="col-md-6">
       <div class="card tile card-news-more material-animate">
-        <div class="card-heading bg-image bg-opaque5 toggle-card-news-more"  style="background: url('http://images.eurogamer.net/2013/articles/1/7/7/4/0/1/3/everybodys-gone-to-the-rapture-review-143928049295.jpg') center/cover;" >
-          <a class="author text-color-white"><img src="http://talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/darthsmurfx/120/73_1.png">DarthSmurfX</a>
+        <div class="card-heading bg-image bg-opaque5 toggle-card-news-more"  style="background: url('http://i.imgur.com/LGg1ejt.jpg') center/cover;" >
+          <a class="author text-color-white"><img src="http://talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/jango/120/149_1.png">Jango</a>
           <div class="heading-content">
 
-            <h1 class="headline"><strong>Everybody's Gone to the Rapture</strong> <small>review</small></h1>
+            <h1 class="headline"><strong>Toy Soldiers: War Chest</strong> <small>review</small></h1>
 
             <button class="btn btn-floating btn-pink toggle-card-news-more"><i class="material-icons md-24">thumb_up</i></button>
           </div>
         </div><!--.card-heading-->
         <div class="card-body">
-          <p>I’ve never played a “walking simulator” before this, but I’m glad I did. This is the Bizarro-Destiny of games, where it is ALL story and no gameplay. And it works. REALLY well.</p>
+          <p>The premise is pretty cool. Imagine you are a kid and you are playing with your toys in a cross pollination kind of way. Army men are playing with pixies, Sci-Fi soldiers are fighting Knights or Ninjas. Now combine that with part RTS, part Tower Defense, and part 3rd Person Shooter and you get Toy Soldiers: War Chest.</p>
 
 
           <div class="card-footer">
             <div class="btn-group btn-merged btn-group-sm pull-left">
-              <span class="badge">Aug 19, 2015</span>
+              <span class="badge">Aug 29, 2015</span>
             </div>
     						<div class="btn-group btn-merged btn-group-sm pull-right">
-    							<button type="button" class="btn btn-green btn-flat btn-ripple"><a href="/review/2015/08/19/everyones-gone-to-the-rapture-review.html">Read More</a></button>
+    							<button type="button" class="btn btn-green btn-flat btn-ripple"><a href="/review/2015/08/29/toy-soldiers-review.html">Read More</a></button>
     						</div>
     					</div><!--.card-footer-->
         </div><!--.card-body-->
@@ -1089,13 +1113,19 @@ function gamer(data) {
     <!-- <script src="../../assets/globals/plugins/gmaps/gmaps.js"></script> -->
     <script src="/plugins/bxslider/jquery.bxslider.min.js"></script>
     <script src="/plugins/d3/d3.min.js"></script>
-    <script src="/plugins/rickshaw/rickshaw.min.js"></script>
+    <!-- <script src="/plugins/rickshaw/rickshaw.min.js"></script> -->
     <script src="/plugins/jquery-knob/excanvas.js"></script>
     <script src="/plugins/jquery-knob/dist/jquery.knob.min.js"></script>
 
-    <script src="/plugins/video.js/dist/video-js/video.js"></script>
+    <script src="/plugins/chartjs/Chart.min.js"></script>
+  	<!-- END PLUGINS AREA -->
+
+  	<!-- PLUGINS INITIALIZATION AND SETTINGS -->
+  	<script src="/scripts/charts-chartjs.js"></script>
+  	<!-- END PLUGINS INITIALIZATION AND SETTINGS -->
+    <!-- <script src="/plugins/video.js/dist/video-js/video.js"></script>
     <script src="/plugins/video.js/plugins/playlist/videojs-playlists.min.js"></script>
-    <script src="/plugins/video.js/plugins/youtube/youtube.js"></script>
+    <script src="/plugins/video.js/plugins/youtube/youtube.js"></script> -->
 
     <!-- <script src="../../assets/globals/plugins/gauge/gauge.min.js"></script> -->
     <!-- END PLUGINS AREA -->
@@ -1110,7 +1140,7 @@ function gamer(data) {
     <script src="/scripts/widget-audio.js"></script>
     <script src="/scripts/widget-video.js"></script>
     <script src="/scripts/charts-knob.js"></script>
-    <script src="/scripts/index.js"></script>
+    <!-- <script src="/scripts/index.js"></script> -->
     <script src="/scripts/typewatch.js"></script>
     <!-- BEGIN INITIALIZATION-->
     <script>
@@ -1118,9 +1148,10 @@ function gamer(data) {
       Pleasure.init();
       Layout.init();
 
-      Index.init();
-      WidgetAudio.single();
+      // Index.init();
+      // WidgetAudio.single();
       ChartsKnob.init();
+      ChartsChartJs.init();
 
     });
     </script>

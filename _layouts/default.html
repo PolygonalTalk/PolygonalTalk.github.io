@@ -4,7 +4,7 @@
   {% include head.html %}
 
   <body>
-{% include search.html %} 
+{% include search.html %}
     <!-- Start Layout -->
     {% include sidebar.html %}
       {% include header.html %}
@@ -23,13 +23,19 @@
     <!-- <script src="../../assets/globals/plugins/gmaps/gmaps.js"></script> -->
     <script src="{{ "/plugins/bxslider/jquery.bxslider.min.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/plugins/d3/d3.min.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/plugins/rickshaw/rickshaw.min.js" | prepend: site.baseurl }}"></script>
+    <!-- <script src="{{ "/plugins/rickshaw/rickshaw.min.js" | prepend: site.baseurl }}"></script> -->
     <script src="{{ "/plugins/jquery-knob/excanvas.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/plugins/jquery-knob/dist/jquery.knob.min.js" | prepend: site.baseurl }}"></script>
 
-    <script src="{{ "/plugins/video.js/dist/video-js/video.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/plugins/chartjs/Chart.min.js" | prepend: site.baseurl }}"></script>
+  	<!-- END PLUGINS AREA -->
+
+  	<!-- PLUGINS INITIALIZATION AND SETTINGS -->
+  	<script src="{{ "/scripts/charts-chartjs.js" | prepend: site.baseurl }}"></script>
+  	<!-- END PLUGINS INITIALIZATION AND SETTINGS -->
+    <!-- <script src="{{ "/plugins/video.js/dist/video-js/video.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/plugins/video.js/plugins/playlist/videojs-playlists.min.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/plugins/video.js/plugins/youtube/youtube.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/plugins/video.js/plugins/youtube/youtube.js" | prepend: site.baseurl }}"></script> -->
 
     <!-- <script src="../../assets/globals/plugins/gauge/gauge.min.js"></script> -->
     <!-- END PLUGINS AREA -->
@@ -44,7 +50,7 @@
     <script src="{{ "/scripts/widget-audio.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/scripts/widget-video.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/scripts/charts-knob.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/scripts/index.js" | prepend: site.baseurl }}"></script>
+    <!-- <script src="{{ "/scripts/index.js" | prepend: site.baseurl }}"></script> -->
     <script src="{{ "/scripts/typewatch.js" | prepend: site.baseurl }}"></script>
     <!-- BEGIN INITIALIZATION-->
     <script>
@@ -52,9 +58,10 @@
       Pleasure.init();
       Layout.init();
 
-      Index.init();
-      WidgetAudio.single();
+      // Index.init();
+      // WidgetAudio.single();
       ChartsKnob.init();
+      ChartsChartJs.init();
 
     });
     </script>
