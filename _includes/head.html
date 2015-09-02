@@ -456,14 +456,14 @@
             comments += '<li class="small">' + relative + '</li></ul></div>';
             comments += '<div>' + content + '</div></div></div>';
             // console.log(usercontent);
-            if(usercontent.length > 40 && i == 19){
+            if(usercontent.length > 60 && i == 19){
               // console.log("remove hidden");
               $("#comment-check").removeClass("hidden");
               $("#discourse-comment").html(comments);
               $("#latestgames0").addClass("hidden");
 
             }
-            else if (usercontent.length <= 40 && i == 19){
+            else if (usercontent.length <= 60 && i == 19){
               $("#highlight-check").removeClass("hidden");
             }
 
@@ -517,13 +517,13 @@
 
       $("#discourse-comments").html(comments);
       // console.log(usercontent);
-      if(usercontent.length > 40 && i == arraylength){
+      if(usercontent.length > 60 && i == arraylength){
         // console.log("remove hidden");
         $("#comment-check").removeClass("hidden");
         $("#discourse-comment").html(comments);
         $("#latestgames0").addClass("hidden");
       }
-      else if (usercontent.length <= 40 && i == arraylength){
+      else if (usercontent.length <= 60 && i == arraylength){
                 $("#highlight-check").removeClass("hidden");
       }
     }
