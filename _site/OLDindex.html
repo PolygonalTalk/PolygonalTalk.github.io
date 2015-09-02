@@ -311,7 +311,7 @@
       var latestarray = []; //array to compare against newly created games
       asyncLoop(4, function(loop) {
         generateLatestGames((loop.iteration() + 1), function(id, gameurl, topicTitle, thumbnail, user, relative, id) {
-          var tiles = newtile = result = "";
+          var tiles = newtile = result = highlight = highlightimg = footer = "";
           latestarray.push(id);
 
           asyncLoop(4, function(loop2) {
@@ -340,6 +340,8 @@
           });
         });
 
+          var x = loop.iteration();
+
           tiles += "<a href='" + gameurl + "' alt=''>";
           tiles += "<div class='game-thumbnail' style='background: url(" + thumbnail + ") center/cover'>";
           tiles += "</div></a>";
@@ -354,13 +356,38 @@
           result += '<div class="list-content">';
           result += '<span class="title">' + topicTitle + '</span>';
           result += '<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>';
-          result += '</div>'
-
+          result += '</div>';
 
           $("#latestgamessearch" + loop.iteration()).html(result);
 
-          // console.log(tiles);
-          $("#latestgames" + loop.iteration()).html(tiles); //populate latest games
+          if($("#comment-check.hidden").length > 0 && loop.iteration() == 0){
+
+            highlightimg += "<a href='' alt=''>";
+            highlightimg += '<div class="card tile card-image card-black bg-image" style="background: url(' + thumbnail + ') center/cover; height: 300px; margin-top:0px;">'
+            highlightimg += '<div class="context ">'
+            highlightimg += '<div class="tile-content">'
+            highlightimg += '<span class="text-title">' + topicTitle + '</span>'
+            highlightimg += '<span class="text-subtitle">latest post - ' + user + '</span></div></div></div></a>'
+
+            footer +=  '<div class="card-footer">'
+            footer +=  '<div class="btn-group btn-merged btn-group-sm pull-right">'
+            footer +=  '<button type="button" class="btn btn-green btn-flat btn-ripple"><a href="' + gameurl + '">Read More</a></button>'
+            footer +=  '</div>	</div>'
+
+            $.getJSON(gameurl, function(data) {
+              populateComments(data);
+            });
+
+            $("#highlightTopicImage").html(highlightimg);
+            $("#card-footer").html(footer);
+
+            var x = loop.iteration();
+
+
+          }
+
+          // console.log(x);
+          $("#latestgames" + x).html(tiles); //populate latest games
           loop.next();
         });
 
@@ -371,6 +398,10 @@
           var tiles = "";
 
           generateGameID(id, gameurl, function(url) {
+            if($("#comment-check.hidden").length == 0 && loop.iteration() == 0){ //check to see if highlight comment exists
+              $("#highlightTopicImage").find("a").attr("href", url);
+              $("#card-footer").find("a").attr("href", url);
+            }
             $("#latestgames" + loop.iteration()).find("a").attr("href", url);
             $("#latestgamessearch" + loop.iteration()).find("a").attr("href", url);
             loop.next();
@@ -402,6 +433,7 @@
             var avatarTemplate = post.avatar_template;
             var avatarMedium = avatarTemplate.replace("{size}", "50");
             var avatar = "http://talk.polygonalweave.com" + avatarMedium;
+            var usercontent = $(post.cooked).text();
 
 
             if (i == 0) {
@@ -427,9 +459,21 @@
             comments += '<li><a href="#">' + user + '</a></li>';
             comments += '<li class="small">' + relative + '</li></ul></div>';
             comments += '<div>' + content + '</div></div></div>';
+            // console.log(usercontent);
+            if(usercontent.length > 40 && i == 19){
+              // console.log("remove hidden");
+              $("#comment-check").removeClass("hidden");
+              $("#discourse-comment").html(comments);
+              $("#latestgames0").addClass("hidden");
+
+            }
+            else if (usercontent.length <= 40 && i == 19){
+              $("#highlight-check").removeClass("hidden");
+            }
 
           }
           $("#discourse-comments").html(comments);
+
         });
 
       } else {
@@ -446,6 +490,8 @@
         var avatarTemplate = post.avatar_template;
         var avatarMedium = avatarTemplate.replace("{size}", "50");
         var avatar = "http://talk.polygonalweave.com" + avatarMedium;
+        var usercontent = $(post.cooked).text();
+
 
 
         if (i == 0) {
@@ -472,8 +518,19 @@
         comments += '<li class="small">' + relative + '</li></ul></div>';
         comments += '<div>' + content + '</div></div></div>';
 
-      }
+
       $("#discourse-comments").html(comments);
+      // console.log(usercontent);
+      if(usercontent.length > 40 && i == arraylength){
+        // console.log("remove hidden");
+        $("#comment-check").removeClass("hidden");
+        $("#discourse-comment").html(comments);
+        $("#latestgames0").addClass("hidden");
+      }
+      else if (usercontent.length <= 40 && i == arraylength){
+                $("#highlight-check").removeClass("hidden");
+      }
+    }
 }
     }
 
@@ -957,21 +1014,22 @@ function gamer(data) {
 
       <div class="col-md-4 material-animate padding-right-40">
         <div class="card">
-        <h4 class="margin-bottom-1">Mad Max</h4>
-        <h4><small>review by </small></h4>
-        <p class="text-grey"><small>
+        <h4 class="margin-bottom-1">Toy Soldiers: War Chest</h4>
+        <h4><small>review by Jango</small></h4>
+        <p class="text-grey"><small><p>The premise is pretty cool. Imagine you are a kid and you are playing with your toys in a cross pollination kind of way. Army men are playing with pixies, Sci-Fi soldiers are fighting Knights or Ninjas. Now combine that with part RTS, part Tower Defense, and part 3rd Person Shooter and you get Toy Soldiers: War Chest.</p>
+
 </small></p>
         <div class="card-footer">
   						<div class="btn-group btn-merged btn-group-sm pull-right">
-  							<button type="button" class="btn btn-green btn-flat btn-ripple"><a href="/review/2015/08/31/mad-max-review.html">Read More</a></button>
+  							<button type="button" class="btn btn-green btn-flat btn-ripple"><a href="/review/2015/08/29/toy-soldiers-review.html">Read More</a></button>
   						</div>
   					</div>
           </div>
       </div><!--.col-->
 
       <div class="col-md-8 material-animate">
-        <div class="hi-bg-image bg-opaque5"  style="background: url('https://heavyeditorial.files.wordpress.com/2015/04/gameplay-screenshot-1.jpg?quality=65&strip=all&w=780&strip=all') center/cover;" >
-            <!-- <a class="author text-color-white" href="#"><img src=""></a> -->
+        <div class="hi-bg-image bg-opaque5"  style="background: url('http://i.imgur.com/LGg1ejt.jpg') center/cover;" >
+            <!-- <a class="author text-color-white" href="#"><img src="http://talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/jango/120/149_1.png">Jango</a> -->
         </div>
       </div><!--.col-->
       <div class="col-md-8 material-animate">
@@ -980,36 +1038,6 @@ function gamer(data) {
     </div><!--.row-->
 
 
-    
-
-    <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet  mdl-cell--12-col-phone">
-      <div class="mdl-card__title"  style="background: url('http://i.imgur.com/LGg1ejt.jpg') center/cover;" >
-        <h2 class="mdl-card__title-text">Toy Soldiers: War Chest</h2>
-      </div>
-      <div class="mdl-card__supporting-text">
-        <p>The premise is pretty cool. Imagine you are a kid and you are playing with your toys in a cross pollination kind of way. Army men are playing with pixies, Sci-Fi soldiers are fighting Knights or Ninjas. Now combine that with part RTS, part Tower Defense, and part 3rd Person Shooter and you get Toy Soldiers: War Chest.</p>
-
-
-      </div>
-      <button class="post-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" onclick="location.href='/review/2015/08/29/toy-soldiers-review.html'">
-        <i class="material-icons">keyboard_arrow_right</i>
-      </button>
-      <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/review/2015/08/29/toy-soldiers-review.html">
-          Aug 29, 2015
-        </a>
-      </div>
-      <div class="mdl-card__menu">
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="post-/review/2015/08/29/toy-soldiers-review">
-          <i class="material-icons">share</i>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="post-/review/2015/08/29/toy-soldiers-review">
-          <li><a href="https://www.facebook.com/dialog/share?app_id={app_id}&display=page&href=/review/2015/08/29/toy-soldiers-review.html&redirect_uri=" class="mdl-menu__item">Facebook</a></li>
-          <li><a href="https://twitter.com/share?url=/review/2015/08/29/toy-soldiers-review.html&text=Toy Soldiers: War Chest&via=jekyllrb" class="mdl-menu__item">Twitter</a></li>
-          <li><a href="https://plus.google.com/share?url=/review/2015/08/29/toy-soldiers-review.html" class="mdl-menu__item">Google+</a></li>
-        </ul>
-      </div>
-    </div>
     
 
     <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet  mdl-cell--12-col-phone">
@@ -1072,6 +1100,35 @@ function gamer(data) {
     </div>
     
 
+    <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet  mdl-cell--12-col-phone">
+      <div class="mdl-card__title"  style="background: url('https://heavyeditorial.files.wordpress.com/2015/04/gameplay-screenshot-1.jpg?quality=65&strip=all&w=780&strip=all') center/cover;" >
+        <h2 class="mdl-card__title-text">Mad Max</h2>
+      </div>
+      <div class="mdl-card__supporting-text">
+        
+
+      </div>
+      <button class="post-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" onclick="location.href='/review/2015/07/31/mad-max-review.html'">
+        <i class="material-icons">keyboard_arrow_right</i>
+      </button>
+      <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/review/2015/07/31/mad-max-review.html">
+          Jul 31, 2015
+        </a>
+      </div>
+      <div class="mdl-card__menu">
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="post-/review/2015/07/31/mad-max-review">
+          <i class="material-icons">share</i>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="post-/review/2015/07/31/mad-max-review">
+          <li><a href="https://www.facebook.com/dialog/share?app_id={app_id}&display=page&href=/review/2015/07/31/mad-max-review.html&redirect_uri=" class="mdl-menu__item">Facebook</a></li>
+          <li><a href="https://twitter.com/share?url=/review/2015/07/31/mad-max-review.html&text=Mad Max&via=jekyllrb" class="mdl-menu__item">Twitter</a></li>
+          <li><a href="https://plus.google.com/share?url=/review/2015/07/31/mad-max-review.html" class="mdl-menu__item">Google+</a></li>
+        </ul>
+      </div>
+    </div>
+    
+
   
   </div>
 </div>
@@ -1115,8 +1172,8 @@ function gamer(data) {
 
     <script src="/scripts/sliders.js"></script>
     <!-- <script src="../../assets/globals/scripts/maps-google.js"></script> -->
-    <script src="/scripts/widget-audio.js"></script>
-    <script src="/scripts/widget-video.js"></script>
+    <!-- <script src="/scripts/widget-audio.js"></script>
+    <script src="/scripts/widget-video.js"></script> -->
     <script src="/scripts/charts-knob.js"></script>
     <!-- <script src="/scripts/index.js"></script> -->
     <script src="/scripts/typewatch.js"></script>

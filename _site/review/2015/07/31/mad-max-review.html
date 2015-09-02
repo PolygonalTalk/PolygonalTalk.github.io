@@ -9,7 +9,7 @@
   <title>Mad Max</title>
   <meta name="description" content="">
 
-  <link rel="canonical" href="http://yourdomain.com/review/2015/08/31/mad-max-review.html">
+  <link rel="canonical" href="http://yourdomain.com/review/2015/07/31/mad-max-review.html">
   <link rel="alternate" type="application/rss+xml" title="Polygonal Talk" href="http://yourdomain.com /feed.xml " />
 
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
@@ -310,7 +310,7 @@
       var latestarray = []; //array to compare against newly created games
       asyncLoop(4, function(loop) {
         generateLatestGames((loop.iteration() + 1), function(id, gameurl, topicTitle, thumbnail, user, relative, id) {
-          var tiles = newtile = result = "";
+          var tiles = newtile = result = highlight = highlightimg = footer = "";
           latestarray.push(id);
 
           asyncLoop(4, function(loop2) {
@@ -339,6 +339,8 @@
           });
         });
 
+          var x = loop.iteration();
+
           tiles += "<a href='" + gameurl + "' alt=''>";
           tiles += "<div class='game-thumbnail' style='background: url(" + thumbnail + ") center/cover'>";
           tiles += "</div></a>";
@@ -353,13 +355,38 @@
           result += '<div class="list-content">';
           result += '<span class="title">' + topicTitle + '</span>';
           result += '<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>';
-          result += '</div>'
-
+          result += '</div>';
 
           $("#latestgamessearch" + loop.iteration()).html(result);
 
-          // console.log(tiles);
-          $("#latestgames" + loop.iteration()).html(tiles); //populate latest games
+          if($("#comment-check.hidden").length > 0 && loop.iteration() == 0){
+
+            highlightimg += "<a href='' alt=''>";
+            highlightimg += '<div class="card tile card-image card-black bg-image" style="background: url(' + thumbnail + ') center/cover; height: 300px; margin-top:0px;">'
+            highlightimg += '<div class="context ">'
+            highlightimg += '<div class="tile-content">'
+            highlightimg += '<span class="text-title">' + topicTitle + '</span>'
+            highlightimg += '<span class="text-subtitle">latest post - ' + user + '</span></div></div></div></a>'
+
+            footer +=  '<div class="card-footer">'
+            footer +=  '<div class="btn-group btn-merged btn-group-sm pull-right">'
+            footer +=  '<button type="button" class="btn btn-green btn-flat btn-ripple"><a href="' + gameurl + '">Read More</a></button>'
+            footer +=  '</div>	</div>'
+
+            $.getJSON(gameurl, function(data) {
+              populateComments(data);
+            });
+
+            $("#highlightTopicImage").html(highlightimg);
+            $("#card-footer").html(footer);
+
+            var x = loop.iteration();
+
+
+          }
+
+          // console.log(x);
+          $("#latestgames" + x).html(tiles); //populate latest games
           loop.next();
         });
 
@@ -370,6 +397,10 @@
           var tiles = "";
 
           generateGameID(id, gameurl, function(url) {
+            if($("#comment-check.hidden").length == 0 && loop.iteration() == 0){ //check to see if highlight comment exists
+              $("#highlightTopicImage").find("a").attr("href", url);
+              $("#card-footer").find("a").attr("href", url);
+            }
             $("#latestgames" + loop.iteration()).find("a").attr("href", url);
             $("#latestgamessearch" + loop.iteration()).find("a").attr("href", url);
             loop.next();
@@ -401,6 +432,7 @@
             var avatarTemplate = post.avatar_template;
             var avatarMedium = avatarTemplate.replace("{size}", "50");
             var avatar = "http://talk.polygonalweave.com" + avatarMedium;
+            var usercontent = $(post.cooked).text();
 
 
             if (i == 0) {
@@ -426,9 +458,21 @@
             comments += '<li><a href="#">' + user + '</a></li>';
             comments += '<li class="small">' + relative + '</li></ul></div>';
             comments += '<div>' + content + '</div></div></div>';
+            // console.log(usercontent);
+            if(usercontent.length > 40 && i == 19){
+              // console.log("remove hidden");
+              $("#comment-check").removeClass("hidden");
+              $("#discourse-comment").html(comments);
+              $("#latestgames0").addClass("hidden");
+
+            }
+            else if (usercontent.length <= 40 && i == 19){
+              $("#highlight-check").removeClass("hidden");
+            }
 
           }
           $("#discourse-comments").html(comments);
+
         });
 
       } else {
@@ -445,6 +489,8 @@
         var avatarTemplate = post.avatar_template;
         var avatarMedium = avatarTemplate.replace("{size}", "50");
         var avatar = "http://talk.polygonalweave.com" + avatarMedium;
+        var usercontent = $(post.cooked).text();
+
 
 
         if (i == 0) {
@@ -471,8 +517,19 @@
         comments += '<li class="small">' + relative + '</li></ul></div>';
         comments += '<div>' + content + '</div></div></div>';
 
-      }
+
       $("#discourse-comments").html(comments);
+      // console.log(usercontent);
+      if(usercontent.length > 40 && i == arraylength){
+        // console.log("remove hidden");
+        $("#comment-check").removeClass("hidden");
+        $("#discourse-comment").html(comments);
+        $("#latestgames0").addClass("hidden");
+      }
+      else if (usercontent.length <= 40 && i == arraylength){
+                $("#highlight-check").removeClass("hidden");
+      }
+    }
 }
     }
 

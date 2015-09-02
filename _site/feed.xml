@@ -6,22 +6,9 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Sep 2015 11:08:58 -0500</pubDate>
-    <lastBuildDate>Tue, 01 Sep 2015 11:08:58 -0500</lastBuildDate>
+    <pubDate>Wed, 02 Sep 2015 12:10:11 -0500</pubDate>
+    <lastBuildDate>Wed, 02 Sep 2015 12:10:11 -0500</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
-    
-      <item>
-        <title>Mad Max</title>
-        <description>
-</description>
-        <pubDate>Mon, 31 Aug 2015 23:34:20 -0500</pubDate>
-        <link>http://yourdomain.com/review/2015/08/31/mad-max-review.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/review/2015/08/31/mad-max-review.html</guid>
-        
-        
-        <category>review</category>
-        
-      </item>
     
       <item>
         <title>Toy Soldiers: War Chest</title>
@@ -171,6 +158,19 @@
         
         
         <category>preview</category>
+        
+      </item>
+    
+      <item>
+        <title>Mad Max</title>
+        <description>
+</description>
+        <pubDate>Fri, 31 Jul 2015 23:34:20 -0500</pubDate>
+        <link>http://yourdomain.com/review/2015/07/31/mad-max-review.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/review/2015/07/31/mad-max-review.html</guid>
+        
+        
+        <category>review</category>
         
       </item>
     

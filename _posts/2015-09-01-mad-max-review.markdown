@@ -1,7 +1,7 @@
 ---
 layout: review
 title:  "Mad Max"
-date:   2015-09-01 04:34:20
+date:   2015-08-01 04:34:20
 categories: Review
 image: https://heavyeditorial.files.wordpress.com/2015/04/gameplay-screenshot-1.jpg?quality=65&strip=all&w=780&strip=all
 title2: "Metal Gear Solid V: The Phantom Pain"
