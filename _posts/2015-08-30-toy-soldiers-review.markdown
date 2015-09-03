@@ -3,6 +3,7 @@ layout: review
 title:  "Toy Soldiers: War Chest"
 date:   2015-08-30 04:34:20
 categories: Review
+icon: thumb_up
 image: http://i.imgur.com/LGg1ejt.jpg
 author: Jango
 avatar: http://talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/jango/120/149_1.png

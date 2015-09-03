@@ -397,7 +397,7 @@
           var tiles = "";
 
           generateGameID(id, gameurl, function(url) {
-            if($("#comment-check.hidden").length == 0 && loop.iteration() == 0){ //check to see if highlight comment exists
+            if(loop.iteration() == 0){ //check to see if highlight comment exists
               $("#highlightTopicImage").find("a").attr("href", url);
               $("#card-footer").find("a").attr("href", url);
             }
@@ -412,18 +412,17 @@
     function populateComments(data) {
       // console.log(data);
       var comments = content = "";
-
+      var charlimit = 60;
       if (data.posts_count > 20) {
-        var postlength = data.posts_count - 1;
-        var realend = postlength - 10;
         var arraylength = 10;
         var end = arraylength - 10;
 
 
-        $.getJSON("http://talk.polygonalweave.com/t/" + data.id + "/" + realend + ".json", function(data) {
+        $.getJSON("http://talk.polygonalweave.com/t/" + data.id + "/" + data.highest_post_number + ".json", function(data) {
 
           for (var i = 19; i >= 10; i--) {
-            // console.log(i);
+            console.log(i);
+            console.log(data);
             var post = data.post_stream.posts[i];
             var url = $(post.cooked).find("blockquote").find("a").attr("href");
             var d = new Date(post.updated_at);
@@ -459,15 +458,17 @@
             comments += '<li class="small">' + relative + '</li></ul></div>';
             comments += '<div>' + content + '</div></div></div>';
             // console.log(usercontent);
-            if(usercontent.length > 40 && i == 19){
+            if(usercontent.length > charlimit && i == 19){
               // console.log("remove hidden");
               $("#comment-check").removeClass("hidden");
               $("#discourse-comment").html(comments);
               $("#latestgames0").addClass("hidden");
-
+              $("#featurepost").removeClass("hidden");
             }
-            else if (usercontent.length <= 40 && i == 19){
+            else if (usercontent.length <= charlimit && i == 19){
               $("#highlight-check").removeClass("hidden");
+              $("#feature_post").removeClass("hidden");
+              $("#quotes").removeClass("hidden");
             }
 
           }
@@ -520,14 +521,17 @@
 
       $("#discourse-comments").html(comments);
       // console.log(usercontent);
-      if(usercontent.length > 40 && i == arraylength){
+      if(usercontent.length > charlimit && i == arraylength){
         // console.log("remove hidden");
         $("#comment-check").removeClass("hidden");
         $("#discourse-comment").html(comments);
         $("#latestgames0").addClass("hidden");
+        $("#featurepost").removeClass("hidden");
       }
-      else if (usercontent.length <= 40 && i == arraylength){
+      else if (usercontent.length <= charlimit && i == arraylength){
                 $("#highlight-check").removeClass("hidden");
+
+                $("#quotes").removeClass("hidden");
       }
     }
 }
@@ -642,6 +646,13 @@
       $(".profile-photo").prepend(imageSmall);
     }
 
+    function embedlylinks() {
+      if ($("#parallaxgame").length){
+        console.log("looking for links");
+        $(".parallax-content").find("a").addClass("embedly-card");
+        console.log($(".parallax-content").find("a"));
+      }
+    }
     // function generatePostsMonthChart()
     // {
     //
@@ -698,6 +709,7 @@
       generateLinks();
       generateTrailers();
       populateLatestGames();
+      embedlylinks();
       // generateLatestSearch();
       // generateGameData();
       // generatePostsMonthChart();
@@ -941,7 +953,7 @@ function gamer(data) {
   }
 }
 </script>
- 
+
     <!-- Start Layout -->
     <div class="nav-bar-container">
 
@@ -1100,6 +1112,23 @@ function gamer(data) {
 
     });
     </script>
+    <script>
+  (function(w, d){
+   var id='embedly-platform', n = 'script';
+   if (!d.getElementById(id)){
+     w.embedly = w.embedly || function() {(w.embedly.q = w.embedly.q || []).push(arguments);};
+     var e = d.createElement(n); e.id = id; e.async=1;
+     e.src = ('https:' === document.location.protocol ? 'https' : 'http') + '://cdn.embedly.com/widgets/platform.js';
+     var s = d.getElementsByTagName(n)[0];
+     s.parentNode.insertBefore(e, s);
+   }
+  })(window, document);
+  embedly("defaults", {
+  cards: {
+    controls: 0
+  }
+  });
+  </script>
 
 
     <!-- END INITIALIZATION-->

@@ -23,8 +23,13 @@ title: Home
     </div>
 
 <div class='col-md-4 material-animate margin-bottom-10'>
+  <div id="featurepost" class="hidden">
+  {% include feature_post.html %}
+  </div>
+  <div id="quotes" class="hidden">
   <li id="quotes0"></li>
   <li id="quotes1"></li>
+ </div>
 </div>
 
 </div>
@@ -33,7 +38,8 @@ title: Home
 
 <div class="display-animation">
   <div class="row image-row margin-top-10 margin-bottom-40">
-
+    <!-- <h2>Featured User Content</h2> -->
+    {% include feature_post2.html %}
     <div class="col-md-3 material-animate">
 
       <li id="newgames0"></li>
@@ -46,38 +52,7 @@ title: Home
       <li id="newgames3"></li>
 
     </div><!--.col-->
-<!-- <h2>Featured User Content</h2> -->
-{% for post in site.posts limit:1 offset:1 %}
-    <div class="col-md-6">
-      <div class="card tile card-news-more material-animate">
-        <div class="card-heading bg-image bg-opaque5 toggle-card-news-more" {% if post.image %} style="background: url('{{ post.image }}') center/cover;" {% endif %}>
-          <a class="author text-color-white"><img src="{{ post.avatar }}">{{ post.author }}</a>
-          <div class="heading-content">
 
-            <h1 class="headline"><strong>{{ post.title }}</strong> <small>{{ post.categories }}</small></h1>
-
-            <button class="btn btn-floating btn-pink toggle-card-news-more"><i class="material-icons md-24">thumb_up</i></button>
-          </div>
-        </div><!--.card-heading-->
-        <div class="card-body">
-          {{ post.excerpt }}
-          <div class="card-footer">
-            <div class="btn-group btn-merged btn-group-sm pull-left">
-              <span class="badge">{{ post.date | date: "%b %-d, %Y" }}{{ page.categories }}</span>
-            </div>
-    						<div class="btn-group btn-merged btn-group-sm pull-right">
-    							<button type="button" class="btn btn-green btn-flat btn-ripple"><a href="{{ post.url | prepend: site.baseurl }}">Read More</a></button>
-    						</div>
-    					</div><!--.card-footer-->
-        </div><!--.card-body-->
-
-      </div><!--.card-->
-    </div><!--.col-->
-
-    <div class="col-md-8 material-animate">
-      <div class="chart chart-sales-by-year without-time"></div>
-    </div><!--.col-->
-{% endfor %}
 </div>
 </div>
 
@@ -94,7 +69,6 @@ title: Home
 <div class='col-lg-4 material-animate'>
 
   <div id="links2"></div>
-
 </div>
 
 </div>

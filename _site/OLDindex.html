@@ -398,7 +398,7 @@
           var tiles = "";
 
           generateGameID(id, gameurl, function(url) {
-            if($("#comment-check.hidden").length == 0 && loop.iteration() == 0){ //check to see if highlight comment exists
+            if(loop.iteration() == 0){ //check to see if highlight comment exists
               $("#highlightTopicImage").find("a").attr("href", url);
               $("#card-footer").find("a").attr("href", url);
             }
@@ -413,18 +413,17 @@
     function populateComments(data) {
       // console.log(data);
       var comments = content = "";
-
+      var charlimit = 60;
       if (data.posts_count > 20) {
-        var postlength = data.posts_count - 1;
-        var realend = postlength - 10;
         var arraylength = 10;
         var end = arraylength - 10;
 
 
-        $.getJSON("http://talk.polygonalweave.com/t/" + data.id + "/" + realend + ".json", function(data) {
+        $.getJSON("http://talk.polygonalweave.com/t/" + data.id + "/" + data.highest_post_number + ".json", function(data) {
 
           for (var i = 19; i >= 10; i--) {
-            // console.log(i);
+            console.log(i);
+            console.log(data);
             var post = data.post_stream.posts[i];
             var url = $(post.cooked).find("blockquote").find("a").attr("href");
             var d = new Date(post.updated_at);
@@ -460,15 +459,17 @@
             comments += '<li class="small">' + relative + '</li></ul></div>';
             comments += '<div>' + content + '</div></div></div>';
             // console.log(usercontent);
-            if(usercontent.length > 40 && i == 19){
+            if(usercontent.length > charlimit && i == 19){
               // console.log("remove hidden");
               $("#comment-check").removeClass("hidden");
               $("#discourse-comment").html(comments);
               $("#latestgames0").addClass("hidden");
-
+              $("#featurepost").removeClass("hidden");
             }
-            else if (usercontent.length <= 40 && i == 19){
+            else if (usercontent.length <= charlimit && i == 19){
               $("#highlight-check").removeClass("hidden");
+              $("#feature_post").removeClass("hidden");
+              $("#quotes").removeClass("hidden");
             }
 
           }
@@ -521,14 +522,17 @@
 
       $("#discourse-comments").html(comments);
       // console.log(usercontent);
-      if(usercontent.length > 40 && i == arraylength){
+      if(usercontent.length > charlimit && i == arraylength){
         // console.log("remove hidden");
         $("#comment-check").removeClass("hidden");
         $("#discourse-comment").html(comments);
         $("#latestgames0").addClass("hidden");
+        $("#featurepost").removeClass("hidden");
       }
-      else if (usercontent.length <= 40 && i == arraylength){
+      else if (usercontent.length <= charlimit && i == arraylength){
                 $("#highlight-check").removeClass("hidden");
+
+                $("#quotes").removeClass("hidden");
       }
     }
 }
@@ -643,6 +647,13 @@
       $(".profile-photo").prepend(imageSmall);
     }
 
+    function embedlylinks() {
+      if ($("#parallaxgame").length){
+        console.log("looking for links");
+        $(".parallax-content").find("a").addClass("embedly-card");
+        console.log($(".parallax-content").find("a"));
+      }
+    }
     // function generatePostsMonthChart()
     // {
     //
@@ -699,6 +710,7 @@
       generateLinks();
       generateTrailers();
       populateLatestGames();
+      embedlylinks();
       // generateLatestSearch();
       // generateGameData();
       // generatePostsMonthChart();
@@ -1014,22 +1026,22 @@ function gamer(data) {
 
       <div class="col-md-4 material-animate padding-right-40">
         <div class="card">
-        <h4 class="margin-bottom-1">Toy Soldiers: War Chest</h4>
-        <h4><small>review by Jango</small></h4>
-        <p class="text-grey"><small><p>The premise is pretty cool. Imagine you are a kid and you are playing with your toys in a cross pollination kind of way. Army men are playing with pixies, Sci-Fi soldiers are fighting Knights or Ninjas. Now combine that with part RTS, part Tower Defense, and part 3rd Person Shooter and you get Toy Soldiers: War Chest.</p>
+        <h4 class="margin-bottom-1">Fig</h4>
+        <h4><small>feature by Rewfus</small></h4>
+        <p class="text-grey"><small><p>Have you guys heard of this service?  It’s essentially an alternative to Kickstarter that they are positioning to be much more about investing in a game then simply backing it.  You can read more about it here:</p>
 
 </small></p>
         <div class="card-footer">
   						<div class="btn-group btn-merged btn-group-sm pull-right">
-  							<button type="button" class="btn btn-green btn-flat btn-ripple"><a href="/review/2015/08/29/toy-soldiers-review.html">Read More</a></button>
+  							<button type="button" class="btn btn-green btn-flat btn-ripple"><a href="/feature/2015/09/01/fig-feature.html">Read More</a></button>
   						</div>
   					</div>
           </div>
       </div><!--.col-->
 
       <div class="col-md-8 material-animate">
-        <div class="hi-bg-image bg-opaque5"  style="background: url('http://i.imgur.com/LGg1ejt.jpg') center/cover;" >
-            <!-- <a class="author text-color-white" href="#"><img src="http://talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/jango/120/149_1.png">Jango</a> -->
+        <div class="hi-bg-image bg-opaque5"  style="background: url('https://cdn2.vox-cdn.com/thumbor/5k_Q4zqUXLaDlJggrmRlmotwXMI=/cdn0.vox-cdn.com/uploads/chorus_asset/file/3977124/fig_logo_full_word.png') center/cover;" >
+            <!-- <a class="author text-color-white" href="#"><img src="http://talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/rewfus/45/69.png">Rewfus</a> -->
         </div>
       </div><!--.col-->
       <div class="col-md-8 material-animate">
@@ -1038,6 +1050,36 @@ function gamer(data) {
     </div><!--.row-->
 
 
+    
+
+    <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet  mdl-cell--12-col-phone">
+      <div class="mdl-card__title"  style="background: url('http://i.imgur.com/LGg1ejt.jpg') center/cover;" >
+        <h2 class="mdl-card__title-text">Toy Soldiers: War Chest</h2>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <p>The premise is pretty cool. Imagine you are a kid and you are playing with your toys in a cross pollination kind of way. Army men are playing with pixies, Sci-Fi soldiers are fighting Knights or Ninjas. Now combine that with part RTS, part Tower Defense, and part 3rd Person Shooter and you get Toy Soldiers: War Chest.</p>
+
+
+      </div>
+      <button class="post-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" onclick="location.href='/review/2015/08/29/toy-soldiers-review.html'">
+        <i class="material-icons">keyboard_arrow_right</i>
+      </button>
+      <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/review/2015/08/29/toy-soldiers-review.html">
+          Aug 29, 2015
+        </a>
+      </div>
+      <div class="mdl-card__menu">
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="post-/review/2015/08/29/toy-soldiers-review">
+          <i class="material-icons">share</i>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="post-/review/2015/08/29/toy-soldiers-review">
+          <li><a href="https://www.facebook.com/dialog/share?app_id={app_id}&display=page&href=/review/2015/08/29/toy-soldiers-review.html&redirect_uri=" class="mdl-menu__item">Facebook</a></li>
+          <li><a href="https://twitter.com/share?url=/review/2015/08/29/toy-soldiers-review.html&text=Toy Soldiers: War Chest&via=jekyllrb" class="mdl-menu__item">Twitter</a></li>
+          <li><a href="https://plus.google.com/share?url=/review/2015/08/29/toy-soldiers-review.html" class="mdl-menu__item">Google+</a></li>
+        </ul>
+      </div>
+    </div>
     
 
     <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet  mdl-cell--12-col-phone">

@@ -3,6 +3,7 @@ layout: review
 title:  "Rogue One"
 date:   2015-08-15 04:34:20
 categories: Preview
+icon: remove_red_eye
 image: http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/08/rogue-one-cast-photo-d23-1024x682.jpg
 author: Jango
 avatar: http://talk.polygonalweave.com/user_avatar/talk.polygonalweave.com/jango/120/149_1.png
